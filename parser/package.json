@@ -1,0 +1,12 @@
+{
+  "name": "ktbe-parser",
+  "version": "0.1.0",
+  "description": "Parses Excel-Sheet and Output: JSON",
+  "author": "Khôi Tran <kt@compile.ch> (http://www.tran-engineering.ch)",
+  "license": "MIT",
+  "dependencies": {
+    "kexcel": "~0.9.1"
+  },
+  "main": "parse.js",
+  "private": true
+}
