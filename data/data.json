@@ -1,0 +1,4157 @@
+[
+    {
+        "children": [
+            {
+                "code": "0",
+                "name": "Legislative",
+                "value": 5487,
+                "children": [
+                    {
+                        "code": "01",
+                        "name": "Legislative",
+                        "value": 5487,
+                        "children": [
+                            {
+                                "code": "011",
+                                "name": "Legislative",
+                                "value": 5487
+                            },
+                            {
+                                "code": "012",
+                                "name": "Exekutive",
+                                "value": 3249
+                            }
+                        ]
+                    },
+                    {
+                        "code": "02",
+                        "name": "Finanz- und Steuerverwaltung",
+                        "value": 221159,
+                        "children": [
+                            {
+                                "code": "021",
+                                "name": "Finanz- und Steuerverwaltung",
+                                "value": 221159
+                            },
+                            {
+                                "code": "022",
+                                "name": "Allgemeine Dienste, übrige",
+                                "value": 202919
+                            },
+                            {
+                                "code": "029",
+                                "name": "Verwaltungsliegenschaften n.a.g.",
+                                "value": 211709
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "code": "1",
+                "name": "Polizei",
+                "value": 390905,
+                "children": [
+                    {
+                        "code": "11",
+                        "name": "Polizei",
+                        "value": 390905,
+                        "children": [
+                            {
+                                "code": "111",
+                                "name": "Polizei",
+                                "value": 390905
+                            },
+                            {
+                                "code": "113",
+                                "name": "Strassenverkehrs- und Schifffahrtsamt",
+                                "value": 45656
+                            }
+                        ]
+                    },
+                    {
+                        "code": "12",
+                        "name": "Rechtssprechung",
+                        "value": 210472,
+                        "children": [
+                            {
+                                "code": "120",
+                                "name": "Rechtssprechung",
+                                "value": 210472
+                            }
+                        ]
+                    },
+                    {
+                        "code": "13",
+                        "name": "Strafvollzug",
+                        "value": 116436,
+                        "children": [
+                            {
+                                "code": "130",
+                                "name": "Strafvollzug",
+                                "value": 116436
+                            }
+                        ]
+                    },
+                    {
+                        "code": "14",
+                        "name": "Allgemeines Rechtswesen",
+                        "value": 184163,
+                        "children": [
+                            {
+                                "code": "140",
+                                "name": "Allgemeines Rechtswesen",
+                                "value": 184163
+                            }
+                        ]
+                    },
+                    {
+                        "code": "16",
+                        "name": "Militärische Verteidigung",
+                        "value": 3278,
+                        "children": [
+                            {
+                                "code": "161",
+                                "name": "Militärische Verteidigung",
+                                "value": 3278
+                            },
+                            {
+                                "code": "162",
+                                "name": "Zivile Verteidigung",
+                                "value": 15512
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "code": "2",
+                "name": "Eingangsstufe",
+                "value": 119219,
+                "children": [
+                    {
+                        "code": "21",
+                        "name": "Eingangsstufe",
+                        "value": 119219,
+                        "children": [
+                            {
+                                "code": "211",
+                                "name": "Eingangsstufe",
+                                "value": 119219
+                            },
+                            {
+                                "code": "212",
+                                "name": "Primarstufe",
+                                "value": 589457
+                            },
+                            {
+                                "code": "213",
+                                "name": "Oberstufe,  Sekundarstufe I",
+                                "value": 383504
+                            },
+                            {
+                                "code": "219",
+                                "name": "Obligatorische Schule n.a.g.",
+                                "value": 71607
+                            }
+                        ]
+                    },
+                    {
+                        "code": "22",
+                        "name": "Sonderschulen",
+                        "value": 14715,
+                        "children": [
+                            {
+                                "code": "220",
+                                "name": "Sonderschulen",
+                                "value": 14715
+                            }
+                        ]
+                    },
+                    {
+                        "code": "23",
+                        "name": "Berufliche Grundbildung",
+                        "value": 565078,
+                        "children": [
+                            {
+                                "code": "230",
+                                "name": "Berufliche Grundbildung",
+                                "value": 565078
+                            }
+                        ]
+                    },
+                    {
+                        "code": "25",
+                        "name": "Gymnasiale Maturitätsschulen",
+                        "value": 182225,
+                        "children": [
+                            {
+                                "code": "251",
+                                "name": "Gymnasiale Maturitätsschulen",
+                                "value": 182225
+                            },
+                            {
+                                "code": "252",
+                                "name": "Fachmittelschulen und andere allgemeinbildende Schulen",
+                                "value": 0
+                            }
+                        ]
+                    },
+                    {
+                        "code": "26",
+                        "name": "Höhere Berufsbildung",
+                        "value": 0,
+                        "children": [
+                            {
+                                "code": "260",
+                                "name": "Höhere Berufsbildung",
+                                "value": 0
+                            }
+                        ]
+                    },
+                    {
+                        "code": "27",
+                        "name": "Universitäre Hochschulen",
+                        "value": 470412,
+                        "children": [
+                            {
+                                "code": "271",
+                                "name": "Universitäre Hochschulen",
+                                "value": 470412
+                            },
+                            {
+                                "code": "272",
+                                "name": "Pädagogische Hochschulen",
+                                "value": 96614
+                            },
+                            {
+                                "code": "273",
+                                "name": "Fachhochschulen",
+                                "value": 313450
+                            }
+                        ]
+                    },
+                    {
+                        "code": "29",
+                        "name": "Verwaltung",
+                        "value": 49896,
+                        "children": [
+                            {
+                                "code": "291",
+                                "name": "Verwaltung",
+                                "value": 49896
+                            },
+                            {
+                                "code": "299",
+                                "name": "Bildung n.a.g.",
+                                "value": 30383
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "code": "3",
+                "name": "Denkmalpflege und Heimatschutz",
+                "value": 24684,
+                "children": [
+                    {
+                        "code": "31",
+                        "name": "Denkmalpflege und Heimatschutz",
+                        "value": 24684,
+                        "children": [
+                            {
+                                "code": "312",
+                                "name": "Denkmalpflege und Heimatschutz",
+                                "value": 24684
+                            }
+                        ]
+                    },
+                    {
+                        "code": "32",
+                        "name": "Bibliotheken",
+                        "value": 0,
+                        "children": [
+                            {
+                                "code": "321",
+                                "name": "Bibliotheken",
+                                "value": 0
+                            },
+                            {
+                                "code": "322",
+                                "name": "Konzert und Theater",
+                                "value": 0
+                            },
+                            {
+                                "code": "329",
+                                "name": "Kultur n.a.g.",
+                                "value": 45837
+                            }
+                        ]
+                    },
+                    {
+                        "code": "33",
+                        "name": "Film und Kino",
+                        "value": 0,
+                        "children": [
+                            {
+                                "code": "331",
+                                "name": "Film und Kino",
+                                "value": 0
+                            }
+                        ]
+                    },
+                    {
+                        "code": "34",
+                        "name": "Sport",
+                        "value": 889,
+                        "children": [
+                            {
+                                "code": "341",
+                                "name": "Sport",
+                                "value": 889
+                            }
+                        ]
+                    },
+                    {
+                        "code": "35",
+                        "name": "Kirchen und religiöse Angelegenheiten",
+                        "value": 73572,
+                        "children": [
+                            {
+                                "code": "350",
+                                "name": "Kirchen und religiöse Angelegenheiten",
+                                "value": 73572
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "code": "4",
+                "name": "Spitäler",
+                "value": 920427,
+                "children": [
+                    {
+                        "code": "41",
+                        "name": "Spitäler",
+                        "value": 920427,
+                        "children": [
+                            {
+                                "code": "411",
+                                "name": "Spitäler",
+                                "value": 920427
+                            },
+                            {
+                                "code": "412",
+                                "name": "Kranken- und Pflegeheime",
+                                "value": 150438
+                            },
+                            {
+                                "code": "413",
+                                "name": "Psychiatrische Kliniken",
+                                "value": 287718
+                            }
+                        ]
+                    },
+                    {
+                        "code": "42",
+                        "name": "Rettungsdienste",
+                        "value": 3165,
+                        "children": [
+                            {
+                                "code": "422",
+                                "name": "Rettungsdienste",
+                                "value": 3165
+                            }
+                        ]
+                    },
+                    {
+                        "code": "43",
+                        "name": "Alkohol- und Drogenmissbrauch",
+                        "value": 27469,
+                        "children": [
+                            {
+                                "code": "431",
+                                "name": "Alkohol- und Drogenmissbrauch",
+                                "value": 27469
+                            },
+                            {
+                                "code": "434",
+                                "name": "Lebensmittelkontrolle",
+                                "value": 10149
+                            }
+                        ]
+                    },
+                    {
+                        "code": "48",
+                        "name": "F&E in Gesundheit",
+                        "value": 97370,
+                        "children": [
+                            {
+                                "code": "480",
+                                "name": "F&E in Gesundheit",
+                                "value": 97370
+                            }
+                        ]
+                    },
+                    {
+                        "code": "49",
+                        "name": "Gesundheitswesen n.a.g.",
+                        "value": 11772,
+                        "children": [
+                            {
+                                "code": "490",
+                                "name": "Gesundheitswesen n.a.g.",
+                                "value": 11772
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "code": "5",
+                "name": "Krankenversicherung",
+                "value": 3403,
+                "children": [
+                    {
+                        "code": "51",
+                        "name": "Krankenversicherung",
+                        "value": 3403,
+                        "children": [
+                            {
+                                "code": "511",
+                                "name": "Krankenversicherung",
+                                "value": 3403
+                            },
+                            {
+                                "code": "512",
+                                "name": "Prämienverbilligungen",
+                                "value": 550902
+                            }
+                        ]
+                    },
+                    {
+                        "code": "52",
+                        "name": "Ergänzungsleistungen IV",
+                        "value": 249737,
+                        "children": [
+                            {
+                                "code": "522",
+                                "name": "Ergänzungsleistungen IV",
+                                "value": 249737
+                            },
+                            {
+                                "code": "523",
+                                "name": "Invalidenheime",
+                                "value": 455611
+                            },
+                            {
+                                "code": "524",
+                                "name": "Leistungen an Invalide",
+                                "value": 2190
+                            }
+                        ]
+                    },
+                    {
+                        "code": "53",
+                        "name": "Alters- und Hinterlassenversicherung AHV",
+                        "value": 12653,
+                        "children": [
+                            {
+                                "code": "531",
+                                "name": "Alters- und Hinterlassenversicherung AHV",
+                                "value": 12653
+                            },
+                            {
+                                "code": "532",
+                                "name": "Ergänzungsleistungen AHV",
+                                "value": 374606
+                            },
+                            {
+                                "code": "533",
+                                "name": "Leistungen an Pensionierte",
+                                "value": 1419
+                            }
+                        ]
+                    },
+                    {
+                        "code": "54",
+                        "name": "Familienzulagen",
+                        "value": 8490,
+                        "children": [
+                            {
+                                "code": "541",
+                                "name": "Familienzulagen",
+                                "value": 8490
+                            },
+                            {
+                                "code": "544",
+                                "name": "Jugendschutz",
+                                "value": 44103
+                            }
+                        ]
+                    },
+                    {
+                        "code": "55",
+                        "name": "Arbeitslosenversicherung",
+                        "value": 14291,
+                        "children": [
+                            {
+                                "code": "551",
+                                "name": "Arbeitslosenversicherung",
+                                "value": 14291
+                            },
+                            {
+                                "code": "559",
+                                "name": "Arbeitslosigkeit n.a.g.",
+                                "value": 0
+                            }
+                        ]
+                    },
+                    {
+                        "code": "57",
+                        "name": "Wirtschaftliche Hilfe",
+                        "value": 355191,
+                        "children": [
+                            {
+                                "code": "572",
+                                "name": "Wirtschaftliche Hilfe",
+                                "value": 355191
+                            },
+                            {
+                                "code": "573",
+                                "name": "Asylwesen",
+                                "value": 2165
+                            },
+                            {
+                                "code": "579",
+                                "name": "Fürsorge n.a.g.",
+                                "value": 34028
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "code": "6",
+                "name": "Nationalstrassen",
+                "value": 250939,
+                "children": [
+                    {
+                        "code": "61",
+                        "name": "Nationalstrassen",
+                        "value": 250939,
+                        "children": [
+                            {
+                                "code": "611",
+                                "name": "Nationalstrassen",
+                                "value": 250939
+                            },
+                            {
+                                "code": "613",
+                                "name": "Kantonsstrassen, übrige",
+                                "value": 338353
+                            },
+                            {
+                                "code": "619",
+                                "name": "Strassen n.a.g.",
+                                "value": 12798
+                            }
+                        ]
+                    },
+                    {
+                        "code": "62",
+                        "name": "Regionalverkehr",
+                        "value": 292440,
+                        "children": [
+                            {
+                                "code": "622",
+                                "name": "Regionalverkehr",
+                                "value": 292440
+                            },
+                            {
+                                "code": "623",
+                                "name": "Agglomerationsverkehr",
+                                "value": 62598
+                            },
+                            {
+                                "code": "629",
+                                "name": "Öffentlicher Verkehr n.a.g",
+                                "value": 2807
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "code": "7",
+                "name": "Wasserversorgung",
+                "value": 7528,
+                "children": [
+                    {
+                        "code": "71",
+                        "name": "Wasserversorgung",
+                        "value": 7528,
+                        "children": [
+                            {
+                                "code": "710",
+                                "name": "Wasserversorgung",
+                                "value": 7528
+                            }
+                        ]
+                    },
+                    {
+                        "code": "72",
+                        "name": "Abwasserbeseitigung",
+                        "value": 39587,
+                        "children": [
+                            {
+                                "code": "720",
+                                "name": "Abwasserbeseitigung",
+                                "value": 39587
+                            }
+                        ]
+                    },
+                    {
+                        "code": "73",
+                        "name": "Abfallwirtschaft",
+                        "value": 3018,
+                        "children": [
+                            {
+                                "code": "730",
+                                "name": "Abfallwirtschaft",
+                                "value": 3018
+                            }
+                        ]
+                    },
+                    {
+                        "code": "74",
+                        "name": "Gewässerverbauungen",
+                        "value": 2348,
+                        "children": [
+                            {
+                                "code": "741",
+                                "name": "Gewässerverbauungen",
+                                "value": 2348
+                            }
+                        ]
+                    },
+                    {
+                        "code": "75",
+                        "name": "Arten- und Landschaftsschutz",
+                        "value": 3681,
+                        "children": [
+                            {
+                                "code": "750",
+                                "name": "Arten- und Landschaftsschutz",
+                                "value": 3681
+                            }
+                        ]
+                    },
+                    {
+                        "code": "76",
+                        "name": "Luftreinhaltung und Klimaschutz",
+                        "value": 2,
+                        "children": [
+                            {
+                                "code": "761",
+                                "name": "Luftreinhaltung und Klimaschutz",
+                                "value": 2
+                            }
+                        ]
+                    },
+                    {
+                        "code": "77",
+                        "name": "Umweltschutz n.a.g.",
+                        "value": 23053,
+                        "children": [
+                            {
+                                "code": "779",
+                                "name": "Umweltschutz n.a.g.",
+                                "value": 23053
+                            }
+                        ]
+                    },
+                    {
+                        "code": "79",
+                        "name": "Raumordnung",
+                        "value": 21103,
+                        "children": [
+                            {
+                                "code": "790",
+                                "name": "Raumordnung",
+                                "value": 21103
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "code": "8",
+                "name": "Verwaltung, Vollzug und Kontrolle",
+                "value": 71507,
+                "children": [
+                    {
+                        "code": "81",
+                        "name": "Verwaltung, Vollzug und Kontrolle",
+                        "value": 71507,
+                        "children": [
+                            {
+                                "code": "811",
+                                "name": "Verwaltung, Vollzug und Kontrolle",
+                                "value": 71507
+                            },
+                            {
+                                "code": "812",
+                                "name": "Strukturverbesserungen",
+                                "value": 13536
+                            },
+                            {
+                                "code": "813",
+                                "name": "Produktionsverbesserungen Vieh",
+                                "value": 4540
+                            },
+                            {
+                                "code": "814",
+                                "name": "Produktionsverbesserungen Pflanzen",
+                                "value": 0
+                            },
+                            {
+                                "code": "815",
+                                "name": "Wirtschaftliche Massnahmen",
+                                "value": 0
+                            },
+                            {
+                                "code": "816",
+                                "name": "Direktzahlungen",
+                                "value": 569914
+                            }
+                        ]
+                    },
+                    {
+                        "code": "82",
+                        "name": "Forstwirtschaft",
+                        "value": 51492,
+                        "children": [
+                            {
+                                "code": "820",
+                                "name": "Forstwirtschaft",
+                                "value": 51492
+                            }
+                        ]
+                    },
+                    {
+                        "code": "83",
+                        "name": "Jagd und Fischerei",
+                        "value": 524,
+                        "children": [
+                            {
+                                "code": "830",
+                                "name": "Jagd und Fischerei",
+                                "value": 524
+                            }
+                        ]
+                    },
+                    {
+                        "code": "84",
+                        "name": "Tourismus",
+                        "value": 3993,
+                        "children": [
+                            {
+                                "code": "840",
+                                "name": "Tourismus",
+                                "value": 3993
+                            }
+                        ]
+                    },
+                    {
+                        "code": "85",
+                        "name": "Industrie, Gewerbe, Handel",
+                        "value": 39707,
+                        "children": [
+                            {
+                                "code": "850",
+                                "name": "Industrie, Gewerbe, Handel",
+                                "value": 39707
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "code": "9",
+                "name": "Finanz- und Lastenausgleich",
+                "value": 188341,
+                "children": [
+                    {
+                        "code": "93",
+                        "name": "Finanz- und Lastenausgleich",
+                        "value": 188341,
+                        "children": [
+                            {
+                                "code": "930",
+                                "name": "Finanz- und Lastenausgleich",
+                                "value": 188341
+                            }
+                        ]
+                    },
+                    {
+                        "code": "95",
+                        "name": "Ertragsanteile, übrige",
+                        "value": 12814,
+                        "children": [
+                            {
+                                "code": "950",
+                                "name": "Ertragsanteile, übrige",
+                                "value": 12814
+                            }
+                        ]
+                    },
+                    {
+                        "code": "96",
+                        "name": "Zinsen",
+                        "value": 115805,
+                        "children": [
+                            {
+                                "code": "961",
+                                "name": "Zinsen",
+                                "value": 115805
+                            },
+                            {
+                                "code": "963",
+                                "name": "Liegenschaften des Finanzvermögens",
+                                "value": 255
+                            },
+                            {
+                                "code": "969",
+                                "name": "Finanzvermögen n.a.g.",
+                                "value": 9346
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "year": 2011
+    },
+    {
+        "children": [
+            {
+                "code": "0",
+                "name": "Legislative",
+                "value": 5300,
+                "children": [
+                    {
+                        "code": "01",
+                        "name": "Legislative",
+                        "value": 5300,
+                        "children": [
+                            {
+                                "code": "011",
+                                "name": "Legislative",
+                                "value": 5300
+                            },
+                            {
+                                "code": "012",
+                                "name": "Exekutive",
+                                "value": 3263
+                            }
+                        ]
+                    },
+                    {
+                        "code": "02",
+                        "name": "Finanz- und Steuerverwaltung",
+                        "value": 211383,
+                        "children": [
+                            {
+                                "code": "021",
+                                "name": "Finanz- und Steuerverwaltung",
+                                "value": 211383
+                            },
+                            {
+                                "code": "022",
+                                "name": "Allgemeine Dienste, übrige",
+                                "value": 202344
+                            },
+                            {
+                                "code": "029",
+                                "name": "Verwaltungsliegenschaften, n. a. g.",
+                                "value": 205519
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "code": "1",
+                "name": "Polizei",
+                "value": 385736,
+                "children": [
+                    {
+                        "code": "11",
+                        "name": "Polizei",
+                        "value": 385736,
+                        "children": [
+                            {
+                                "code": "111",
+                                "name": "Polizei",
+                                "value": 385736
+                            },
+                            {
+                                "code": "113",
+                                "name": "Strassenverkehrs- und Schifffahrtsamt",
+                                "value": 44894
+                            }
+                        ]
+                    },
+                    {
+                        "code": "12",
+                        "name": "Rechtssprechung",
+                        "value": 189402,
+                        "children": [
+                            {
+                                "code": "120",
+                                "name": "Rechtssprechung",
+                                "value": 189402
+                            }
+                        ]
+                    },
+                    {
+                        "code": "13",
+                        "name": "Strafvollzug",
+                        "value": 111794,
+                        "children": [
+                            {
+                                "code": "130",
+                                "name": "Strafvollzug",
+                                "value": 111794
+                            }
+                        ]
+                    },
+                    {
+                        "code": "14",
+                        "name": "Allgemeines Rechtswesen",
+                        "value": 99613,
+                        "children": [
+                            {
+                                "code": "140",
+                                "name": "Allgemeines Rechtswesen",
+                                "value": 99613
+                            }
+                        ]
+                    },
+                    {
+                        "code": "16",
+                        "name": "Militärische Verteidigung",
+                        "value": 3268,
+                        "children": [
+                            {
+                                "code": "161",
+                                "name": "Militärische Verteidigung",
+                                "value": 3268
+                            },
+                            {
+                                "code": "162",
+                                "name": "Zivile Verteidigung",
+                                "value": 15976
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "code": "2",
+                "name": "Eingangsstufe",
+                "value": 112482,
+                "children": [
+                    {
+                        "code": "21",
+                        "name": "Eingangsstufe",
+                        "value": 112482,
+                        "children": [
+                            {
+                                "code": "211",
+                                "name": "Eingangsstufe",
+                                "value": 112482
+                            },
+                            {
+                                "code": "212",
+                                "name": "Primarstufe",
+                                "value": 572721
+                            },
+                            {
+                                "code": "213",
+                                "name": "Oberstufe,  Sekundarstufe I",
+                                "value": 384735
+                            },
+                            {
+                                "code": "219",
+                                "name": "Obligatorische Schule, n. a. g.",
+                                "value": 49727
+                            }
+                        ]
+                    },
+                    {
+                        "code": "22",
+                        "name": "Sonderschulen",
+                        "value": 14203,
+                        "children": [
+                            {
+                                "code": "220",
+                                "name": "Sonderschulen",
+                                "value": 14203
+                            }
+                        ]
+                    },
+                    {
+                        "code": "23",
+                        "name": "Berufliche Grundbildung",
+                        "value": 512013,
+                        "children": [
+                            {
+                                "code": "230",
+                                "name": "Berufliche Grundbildung",
+                                "value": 512013
+                            }
+                        ]
+                    },
+                    {
+                        "code": "25",
+                        "name": "Gymnasiale Maturitätsschulen",
+                        "value": 180817,
+                        "children": [
+                            {
+                                "code": "251",
+                                "name": "Gymnasiale Maturitätsschulen",
+                                "value": 180817
+                            }
+                        ]
+                    },
+                    {
+                        "code": "27",
+                        "name": "Universitäre Hochschulen",
+                        "value": 464609,
+                        "children": [
+                            {
+                                "code": "271",
+                                "name": "Universitäre Hochschulen",
+                                "value": 464609
+                            },
+                            {
+                                "code": "272",
+                                "name": "Pädagogische Hochschulen",
+                                "value": 94019
+                            },
+                            {
+                                "code": "273",
+                                "name": "Fachhochschulen",
+                                "value": 291436
+                            }
+                        ]
+                    },
+                    {
+                        "code": "29",
+                        "name": "Verwaltung",
+                        "value": 61389,
+                        "children": [
+                            {
+                                "code": "291",
+                                "name": "Verwaltung",
+                                "value": 61389
+                            },
+                            {
+                                "code": "299",
+                                "name": "Bildung, n. a. g.",
+                                "value": 43742
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "code": "3",
+                "name": "Denkmalpflege und Heimatschutz",
+                "value": 21949,
+                "children": [
+                    {
+                        "code": "31",
+                        "name": "Denkmalpflege und Heimatschutz",
+                        "value": 21949,
+                        "children": [
+                            {
+                                "code": "312",
+                                "name": "Denkmalpflege und Heimatschutz",
+                                "value": 21949
+                            }
+                        ]
+                    },
+                    {
+                        "code": "32",
+                        "name": "Kultur, n. a. g.",
+                        "value": 56520,
+                        "children": [
+                            {
+                                "code": "329",
+                                "name": "Kultur, n. a. g.",
+                                "value": 56520
+                            }
+                        ]
+                    },
+                    {
+                        "code": "34",
+                        "name": "Sport",
+                        "value": 847,
+                        "children": [
+                            {
+                                "code": "341",
+                                "name": "Sport",
+                                "value": 847
+                            }
+                        ]
+                    },
+                    {
+                        "code": "35",
+                        "name": "Kirchen und religiöse Angelegenheiten",
+                        "value": 71468,
+                        "children": [
+                            {
+                                "code": "350",
+                                "name": "Kirchen und religiöse Angelegenheiten",
+                                "value": 71468
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "code": "4",
+                "name": "Spitäler",
+                "value": 908847,
+                "children": [
+                    {
+                        "code": "41",
+                        "name": "Spitäler",
+                        "value": 908847,
+                        "children": [
+                            {
+                                "code": "411",
+                                "name": "Spitäler",
+                                "value": 908847
+                            },
+                            {
+                                "code": "412",
+                                "name": "Kranken- und Pflegeheime",
+                                "value": 76913
+                            },
+                            {
+                                "code": "413",
+                                "name": "Psychiatrische Kliniken",
+                                "value": 275136
+                            }
+                        ]
+                    },
+                    {
+                        "code": "43",
+                        "name": "Alkohol- und Drogenmissbrauch",
+                        "value": 29300,
+                        "children": [
+                            {
+                                "code": "431",
+                                "name": "Alkohol- und Drogenmissbrauch",
+                                "value": 29300
+                            },
+                            {
+                                "code": "434",
+                                "name": "Lebensmittelkontrolle",
+                                "value": 10816
+                            }
+                        ]
+                    },
+                    {
+                        "code": "48",
+                        "name": "F&E in Gesundheit",
+                        "value": 94860,
+                        "children": [
+                            {
+                                "code": "480",
+                                "name": "F&E in Gesundheit",
+                                "value": 94860
+                            }
+                        ]
+                    },
+                    {
+                        "code": "49",
+                        "name": "Gesundheitswesen, n. a. g.",
+                        "value": 10000,
+                        "children": [
+                            {
+                                "code": "490",
+                                "name": "Gesundheitswesen, n. a. g.",
+                                "value": 10000
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "code": "5",
+                "name": "Krankenversicherung",
+                "value": 3164,
+                "children": [
+                    {
+                        "code": "51",
+                        "name": "Krankenversicherung",
+                        "value": 3164,
+                        "children": [
+                            {
+                                "code": "511",
+                                "name": "Krankenversicherung",
+                                "value": 3164
+                            },
+                            {
+                                "code": "512",
+                                "name": "Prämienverbilligungen",
+                                "value": 536953
+                            }
+                        ]
+                    },
+                    {
+                        "code": "52",
+                        "name": "Ergänzungsleistungen IV",
+                        "value": 230673,
+                        "children": [
+                            {
+                                "code": "522",
+                                "name": "Ergänzungsleistungen IV",
+                                "value": 230673
+                            },
+                            {
+                                "code": "523",
+                                "name": "Invalidenheime",
+                                "value": 434875
+                            }
+                        ]
+                    },
+                    {
+                        "code": "53",
+                        "name": "Alters- und Hinterlassenversicherung AHV",
+                        "value": 11111,
+                        "children": [
+                            {
+                                "code": "531",
+                                "name": "Alters- und Hinterlassenversicherung AHV",
+                                "value": 11111
+                            },
+                            {
+                                "code": "532",
+                                "name": "Ergänzungsleistungen AHV",
+                                "value": 346009
+                            },
+                            {
+                                "code": "533",
+                                "name": "Leistungen an Pensionierte",
+                                "value": 3412
+                            }
+                        ]
+                    },
+                    {
+                        "code": "54",
+                        "name": "Familienzulagen",
+                        "value": 7300,
+                        "children": [
+                            {
+                                "code": "541",
+                                "name": "Familienzulagen",
+                                "value": 7300
+                            },
+                            {
+                                "code": "544",
+                                "name": "Jugendschutz",
+                                "value": 42902
+                            }
+                        ]
+                    },
+                    {
+                        "code": "55",
+                        "name": "Arbeitslosenversicherung",
+                        "value": 14961,
+                        "children": [
+                            {
+                                "code": "551",
+                                "name": "Arbeitslosenversicherung",
+                                "value": 14961
+                            }
+                        ]
+                    },
+                    {
+                        "code": "57",
+                        "name": "Wirtschaftliche Hilfe",
+                        "value": 324613,
+                        "children": [
+                            {
+                                "code": "572",
+                                "name": "Wirtschaftliche Hilfe",
+                                "value": 324613
+                            },
+                            {
+                                "code": "573",
+                                "name": "Asylwesen",
+                                "value": 72642
+                            },
+                            {
+                                "code": "579",
+                                "name": "Fürsorge,  n. a. g.",
+                                "value": 61008
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "code": "6",
+                "name": "Nationalstrassen",
+                "value": 214096,
+                "children": [
+                    {
+                        "code": "61",
+                        "name": "Nationalstrassen",
+                        "value": 214096,
+                        "children": [
+                            {
+                                "code": "611",
+                                "name": "Nationalstrassen",
+                                "value": 214096
+                            },
+                            {
+                                "code": "613",
+                                "name": "Kantonsstrassen, übrige",
+                                "value": 311940
+                            },
+                            {
+                                "code": "619",
+                                "name": "Strassen, n. a. g.",
+                                "value": 34859
+                            }
+                        ]
+                    },
+                    {
+                        "code": "62",
+                        "name": "Regionalverkehr",
+                        "value": 295397,
+                        "children": [
+                            {
+                                "code": "622",
+                                "name": "Regionalverkehr",
+                                "value": 295397
+                            },
+                            {
+                                "code": "623",
+                                "name": "Agglomerationsverkehr",
+                                "value": 60141
+                            },
+                            {
+                                "code": "629",
+                                "name": "Öffentlicher Verkehr, n.a.g",
+                                "value": 2874
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "code": "7",
+                "name": "Wasserversorgung",
+                "value": 7157,
+                "children": [
+                    {
+                        "code": "71",
+                        "name": "Wasserversorgung",
+                        "value": 7157,
+                        "children": [
+                            {
+                                "code": "710",
+                                "name": "Wasserversorgung",
+                                "value": 7157
+                            }
+                        ]
+                    },
+                    {
+                        "code": "72",
+                        "name": "Abwasserbeseitigung",
+                        "value": 41149,
+                        "children": [
+                            {
+                                "code": "720",
+                                "name": "Abwasserbeseitigung",
+                                "value": 41149
+                            }
+                        ]
+                    },
+                    {
+                        "code": "73",
+                        "name": "Abfallwirtschaft",
+                        "value": 3012,
+                        "children": [
+                            {
+                                "code": "730",
+                                "name": "Abfallwirtschaft",
+                                "value": 3012
+                            }
+                        ]
+                    },
+                    {
+                        "code": "74",
+                        "name": "Gewässerverbauungen",
+                        "value": 3372,
+                        "children": [
+                            {
+                                "code": "741",
+                                "name": "Gewässerverbauungen",
+                                "value": 3372
+                            }
+                        ]
+                    },
+                    {
+                        "code": "75",
+                        "name": "Arten- und Landschaftsschutz",
+                        "value": 3688,
+                        "children": [
+                            {
+                                "code": "750",
+                                "name": "Arten- und Landschaftsschutz",
+                                "value": 3688
+                            }
+                        ]
+                    },
+                    {
+                        "code": "76",
+                        "name": "Luftreinhaltung und Klimaschutz",
+                        "value": 2,
+                        "children": [
+                            {
+                                "code": "761",
+                                "name": "Luftreinhaltung und Klimaschutz",
+                                "value": 2
+                            }
+                        ]
+                    },
+                    {
+                        "code": "77",
+                        "name": "Umweltschutz, n. a. g.",
+                        "value": 20164,
+                        "children": [
+                            {
+                                "code": "779",
+                                "name": "Umweltschutz, n. a. g.",
+                                "value": 20164
+                            }
+                        ]
+                    },
+                    {
+                        "code": "79",
+                        "name": "Raumordnung",
+                        "value": 17483,
+                        "children": [
+                            {
+                                "code": "790",
+                                "name": "Raumordnung",
+                                "value": 17483
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "code": "8",
+                "name": "Verwaltung, Vollzug und Kontrolle",
+                "value": 97475,
+                "children": [
+                    {
+                        "code": "81",
+                        "name": "Verwaltung, Vollzug und Kontrolle",
+                        "value": 97475,
+                        "children": [
+                            {
+                                "code": "811",
+                                "name": "Verwaltung, Vollzug und Kontrolle",
+                                "value": 97475
+                            },
+                            {
+                                "code": "812",
+                                "name": "Strukturverbesserungen",
+                                "value": 13431
+                            },
+                            {
+                                "code": "813",
+                                "name": "Produktionsverbesserungen Vieh",
+                                "value": 6595
+                            },
+                            {
+                                "code": "816",
+                                "name": "Direktzahlungen",
+                                "value": 550495
+                            }
+                        ]
+                    },
+                    {
+                        "code": "82",
+                        "name": "Forstwirtschaft",
+                        "value": 52585,
+                        "children": [
+                            {
+                                "code": "820",
+                                "name": "Forstwirtschaft",
+                                "value": 52585
+                            }
+                        ]
+                    },
+                    {
+                        "code": "83",
+                        "name": "Jagd und Fischerei",
+                        "value": 518,
+                        "children": [
+                            {
+                                "code": "830",
+                                "name": "Jagd und Fischerei",
+                                "value": 518
+                            }
+                        ]
+                    },
+                    {
+                        "code": "84",
+                        "name": "Tourismus",
+                        "value": 4420,
+                        "children": [
+                            {
+                                "code": "840",
+                                "name": "Tourismus",
+                                "value": 4420
+                            }
+                        ]
+                    },
+                    {
+                        "code": "85",
+                        "name": "Industrie, Gewerbe, Handel",
+                        "value": 38447,
+                        "children": [
+                            {
+                                "code": "850",
+                                "name": "Industrie, Gewerbe, Handel",
+                                "value": 38447
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "code": "9",
+                "name": "Finanz- und Lastenausgleich",
+                "value": 191626,
+                "children": [
+                    {
+                        "code": "93",
+                        "name": "Finanz- und Lastenausgleich",
+                        "value": 191626,
+                        "children": [
+                            {
+                                "code": "930",
+                                "name": "Finanz- und Lastenausgleich",
+                                "value": 191626
+                            }
+                        ]
+                    },
+                    {
+                        "code": "95",
+                        "name": "Ertragsanteile, übrige",
+                        "value": 10419,
+                        "children": [
+                            {
+                                "code": "950",
+                                "name": "Ertragsanteile, übrige",
+                                "value": 10419
+                            }
+                        ]
+                    },
+                    {
+                        "code": "96",
+                        "name": "Zinsen",
+                        "value": 130033,
+                        "children": [
+                            {
+                                "code": "961",
+                                "name": "Zinsen",
+                                "value": 130033
+                            },
+                            {
+                                "code": "963",
+                                "name": "Liegenschaften des Finanzvermögens",
+                                "value": 59
+                            },
+                            {
+                                "code": "969",
+                                "name": "Finanzvermögen, n. a. g.",
+                                "value": 18721
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "year": 2010
+    },
+    {
+        "children": [
+            {
+                "code": "0",
+                "name": "Legislative",
+                "value": 5552,
+                "children": [
+                    {
+                        "code": "01",
+                        "name": "Legislative",
+                        "value": 5552,
+                        "children": [
+                            {
+                                "code": "011",
+                                "name": "Legislative",
+                                "value": 5552
+                            },
+                            {
+                                "code": "012",
+                                "name": "Exekutive",
+                                "value": 3242
+                            }
+                        ]
+                    },
+                    {
+                        "code": "02",
+                        "name": "Finanz- und Steuerverwaltung",
+                        "value": 222154,
+                        "children": [
+                            {
+                                "code": "021",
+                                "name": "Finanz- und Steuerverwaltung",
+                                "value": 222154
+                            },
+                            {
+                                "code": "022",
+                                "name": "Allgemeine Dienste, übrige",
+                                "value": 190517
+                            },
+                            {
+                                "code": "029",
+                                "name": "Verwaltungsliegenschaften, n. a. g.",
+                                "value": 166126
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "code": "1",
+                "name": "Polizei",
+                "value": 366461,
+                "children": [
+                    {
+                        "code": "11",
+                        "name": "Polizei",
+                        "value": 366461,
+                        "children": [
+                            {
+                                "code": "111",
+                                "name": "Polizei",
+                                "value": 366461
+                            },
+                            {
+                                "code": "113",
+                                "name": "Strassenverkehrs- und Schifffahrtsamt",
+                                "value": 45564
+                            }
+                        ]
+                    },
+                    {
+                        "code": "12",
+                        "name": "Rechtssprechung",
+                        "value": 182193,
+                        "children": [
+                            {
+                                "code": "120",
+                                "name": "Rechtssprechung",
+                                "value": 182193
+                            }
+                        ]
+                    },
+                    {
+                        "code": "13",
+                        "name": "Strafvollzug",
+                        "value": 107016,
+                        "children": [
+                            {
+                                "code": "130",
+                                "name": "Strafvollzug",
+                                "value": 107016
+                            }
+                        ]
+                    },
+                    {
+                        "code": "14",
+                        "name": "Allgemeines Rechtswesen",
+                        "value": 168243,
+                        "children": [
+                            {
+                                "code": "140",
+                                "name": "Allgemeines Rechtswesen",
+                                "value": 168243
+                            }
+                        ]
+                    },
+                    {
+                        "code": "16",
+                        "name": "Militärische Verteidigung",
+                        "value": 4642,
+                        "children": [
+                            {
+                                "code": "161",
+                                "name": "Militärische Verteidigung",
+                                "value": 4642
+                            },
+                            {
+                                "code": "162",
+                                "name": "Zivile Verteidigung",
+                                "value": 14070
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "code": "2",
+                "name": "Eingangsstufe",
+                "value": 113258,
+                "children": [
+                    {
+                        "code": "21",
+                        "name": "Eingangsstufe",
+                        "value": 113258,
+                        "children": [
+                            {
+                                "code": "211",
+                                "name": "Eingangsstufe",
+                                "value": 113258
+                            },
+                            {
+                                "code": "212",
+                                "name": "Primarstufe",
+                                "value": 572917
+                            },
+                            {
+                                "code": "213",
+                                "name": "Oberstufe",
+                                "value": 399857
+                            },
+                            {
+                                "code": "219",
+                                "name": "Obligatorische Schule, n. a. g.",
+                                "value": 41831
+                            }
+                        ]
+                    },
+                    {
+                        "code": "22",
+                        "name": "Sonderschulen",
+                        "value": 13282,
+                        "children": [
+                            {
+                                "code": "220",
+                                "name": "Sonderschulen",
+                                "value": 13282
+                            }
+                        ]
+                    },
+                    {
+                        "code": "23",
+                        "name": "Berufliche Grundbildung",
+                        "value": 512363,
+                        "children": [
+                            {
+                                "code": "230",
+                                "name": "Berufliche Grundbildung",
+                                "value": 512363
+                            }
+                        ]
+                    },
+                    {
+                        "code": "25",
+                        "name": "Gymnasiale Maturitätsschulen",
+                        "value": 183735,
+                        "children": [
+                            {
+                                "code": "251",
+                                "name": "Gymnasiale Maturitätsschulen",
+                                "value": 183735
+                            },
+                            {
+                                "code": "252",
+                                "name": "Fachmittelschulen und andere allgemeinbildende Schulen",
+                                "value": 0
+                            }
+                        ]
+                    },
+                    {
+                        "code": "26",
+                        "name": "Höhere Berufsbildung",
+                        "value": 0,
+                        "children": [
+                            {
+                                "code": "260",
+                                "name": "Höhere Berufsbildung",
+                                "value": 0
+                            }
+                        ]
+                    },
+                    {
+                        "code": "27",
+                        "name": "Universitäre Hochschulen",
+                        "value": 454695,
+                        "children": [
+                            {
+                                "code": "271",
+                                "name": "Universitäre Hochschulen",
+                                "value": 454695
+                            },
+                            {
+                                "code": "272",
+                                "name": "Pädagogische Hochschulen",
+                                "value": 88401
+                            },
+                            {
+                                "code": "273",
+                                "name": "Fachhochschulen",
+                                "value": 285416
+                            }
+                        ]
+                    },
+                    {
+                        "code": "29",
+                        "name": "Verwaltung",
+                        "value": 69414,
+                        "children": [
+                            {
+                                "code": "291",
+                                "name": "Verwaltung",
+                                "value": 69414
+                            },
+                            {
+                                "code": "299",
+                                "name": "Bildung, n. a. g.",
+                                "value": 29068
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "code": "3",
+                "name": "Denkmalpflege und Heimatschutz",
+                "value": 21918,
+                "children": [
+                    {
+                        "code": "31",
+                        "name": "Denkmalpflege und Heimatschutz",
+                        "value": 21918,
+                        "children": [
+                            {
+                                "code": "312",
+                                "name": "Denkmalpflege und Heimatschutz",
+                                "value": 21918
+                            }
+                        ]
+                    },
+                    {
+                        "code": "32",
+                        "name": "Kultur, n. a. g.",
+                        "value": 62844,
+                        "children": [
+                            {
+                                "code": "329",
+                                "name": "Kultur, n. a. g.",
+                                "value": 62844
+                            }
+                        ]
+                    },
+                    {
+                        "code": "34",
+                        "name": "Sport",
+                        "value": 969,
+                        "children": [
+                            {
+                                "code": "341",
+                                "name": "Sport",
+                                "value": 969
+                            }
+                        ]
+                    },
+                    {
+                        "code": "35",
+                        "name": "Kirchen und religiöse Angelegenheiten",
+                        "value": 73072,
+                        "children": [
+                            {
+                                "code": "350",
+                                "name": "Kirchen und religiöse Angelegenheiten",
+                                "value": 73072
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "code": "4",
+                "name": "Spitäler",
+                "value": 900533,
+                "children": [
+                    {
+                        "code": "41",
+                        "name": "Spitäler",
+                        "value": 900533,
+                        "children": [
+                            {
+                                "code": "411",
+                                "name": "Spitäler",
+                                "value": 900533
+                            },
+                            {
+                                "code": "412",
+                                "name": "Kranken- und Pflegeheime",
+                                "value": 69344
+                            },
+                            {
+                                "code": "413",
+                                "name": "Psychiatrische Kliniken",
+                                "value": 272906
+                            }
+                        ]
+                    },
+                    {
+                        "code": "42",
+                        "name": "Rettungsdienste",
+                        "value": 17757,
+                        "children": [
+                            {
+                                "code": "422",
+                                "name": "Rettungsdienste",
+                                "value": 17757
+                            }
+                        ]
+                    },
+                    {
+                        "code": "43",
+                        "name": "Alkohol- und Drogenmissbrauch",
+                        "value": 25892,
+                        "children": [
+                            {
+                                "code": "431",
+                                "name": "Alkohol- und Drogenmissbrauch",
+                                "value": 25892
+                            },
+                            {
+                                "code": "434",
+                                "name": "Lebensmittelkontrolle",
+                                "value": 10710
+                            }
+                        ]
+                    },
+                    {
+                        "code": "48",
+                        "name": "F&E in Gesundheit",
+                        "value": 95654,
+                        "children": [
+                            {
+                                "code": "480",
+                                "name": "F&E in Gesundheit",
+                                "value": 95654
+                            }
+                        ]
+                    },
+                    {
+                        "code": "49",
+                        "name": "Gesundheitswesen, n. a. g.",
+                        "value": 11190,
+                        "children": [
+                            {
+                                "code": "490",
+                                "name": "Gesundheitswesen, n. a. g.",
+                                "value": 11190
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "code": "5",
+                "name": "Krankenversicherung",
+                "value": 4667,
+                "children": [
+                    {
+                        "code": "51",
+                        "name": "Krankenversicherung",
+                        "value": 4667,
+                        "children": [
+                            {
+                                "code": "511",
+                                "name": "Krankenversicherung",
+                                "value": 4667
+                            },
+                            {
+                                "code": "512",
+                                "name": "Prämienverbilligungen",
+                                "value": 458955
+                            }
+                        ]
+                    },
+                    {
+                        "code": "52",
+                        "name": "Invalidenversicherung IV",
+                        "value": 0,
+                        "children": [
+                            {
+                                "code": "521",
+                                "name": "Invalidenversicherung IV",
+                                "value": 0
+                            },
+                            {
+                                "code": "522",
+                                "name": "Ergänzungsleistungen IV",
+                                "value": 229147
+                            },
+                            {
+                                "code": "523",
+                                "name": "Invalidenheime",
+                                "value": 428616
+                            }
+                        ]
+                    },
+                    {
+                        "code": "53",
+                        "name": "Alters- und Hinterlassenversicherung AHV",
+                        "value": 23913,
+                        "children": [
+                            {
+                                "code": "531",
+                                "name": "Alters- und Hinterlassenversicherung AHV",
+                                "value": 23913
+                            },
+                            {
+                                "code": "532",
+                                "name": "Ergänzungsleistungen AHV",
+                                "value": 343721
+                            },
+                            {
+                                "code": "533",
+                                "name": "Leistungen an Pensionierte",
+                                "value": 1133
+                            }
+                        ]
+                    },
+                    {
+                        "code": "54",
+                        "name": "Familienzulagen",
+                        "value": 0,
+                        "children": [
+                            {
+                                "code": "541",
+                                "name": "Familienzulagen",
+                                "value": 0
+                            },
+                            {
+                                "code": "544",
+                                "name": "Jugendschutz",
+                                "value": 40963
+                            }
+                        ]
+                    },
+                    {
+                        "code": "55",
+                        "name": "Arbeitslosigkeit, n. a. g.",
+                        "value": 1553,
+                        "children": [
+                            {
+                                "code": "559",
+                                "name": "Arbeitslosigkeit, n. a. g.",
+                                "value": 1553
+                            }
+                        ]
+                    },
+                    {
+                        "code": "57",
+                        "name": "Wirtschaftliche Hilfe",
+                        "value": 37898,
+                        "children": [
+                            {
+                                "code": "572",
+                                "name": "Wirtschaftliche Hilfe",
+                                "value": 37898
+                            },
+                            {
+                                "code": "573",
+                                "name": "Asylwesen",
+                                "value": 1769
+                            },
+                            {
+                                "code": "579",
+                                "name": "Fürsorge,  n. a. g.",
+                                "value": 319388
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "code": "6",
+                "name": "Nationalstrassen",
+                "value": 226885,
+                "children": [
+                    {
+                        "code": "61",
+                        "name": "Nationalstrassen",
+                        "value": 226885,
+                        "children": [
+                            {
+                                "code": "611",
+                                "name": "Nationalstrassen",
+                                "value": 226885
+                            },
+                            {
+                                "code": "613",
+                                "name": "Kantonsstrassen, übrige",
+                                "value": 324458
+                            },
+                            {
+                                "code": "619",
+                                "name": "Strassen, n. a. g.",
+                                "value": 39582
+                            }
+                        ]
+                    },
+                    {
+                        "code": "62",
+                        "name": "Regionalverkehr",
+                        "value": 258137,
+                        "children": [
+                            {
+                                "code": "622",
+                                "name": "Regionalverkehr",
+                                "value": 258137
+                            },
+                            {
+                                "code": "623",
+                                "name": "Agglomerationsverkehr",
+                                "value": 55568
+                            },
+                            {
+                                "code": "629",
+                                "name": "Öffentlicher Verkehr, n.a.g",
+                                "value": 4457
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "code": "7",
+                "name": "Wasserversorgung",
+                "value": 9650,
+                "children": [
+                    {
+                        "code": "71",
+                        "name": "Wasserversorgung",
+                        "value": 9650,
+                        "children": [
+                            {
+                                "code": "710",
+                                "name": "Wasserversorgung",
+                                "value": 9650
+                            }
+                        ]
+                    },
+                    {
+                        "code": "72",
+                        "name": "Abwasserbeseitigung",
+                        "value": 54678,
+                        "children": [
+                            {
+                                "code": "720",
+                                "name": "Abwasserbeseitigung",
+                                "value": 54678
+                            }
+                        ]
+                    },
+                    {
+                        "code": "73",
+                        "name": "Abfallwirtschaft",
+                        "value": 3216,
+                        "children": [
+                            {
+                                "code": "730",
+                                "name": "Abfallwirtschaft",
+                                "value": 3216
+                            }
+                        ]
+                    },
+                    {
+                        "code": "74",
+                        "name": "Gewässerverbauungen",
+                        "value": 2101,
+                        "children": [
+                            {
+                                "code": "741",
+                                "name": "Gewässerverbauungen",
+                                "value": 2101
+                            }
+                        ]
+                    },
+                    {
+                        "code": "75",
+                        "name": "Arten- und Landschaftsschutz",
+                        "value": 2913,
+                        "children": [
+                            {
+                                "code": "750",
+                                "name": "Arten- und Landschaftsschutz",
+                                "value": 2913
+                            }
+                        ]
+                    },
+                    {
+                        "code": "76",
+                        "name": "Luftreinhaltung und Klimaschutz",
+                        "value": 6754,
+                        "children": [
+                            {
+                                "code": "761",
+                                "name": "Luftreinhaltung und Klimaschutz",
+                                "value": 6754
+                            }
+                        ]
+                    },
+                    {
+                        "code": "77",
+                        "name": "Umweltschutz, n. a. g.",
+                        "value": 21895,
+                        "children": [
+                            {
+                                "code": "779",
+                                "name": "Umweltschutz, n. a. g.",
+                                "value": 21895
+                            }
+                        ]
+                    },
+                    {
+                        "code": "79",
+                        "name": "Raumordnung",
+                        "value": 21919,
+                        "children": [
+                            {
+                                "code": "790",
+                                "name": "Raumordnung",
+                                "value": 21919
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "code": "8",
+                "name": "Verwaltung, Vollzug und Kontrolle",
+                "value": 89555,
+                "children": [
+                    {
+                        "code": "81",
+                        "name": "Verwaltung, Vollzug und Kontrolle",
+                        "value": 89555,
+                        "children": [
+                            {
+                                "code": "811",
+                                "name": "Verwaltung, Vollzug und Kontrolle",
+                                "value": 89555
+                            },
+                            {
+                                "code": "812",
+                                "name": "Strukturverbesserungen",
+                                "value": 92
+                            },
+                            {
+                                "code": "813",
+                                "name": "Produktionsverbesserungen Vieh",
+                                "value": 8475
+                            },
+                            {
+                                "code": "814",
+                                "name": "Produktionsverbesserungen Pflanzen",
+                                "value": 0
+                            },
+                            {
+                                "code": "815",
+                                "name": "Wirtschaftliche Massnahmen",
+                                "value": 0
+                            },
+                            {
+                                "code": "816",
+                                "name": "Direktzahlungen",
+                                "value": 538089
+                            }
+                        ]
+                    },
+                    {
+                        "code": "82",
+                        "name": "Forstwirtschaft",
+                        "value": 47789,
+                        "children": [
+                            {
+                                "code": "820",
+                                "name": "Forstwirtschaft",
+                                "value": 47789
+                            }
+                        ]
+                    },
+                    {
+                        "code": "83",
+                        "name": "Jagd und Fischerei",
+                        "value": 18414,
+                        "children": [
+                            {
+                                "code": "830",
+                                "name": "Jagd und Fischerei",
+                                "value": 18414
+                            }
+                        ]
+                    },
+                    {
+                        "code": "84",
+                        "name": "Tourismus",
+                        "value": 3867,
+                        "children": [
+                            {
+                                "code": "840",
+                                "name": "Tourismus",
+                                "value": 3867
+                            }
+                        ]
+                    },
+                    {
+                        "code": "85",
+                        "name": "Industrie, Gewerbe, Handel",
+                        "value": 41433,
+                        "children": [
+                            {
+                                "code": "850",
+                                "name": "Industrie, Gewerbe, Handel",
+                                "value": 41433
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "code": "9",
+                "name": "Finanz- und Lastenausgleich",
+                "value": 191494,
+                "children": [
+                    {
+                        "code": "93",
+                        "name": "Finanz- und Lastenausgleich",
+                        "value": 191494,
+                        "children": [
+                            {
+                                "code": "930",
+                                "name": "Finanz- und Lastenausgleich",
+                                "value": 191494
+                            }
+                        ]
+                    },
+                    {
+                        "code": "95",
+                        "name": "Ertragsanteile, übrige",
+                        "value": 9685,
+                        "children": [
+                            {
+                                "code": "950",
+                                "name": "Ertragsanteile, übrige",
+                                "value": 9685
+                            }
+                        ]
+                    },
+                    {
+                        "code": "96",
+                        "name": "Zinsen",
+                        "value": 122297,
+                        "children": [
+                            {
+                                "code": "961",
+                                "name": "Zinsen",
+                                "value": 122297
+                            },
+                            {
+                                "code": "963",
+                                "name": "Liegenschaften des Finanzvermögens",
+                                "value": 32
+                            },
+                            {
+                                "code": "969",
+                                "name": "Finanzvermögen, n. a. g.",
+                                "value": 10460
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "year": 2009
+    },
+    {
+        "children": [
+            {
+                "code": "0",
+                "name": "Legislative",
+                "value": 5502,
+                "children": [
+                    {
+                        "code": "01",
+                        "name": "Legislative",
+                        "value": 5502,
+                        "children": [
+                            {
+                                "code": "011",
+                                "name": "Legislative",
+                                "value": 5502
+                            },
+                            {
+                                "code": "012",
+                                "name": "Exekutive",
+                                "value": 3249
+                            }
+                        ]
+                    },
+                    {
+                        "code": "02",
+                        "name": "Finanz- und Steuerverwaltung",
+                        "value": 150369,
+                        "children": [
+                            {
+                                "code": "021",
+                                "name": "Finanz- und Steuerverwaltung",
+                                "value": 150369
+                            },
+                            {
+                                "code": "022",
+                                "name": "Allgemeine Dienste, übrige",
+                                "value": 199765
+                            },
+                            {
+                                "code": "029",
+                                "name": "Verwaltungsliegenschaften n.a.g.",
+                                "value": 270616
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "code": "1",
+                "name": "Polizei",
+                "value": 356751,
+                "children": [
+                    {
+                        "code": "11",
+                        "name": "Polizei",
+                        "value": 356751,
+                        "children": [
+                            {
+                                "code": "111",
+                                "name": "Polizei",
+                                "value": 356751
+                            },
+                            {
+                                "code": "112",
+                                "name": "Verkehrssicherheit",
+                                "value": 0
+                            },
+                            {
+                                "code": "113",
+                                "name": "Strassenverkehrs- und Schifffahrtsamt",
+                                "value": 42360
+                            }
+                        ]
+                    },
+                    {
+                        "code": "12",
+                        "name": "Rechtssprechung",
+                        "value": 210120,
+                        "children": [
+                            {
+                                "code": "120",
+                                "name": "Rechtssprechung",
+                                "value": 210120
+                            }
+                        ]
+                    },
+                    {
+                        "code": "13",
+                        "name": "Strafvollzug",
+                        "value": 128613,
+                        "children": [
+                            {
+                                "code": "130",
+                                "name": "Strafvollzug",
+                                "value": 128613
+                            }
+                        ]
+                    },
+                    {
+                        "code": "14",
+                        "name": "Allgemeines Rechtswesen",
+                        "value": 218161,
+                        "children": [
+                            {
+                                "code": "140",
+                                "name": "Allgemeines Rechtswesen",
+                                "value": 218161
+                            }
+                        ]
+                    },
+                    {
+                        "code": "16",
+                        "name": "Militärische Verteidigung",
+                        "value": 3058,
+                        "children": [
+                            {
+                                "code": "161",
+                                "name": "Militärische Verteidigung",
+                                "value": 3058
+                            },
+                            {
+                                "code": "162",
+                                "name": "Zivile Verteidigung",
+                                "value": 15738
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "code": "2",
+                "name": "Eingangsstufe",
+                "value": 123198,
+                "children": [
+                    {
+                        "code": "21",
+                        "name": "Eingangsstufe",
+                        "value": 123198,
+                        "children": [
+                            {
+                                "code": "211",
+                                "name": "Eingangsstufe",
+                                "value": 123198
+                            },
+                            {
+                                "code": "212",
+                                "name": "Primarstufe",
+                                "value": 578327
+                            },
+                            {
+                                "code": "213",
+                                "name": "Oberstufe, Sekundarstufe I",
+                                "value": 371642
+                            },
+                            {
+                                "code": "214",
+                                "name": "Musikschulen",
+                                "value": 0
+                            },
+                            {
+                                "code": "218",
+                                "name": "Tagesbetreuung",
+                                "value": 0
+                            },
+                            {
+                                "code": "219",
+                                "name": "Obligatorische Schule n.a.g.",
+                                "value": 84342
+                            }
+                        ]
+                    },
+                    {
+                        "code": "22",
+                        "name": "Sonderschulen",
+                        "value": 15452,
+                        "children": [
+                            {
+                                "code": "220",
+                                "name": "Sonderschulen",
+                                "value": 15452
+                            }
+                        ]
+                    },
+                    {
+                        "code": "23",
+                        "name": "Berufliche Grundbildung",
+                        "value": 508251,
+                        "children": [
+                            {
+                                "code": "230",
+                                "name": "Berufliche Grundbildung",
+                                "value": 508251
+                            }
+                        ]
+                    },
+                    {
+                        "code": "25",
+                        "name": "Gymnasiale Maturitätsschulen",
+                        "value": 178067,
+                        "children": [
+                            {
+                                "code": "251",
+                                "name": "Gymnasiale Maturitätsschulen",
+                                "value": 178067
+                            },
+                            {
+                                "code": "252",
+                                "name": "Fachmittelschulen und andere allgemeinbildende Schulen",
+                                "value": 0
+                            }
+                        ]
+                    },
+                    {
+                        "code": "26",
+                        "name": "Höhere Berufsbildung",
+                        "value": 4264,
+                        "children": [
+                            {
+                                "code": "260",
+                                "name": "Höhere Berufsbildung",
+                                "value": 4264
+                            }
+                        ]
+                    },
+                    {
+                        "code": "27",
+                        "name": "Universitäre Hochschulen",
+                        "value": 344990,
+                        "children": [
+                            {
+                                "code": "271",
+                                "name": "Universitäre Hochschulen",
+                                "value": 344990
+                            },
+                            {
+                                "code": "272",
+                                "name": "Pädagogische Hochschulen",
+                                "value": 98634
+                            },
+                            {
+                                "code": "273",
+                                "name": "Fachhochschulen",
+                                "value": 310673
+                            }
+                        ]
+                    },
+                    {
+                        "code": "28",
+                        "name": "Grundlagenforschung",
+                        "value": 0,
+                        "children": [
+                            {
+                                "code": "281",
+                                "name": "Grundlagenforschung",
+                                "value": 0
+                            }
+                        ]
+                    },
+                    {
+                        "code": "29",
+                        "name": "Verwaltung",
+                        "value": 32611,
+                        "children": [
+                            {
+                                "code": "291",
+                                "name": "Verwaltung",
+                                "value": 32611
+                            },
+                            {
+                                "code": "299",
+                                "name": "Bildung n.a.g.",
+                                "value": 42805
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "code": "3",
+                "name": "Museen und bildende Kunst",
+                "value": 0,
+                "children": [
+                    {
+                        "code": "31",
+                        "name": "Museen und bildende Kunst",
+                        "value": 0,
+                        "children": [
+                            {
+                                "code": "311",
+                                "name": "Museen und bildende Kunst",
+                                "value": 0
+                            },
+                            {
+                                "code": "312",
+                                "name": "Denkmalpflege und Heimatschutz",
+                                "value": 19824
+                            }
+                        ]
+                    },
+                    {
+                        "code": "32",
+                        "name": "Bibliotheken",
+                        "value": 0,
+                        "children": [
+                            {
+                                "code": "321",
+                                "name": "Bibliotheken",
+                                "value": 0
+                            },
+                            {
+                                "code": "322",
+                                "name": "Konzert und Theater",
+                                "value": 0
+                            },
+                            {
+                                "code": "329",
+                                "name": "Kultur n.a.g.",
+                                "value": 43748
+                            }
+                        ]
+                    },
+                    {
+                        "code": "33",
+                        "name": "Film und Kino",
+                        "value": 0,
+                        "children": [
+                            {
+                                "code": "331",
+                                "name": "Film und Kino",
+                                "value": 0
+                            }
+                        ]
+                    },
+                    {
+                        "code": "34",
+                        "name": "Sport",
+                        "value": 1249,
+                        "children": [
+                            {
+                                "code": "341",
+                                "name": "Sport",
+                                "value": 1249
+                            }
+                        ]
+                    },
+                    {
+                        "code": "35",
+                        "name": "Kirchen und religiöse Angelegenheiten",
+                        "value": 73184,
+                        "children": [
+                            {
+                                "code": "350",
+                                "name": "Kirchen und religiöse Angelegenheiten",
+                                "value": 73184
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "code": "4",
+                "name": "Spitäler",
+                "value": 1069237,
+                "children": [
+                    {
+                        "code": "41",
+                        "name": "Spitäler",
+                        "value": 1069237,
+                        "children": [
+                            {
+                                "code": "411",
+                                "name": "Spitäler",
+                                "value": 1069237
+                            },
+                            {
+                                "code": "412",
+                                "name": "Kranken-, Alters- und Pflegeheime",
+                                "value": 327392
+                            },
+                            {
+                                "code": "413",
+                                "name": "Psychiatrische Kliniken",
+                                "value": 310505
+                            }
+                        ]
+                    },
+                    {
+                        "code": "42",
+                        "name": "Ambulante Krankenpflege",
+                        "value": 0,
+                        "children": [
+                            {
+                                "code": "421",
+                                "name": "Ambulante Krankenpflege",
+                                "value": 0
+                            },
+                            {
+                                "code": "422",
+                                "name": "Rettungsdienste",
+                                "value": 4899
+                            }
+                        ]
+                    },
+                    {
+                        "code": "43",
+                        "name": "Alkohol- und Drogenprävention",
+                        "value": 23330,
+                        "children": [
+                            {
+                                "code": "431",
+                                "name": "Alkohol- und Drogenprävention",
+                                "value": 23330
+                            },
+                            {
+                                "code": "434",
+                                "name": "Lebensmittelkontrolle",
+                                "value": 9674
+                            }
+                        ]
+                    },
+                    {
+                        "code": "48",
+                        "name": "F&E in Gesundheit",
+                        "value": 0,
+                        "children": [
+                            {
+                                "code": "480",
+                                "name": "F&E in Gesundheit",
+                                "value": 0
+                            }
+                        ]
+                    },
+                    {
+                        "code": "49",
+                        "name": "Gesundheitswesen n.a.g.",
+                        "value": 11512,
+                        "children": [
+                            {
+                                "code": "490",
+                                "name": "Gesundheitswesen n.a.g.",
+                                "value": 11512
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "code": "5",
+                "name": "Krankenversicherung",
+                "value": 9242,
+                "children": [
+                    {
+                        "code": "51",
+                        "name": "Krankenversicherung",
+                        "value": 9242,
+                        "children": [
+                            {
+                                "code": "511",
+                                "name": "Krankenversicherung",
+                                "value": 9242
+                            },
+                            {
+                                "code": "512",
+                                "name": "Prämienverbilligungen",
+                                "value": 541084
+                            }
+                        ]
+                    },
+                    {
+                        "code": "52",
+                        "name": "Ergänzungsleistungen IV",
+                        "value": 235290,
+                        "children": [
+                            {
+                                "code": "522",
+                                "name": "Ergänzungsleistungen IV",
+                                "value": 235290
+                            },
+                            {
+                                "code": "523",
+                                "name": "Invalidenheime",
+                                "value": 373335
+                            },
+                            {
+                                "code": "524",
+                                "name": "Leistungen an Invalide",
+                                "value": 0
+                            }
+                        ]
+                    },
+                    {
+                        "code": "53",
+                        "name": "Alters- und Hinterlassenversicherung AHV",
+                        "value": 7095,
+                        "children": [
+                            {
+                                "code": "531",
+                                "name": "Alters- und Hinterlassenversicherung AHV",
+                                "value": 7095
+                            },
+                            {
+                                "code": "532",
+                                "name": "Ergänzungsleistungen AHV",
+                                "value": 399480
+                            },
+                            {
+                                "code": "533",
+                                "name": "Leistungen an Pensionierte",
+                                "value": 1669
+                            },
+                            {
+                                "code": "535",
+                                "name": "Leistungen an das Alter",
+                                "value": 0
+                            }
+                        ]
+                    },
+                    {
+                        "code": "54",
+                        "name": "Familienzulagen",
+                        "value": 7176,
+                        "children": [
+                            {
+                                "code": "541",
+                                "name": "Familienzulagen",
+                                "value": 7176
+                            },
+                            {
+                                "code": "544",
+                                "name": "Jugendschutz",
+                                "value": 43140
+                            },
+                            {
+                                "code": "545",
+                                "name": "Leistungen an Familien",
+                                "value": 0
+                            }
+                        ]
+                    },
+                    {
+                        "code": "55",
+                        "name": "Arbeitslosenversicherung",
+                        "value": 14277,
+                        "children": [
+                            {
+                                "code": "551",
+                                "name": "Arbeitslosenversicherung",
+                                "value": 14277
+                            },
+                            {
+                                "code": "559",
+                                "name": "Arbeitslosigkeit n.a.g.",
+                                "value": 0
+                            }
+                        ]
+                    },
+                    {
+                        "code": "57",
+                        "name": "Wirtschaftliche Hilfe",
+                        "value": 353999,
+                        "children": [
+                            {
+                                "code": "572",
+                                "name": "Wirtschaftliche Hilfe",
+                                "value": 353999
+                            },
+                            {
+                                "code": "573",
+                                "name": "Asylwesen",
+                                "value": 110342
+                            },
+                            {
+                                "code": "579",
+                                "name": "Fürsorge n.a.g.",
+                                "value": 16819
+                            }
+                        ]
+                    },
+                    {
+                        "code": "59",
+                        "name": "Hilfsaktionen im Ausland",
+                        "value": 0,
+                        "children": [
+                            {
+                                "code": "593",
+                                "name": "Hilfsaktionen im Ausland",
+                                "value": 0
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "code": "6",
+                "name": "Nationalstrassen",
+                "value": 295722,
+                "children": [
+                    {
+                        "code": "61",
+                        "name": "Nationalstrassen",
+                        "value": 295722,
+                        "children": [
+                            {
+                                "code": "611",
+                                "name": "Nationalstrassen",
+                                "value": 295722
+                            },
+                            {
+                                "code": "612",
+                                "name": "Hauptstrassen nach Bundesrecht",
+                                "value": 0
+                            },
+                            {
+                                "code": "613",
+                                "name": "Kantonsstrassen, übrige",
+                                "value": 225155
+                            },
+                            {
+                                "code": "619",
+                                "name": "Strassen n.a.g.",
+                                "value": 33748
+                            }
+                        ]
+                    },
+                    {
+                        "code": "62",
+                        "name": "Regionalverkehr",
+                        "value": 287979,
+                        "children": [
+                            {
+                                "code": "622",
+                                "name": "Regionalverkehr",
+                                "value": 287979
+                            },
+                            {
+                                "code": "623",
+                                "name": "Agglomerationsverkehr",
+                                "value": 62619
+                            },
+                            {
+                                "code": "629",
+                                "name": "Öffentlicher Verkehr n.a.g",
+                                "value": 2350
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "code": "7",
+                "name": "Wasserversorgung",
+                "value": 7906,
+                "children": [
+                    {
+                        "code": "71",
+                        "name": "Wasserversorgung",
+                        "value": 7906,
+                        "children": [
+                            {
+                                "code": "710",
+                                "name": "Wasserversorgung",
+                                "value": 7906
+                            }
+                        ]
+                    },
+                    {
+                        "code": "72",
+                        "name": "Abwasserbeseitigung",
+                        "value": 37423,
+                        "children": [
+                            {
+                                "code": "720",
+                                "name": "Abwasserbeseitigung",
+                                "value": 37423
+                            }
+                        ]
+                    },
+                    {
+                        "code": "73",
+                        "name": "Abfallwirtschaft",
+                        "value": 5378,
+                        "children": [
+                            {
+                                "code": "730",
+                                "name": "Abfallwirtschaft",
+                                "value": 5378
+                            }
+                        ]
+                    },
+                    {
+                        "code": "74",
+                        "name": "Gewässerverbauungen",
+                        "value": 9394,
+                        "children": [
+                            {
+                                "code": "741",
+                                "name": "Gewässerverbauungen",
+                                "value": 9394
+                            }
+                        ]
+                    },
+                    {
+                        "code": "75",
+                        "name": "Arten- und Landschaftsschutz",
+                        "value": 4861,
+                        "children": [
+                            {
+                                "code": "750",
+                                "name": "Arten- und Landschaftsschutz",
+                                "value": 4861
+                            }
+                        ]
+                    },
+                    {
+                        "code": "76",
+                        "name": "Luftreinhaltung und Klimaschutz",
+                        "value": 33737,
+                        "children": [
+                            {
+                                "code": "761",
+                                "name": "Luftreinhaltung und Klimaschutz",
+                                "value": 33737
+                            },
+                            {
+                                "code": "769",
+                                "name": "Bekämpfung von Umweltverschmutzung n.a.g.",
+                                "value": 2
+                            }
+                        ]
+                    },
+                    {
+                        "code": "77",
+                        "name": "Umweltschutz n.a.g.",
+                        "value": 4233,
+                        "children": [
+                            {
+                                "code": "779",
+                                "name": "Umweltschutz n.a.g.",
+                                "value": 4233
+                            }
+                        ]
+                    },
+                    {
+                        "code": "79",
+                        "name": "Raumordnung",
+                        "value": 6559,
+                        "children": [
+                            {
+                                "code": "790",
+                                "name": "Raumordnung",
+                                "value": 6559
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "code": "8",
+                "name": "Verwaltung, Vollzug und Kontrolle",
+                "value": 70966,
+                "children": [
+                    {
+                        "code": "81",
+                        "name": "Verwaltung, Vollzug und Kontrolle",
+                        "value": 70966,
+                        "children": [
+                            {
+                                "code": "811",
+                                "name": "Verwaltung, Vollzug und Kontrolle",
+                                "value": 70966
+                            },
+                            {
+                                "code": "812",
+                                "name": "Strukturverbesserungen",
+                                "value": 11296
+                            },
+                            {
+                                "code": "813",
+                                "name": "Produktionsverbesserungen Vieh",
+                                "value": 2481
+                            },
+                            {
+                                "code": "814",
+                                "name": "Produktionsverbesserungen Pflanzen",
+                                "value": 0
+                            },
+                            {
+                                "code": "815",
+                                "name": "Wirtschaftliche Massnahmen",
+                                "value": 0
+                            },
+                            {
+                                "code": "816",
+                                "name": "Direktzahlungen",
+                                "value": 570022
+                            }
+                        ]
+                    },
+                    {
+                        "code": "82",
+                        "name": "Forstwirtschaft",
+                        "value": 49515,
+                        "children": [
+                            {
+                                "code": "820",
+                                "name": "Forstwirtschaft",
+                                "value": 49515
+                            }
+                        ]
+                    },
+                    {
+                        "code": "83",
+                        "name": "Jagd und Fischerei",
+                        "value": 319,
+                        "children": [
+                            {
+                                "code": "830",
+                                "name": "Jagd und Fischerei",
+                                "value": 319
+                            }
+                        ]
+                    },
+                    {
+                        "code": "84",
+                        "name": "Tourismus",
+                        "value": 6528,
+                        "children": [
+                            {
+                                "code": "840",
+                                "name": "Tourismus",
+                                "value": 6528
+                            }
+                        ]
+                    },
+                    {
+                        "code": "85",
+                        "name": "Industrie, Gewerbe, Handel",
+                        "value": 48033,
+                        "children": [
+                            {
+                                "code": "850",
+                                "name": "Industrie, Gewerbe, Handel",
+                                "value": 48033
+                            }
+                        ]
+                    },
+                    {
+                        "code": "87",
+                        "name": "Energie n.a.g",
+                        "value": 1044,
+                        "children": [
+                            {
+                                "code": "879",
+                                "name": "Energie n.a.g",
+                                "value": 1044
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "code": "9",
+                "name": "Steuern",
+                "value": 67995,
+                "children": [
+                    {
+                        "code": "91",
+                        "name": "Steuern",
+                        "value": 67995,
+                        "children": [
+                            {
+                                "code": "910",
+                                "name": "Steuern",
+                                "value": 67995
+                            }
+                        ]
+                    },
+                    {
+                        "code": "93",
+                        "name": "Finanz- und Lastenausgleich",
+                        "value": 290644,
+                        "children": [
+                            {
+                                "code": "930",
+                                "name": "Finanz- und Lastenausgleich",
+                                "value": 290644
+                            }
+                        ]
+                    },
+                    {
+                        "code": "95",
+                        "name": "Ertragsanteile, übrige",
+                        "value": 11473,
+                        "children": [
+                            {
+                                "code": "950",
+                                "name": "Ertragsanteile, übrige",
+                                "value": 11473
+                            }
+                        ]
+                    },
+                    {
+                        "code": "96",
+                        "name": "Zinsen",
+                        "value": 107407,
+                        "children": [
+                            {
+                                "code": "961",
+                                "name": "Zinsen",
+                                "value": 107407
+                            },
+                            {
+                                "code": "963",
+                                "name": "Liegenschaften des Finanzvermögens",
+                                "value": 1681
+                            },
+                            {
+                                "code": "969",
+                                "name": "Finanzvermögen n.a.g.",
+                                "value": 8186
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "year": 2013
+    },
+    {
+        "children": [
+            {
+                "code": "0",
+                "name": "Legislative",
+                "value": 5578,
+                "children": [
+                    {
+                        "code": "01",
+                        "name": "Legislative",
+                        "value": 5578,
+                        "children": [
+                            {
+                                "code": "011",
+                                "name": "Legislative",
+                                "value": 5578
+                            },
+                            {
+                                "code": "012",
+                                "name": "Exekutive",
+                                "value": 3115
+                            }
+                        ]
+                    },
+                    {
+                        "code": "02",
+                        "name": "Finanz- und Steuerverwaltung",
+                        "value": 218983,
+                        "children": [
+                            {
+                                "code": "021",
+                                "name": "Finanz- und Steuerverwaltung",
+                                "value": 218983
+                            },
+                            {
+                                "code": "022",
+                                "name": "Allgemeine Dienste, übrige",
+                                "value": 194388
+                            },
+                            {
+                                "code": "029",
+                                "name": "Verwaltungsliegenschaften n.a.g.",
+                                "value": 478266
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "code": "1",
+                "name": "Polizei",
+                "value": 374921,
+                "children": [
+                    {
+                        "code": "11",
+                        "name": "Polizei",
+                        "value": 374921,
+                        "children": [
+                            {
+                                "code": "111",
+                                "name": "Polizei",
+                                "value": 374921
+                            },
+                            {
+                                "code": "113",
+                                "name": "Strassenverkehrs- und Schifffahrtsamt",
+                                "value": 43482
+                            }
+                        ]
+                    },
+                    {
+                        "code": "12",
+                        "name": "Rechtssprechung",
+                        "value": 210164,
+                        "children": [
+                            {
+                                "code": "120",
+                                "name": "Rechtssprechung",
+                                "value": 210164
+                            }
+                        ]
+                    },
+                    {
+                        "code": "13",
+                        "name": "Strafvollzug",
+                        "value": 122692,
+                        "children": [
+                            {
+                                "code": "130",
+                                "name": "Strafvollzug",
+                                "value": 122692
+                            }
+                        ]
+                    },
+                    {
+                        "code": "14",
+                        "name": "Allgemeines Rechtswesen",
+                        "value": 188451,
+                        "children": [
+                            {
+                                "code": "140",
+                                "name": "Allgemeines Rechtswesen",
+                                "value": 188451
+                            }
+                        ]
+                    },
+                    {
+                        "code": "16",
+                        "name": "Militärische Verteidigung",
+                        "value": 3253,
+                        "children": [
+                            {
+                                "code": "161",
+                                "name": "Militärische Verteidigung",
+                                "value": 3253
+                            },
+                            {
+                                "code": "162",
+                                "name": "Zivile Verteidigung",
+                                "value": 15655
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "code": "2",
+                "name": "Eingangsstufe",
+                "value": 121105,
+                "children": [
+                    {
+                        "code": "21",
+                        "name": "Eingangsstufe",
+                        "value": 121105,
+                        "children": [
+                            {
+                                "code": "211",
+                                "name": "Eingangsstufe",
+                                "value": 121105
+                            },
+                            {
+                                "code": "212",
+                                "name": "Primarstufe",
+                                "value": 589081
+                            },
+                            {
+                                "code": "213",
+                                "name": "Oberstufe,  Sekundarstufe I",
+                                "value": 378931
+                            },
+                            {
+                                "code": "219",
+                                "name": "Obligatorische Schule n.a.g.",
+                                "value": 74366
+                            }
+                        ]
+                    },
+                    {
+                        "code": "22",
+                        "name": "Sonderschulen",
+                        "value": 15491,
+                        "children": [
+                            {
+                                "code": "220",
+                                "name": "Sonderschulen",
+                                "value": 15491
+                            }
+                        ]
+                    },
+                    {
+                        "code": "23",
+                        "name": "Berufliche Grundbildung",
+                        "value": 519853,
+                        "children": [
+                            {
+                                "code": "230",
+                                "name": "Berufliche Grundbildung",
+                                "value": 519853
+                            }
+                        ]
+                    },
+                    {
+                        "code": "25",
+                        "name": "Gymnasiale Maturitätsschulen",
+                        "value": 175964,
+                        "children": [
+                            {
+                                "code": "251",
+                                "name": "Gymnasiale Maturitätsschulen",
+                                "value": 175964
+                            },
+                            {
+                                "code": "252",
+                                "name": "Fachmittelschulen und andere allgemeinbildende Schulen",
+                                "value": 0
+                            }
+                        ]
+                    },
+                    {
+                        "code": "26",
+                        "name": "Höhere Berufsbildung",
+                        "value": 0,
+                        "children": [
+                            {
+                                "code": "260",
+                                "name": "Höhere Berufsbildung",
+                                "value": 0
+                            }
+                        ]
+                    },
+                    {
+                        "code": "27",
+                        "name": "Universitäre Hochschulen",
+                        "value": 478800,
+                        "children": [
+                            {
+                                "code": "271",
+                                "name": "Universitäre Hochschulen",
+                                "value": 478800
+                            },
+                            {
+                                "code": "272",
+                                "name": "Pädagogische Hochschulen",
+                                "value": 96332
+                            },
+                            {
+                                "code": "273",
+                                "name": "Fachhochschulen",
+                                "value": 326333
+                            }
+                        ]
+                    },
+                    {
+                        "code": "29",
+                        "name": "Verwaltung",
+                        "value": 72661,
+                        "children": [
+                            {
+                                "code": "291",
+                                "name": "Verwaltung",
+                                "value": 72661
+                            },
+                            {
+                                "code": "299",
+                                "name": "Bildung n.a.g.",
+                                "value": 29015
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "code": "3",
+                "name": "Denkmalpflege und Heimatschutz",
+                "value": 21453,
+                "children": [
+                    {
+                        "code": "31",
+                        "name": "Denkmalpflege und Heimatschutz",
+                        "value": 21453,
+                        "children": [
+                            {
+                                "code": "312",
+                                "name": "Denkmalpflege und Heimatschutz",
+                                "value": 21453
+                            }
+                        ]
+                    },
+                    {
+                        "code": "32",
+                        "name": "Kultur n.a.g.",
+                        "value": 46920,
+                        "children": [
+                            {
+                                "code": "329",
+                                "name": "Kultur n.a.g.",
+                                "value": 46920
+                            }
+                        ]
+                    },
+                    {
+                        "code": "34",
+                        "name": "Sport",
+                        "value": 1123,
+                        "children": [
+                            {
+                                "code": "341",
+                                "name": "Sport",
+                                "value": 1123
+                            }
+                        ]
+                    },
+                    {
+                        "code": "35",
+                        "name": "Kirchen und religiöse Angelegenheiten",
+                        "value": 74996,
+                        "children": [
+                            {
+                                "code": "350",
+                                "name": "Kirchen und religiöse Angelegenheiten",
+                                "value": 74996
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "code": "4",
+                "name": "Spitäler",
+                "value": 1165877,
+                "children": [
+                    {
+                        "code": "41",
+                        "name": "Spitäler",
+                        "value": 1165877,
+                        "children": [
+                            {
+                                "code": "411",
+                                "name": "Spitäler",
+                                "value": 1165877
+                            },
+                            {
+                                "code": "412",
+                                "name": "Kranken- und Pflegeheime",
+                                "value": 306267
+                            },
+                            {
+                                "code": "413",
+                                "name": "Psychiatrische Kliniken",
+                                "value": 324114
+                            }
+                        ]
+                    },
+                    {
+                        "code": "42",
+                        "name": "Rettungsdienste",
+                        "value": 8491,
+                        "children": [
+                            {
+                                "code": "422",
+                                "name": "Rettungsdienste",
+                                "value": 8491
+                            }
+                        ]
+                    },
+                    {
+                        "code": "43",
+                        "name": "Alkohol- und Drogenmissbrauch",
+                        "value": 23728,
+                        "children": [
+                            {
+                                "code": "431",
+                                "name": "Alkohol- und Drogenmissbrauch",
+                                "value": 23728
+                            },
+                            {
+                                "code": "434",
+                                "name": "Lebensmittelkontrolle",
+                                "value": 10017
+                            }
+                        ]
+                    },
+                    {
+                        "code": "48",
+                        "name": "F&E in Gesundheit",
+                        "value": 98239,
+                        "children": [
+                            {
+                                "code": "480",
+                                "name": "F&E in Gesundheit",
+                                "value": 98239
+                            }
+                        ]
+                    },
+                    {
+                        "code": "49",
+                        "name": "Gesundheitswesen n.a.g.",
+                        "value": 12893,
+                        "children": [
+                            {
+                                "code": "490",
+                                "name": "Gesundheitswesen n.a.g.",
+                                "value": 12893
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "code": "5",
+                "name": "Krankenversicherung",
+                "value": 23293,
+                "children": [
+                    {
+                        "code": "51",
+                        "name": "Krankenversicherung",
+                        "value": 23293,
+                        "children": [
+                            {
+                                "code": "511",
+                                "name": "Krankenversicherung",
+                                "value": 23293
+                            },
+                            {
+                                "code": "512",
+                                "name": "Prämienverbilligungen",
+                                "value": 564873
+                            }
+                        ]
+                    },
+                    {
+                        "code": "52",
+                        "name": "Ergänzungsleistungen IV",
+                        "value": 254794,
+                        "children": [
+                            {
+                                "code": "522",
+                                "name": "Ergänzungsleistungen IV",
+                                "value": 254794
+                            },
+                            {
+                                "code": "523",
+                                "name": "Invalidenheime",
+                                "value": 370220
+                            }
+                        ]
+                    },
+                    {
+                        "code": "53",
+                        "name": "Alters- und Hinterlassenversicherung AHV",
+                        "value": 0,
+                        "children": [
+                            {
+                                "code": "531",
+                                "name": "Alters- und Hinterlassenversicherung AHV",
+                                "value": 0
+                            },
+                            {
+                                "code": "532",
+                                "name": "Ergänzungsleistungen AHV",
+                                "value": 382191
+                            },
+                            {
+                                "code": "533",
+                                "name": "Leistungen an Pensionierte",
+                                "value": 1766
+                            }
+                        ]
+                    },
+                    {
+                        "code": "54",
+                        "name": "Jugendschutz",
+                        "value": 48069,
+                        "children": [
+                            {
+                                "code": "544",
+                                "name": "Jugendschutz",
+                                "value": 48069
+                            }
+                        ]
+                    },
+                    {
+                        "code": "55",
+                        "name": "Arbeitslosenversicherung",
+                        "value": 14169,
+                        "children": [
+                            {
+                                "code": "551",
+                                "name": "Arbeitslosenversicherung",
+                                "value": 14169
+                            },
+                            {
+                                "code": "559",
+                                "name": "Arbeitslosigkeit n.a.g.",
+                                "value": 0
+                            }
+                        ]
+                    },
+                    {
+                        "code": "57",
+                        "name": "Wirtschaftliche Hilfe",
+                        "value": 369196,
+                        "children": [
+                            {
+                                "code": "572",
+                                "name": "Wirtschaftliche Hilfe",
+                                "value": 369196
+                            },
+                            {
+                                "code": "573",
+                                "name": "Asylwesen",
+                                "value": 10855
+                            },
+                            {
+                                "code": "579",
+                                "name": "Fürsorge n.a.g.",
+                                "value": 43759
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "code": "6",
+                "name": "Nationalstrassen",
+                "value": 284459,
+                "children": [
+                    {
+                        "code": "61",
+                        "name": "Nationalstrassen",
+                        "value": 284459,
+                        "children": [
+                            {
+                                "code": "611",
+                                "name": "Nationalstrassen",
+                                "value": 284459
+                            },
+                            {
+                                "code": "613",
+                                "name": "Kantonsstrassen, übrige",
+                                "value": 241051
+                            },
+                            {
+                                "code": "619",
+                                "name": "Strassen n.a.g.",
+                                "value": 41694
+                            }
+                        ]
+                    },
+                    {
+                        "code": "62",
+                        "name": "Regionalverkehr",
+                        "value": 270719,
+                        "children": [
+                            {
+                                "code": "622",
+                                "name": "Regionalverkehr",
+                                "value": 270719
+                            },
+                            {
+                                "code": "623",
+                                "name": "Agglomerationsverkehr",
+                                "value": 66457
+                            },
+                            {
+                                "code": "629",
+                                "name": "Öffentlicher Verkehr n.a.g",
+                                "value": 2828
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "code": "7",
+                "name": "Wasserversorgung",
+                "value": 4493,
+                "children": [
+                    {
+                        "code": "71",
+                        "name": "Wasserversorgung",
+                        "value": 4493,
+                        "children": [
+                            {
+                                "code": "710",
+                                "name": "Wasserversorgung",
+                                "value": 4493
+                            }
+                        ]
+                    },
+                    {
+                        "code": "72",
+                        "name": "Abwasserbeseitigung",
+                        "value": 40254,
+                        "children": [
+                            {
+                                "code": "720",
+                                "name": "Abwasserbeseitigung",
+                                "value": 40254
+                            }
+                        ]
+                    },
+                    {
+                        "code": "73",
+                        "name": "Abfallwirtschaft",
+                        "value": 4567,
+                        "children": [
+                            {
+                                "code": "730",
+                                "name": "Abfallwirtschaft",
+                                "value": 4567
+                            }
+                        ]
+                    },
+                    {
+                        "code": "74",
+                        "name": "Gewässerverbauungen",
+                        "value": 2176,
+                        "children": [
+                            {
+                                "code": "741",
+                                "name": "Gewässerverbauungen",
+                                "value": 2176
+                            }
+                        ]
+                    },
+                    {
+                        "code": "75",
+                        "name": "Arten- und Landschaftsschutz",
+                        "value": 2611,
+                        "children": [
+                            {
+                                "code": "750",
+                                "name": "Arten- und Landschaftsschutz",
+                                "value": 2611
+                            }
+                        ]
+                    },
+                    {
+                        "code": "76",
+                        "name": "Luftreinhaltung und Klimaschutz",
+                        "value": 21,
+                        "children": [
+                            {
+                                "code": "761",
+                                "name": "Luftreinhaltung und Klimaschutz",
+                                "value": 21
+                            }
+                        ]
+                    },
+                    {
+                        "code": "77",
+                        "name": "Umweltschutz n.a.g.",
+                        "value": 46327,
+                        "children": [
+                            {
+                                "code": "779",
+                                "name": "Umweltschutz n.a.g.",
+                                "value": 46327
+                            }
+                        ]
+                    },
+                    {
+                        "code": "79",
+                        "name": "Raumordnung",
+                        "value": 5948,
+                        "children": [
+                            {
+                                "code": "790",
+                                "name": "Raumordnung",
+                                "value": 5948
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "code": "8",
+                "name": "Verwaltung, Vollzug und Kontrolle",
+                "value": 67219,
+                "children": [
+                    {
+                        "code": "81",
+                        "name": "Verwaltung, Vollzug und Kontrolle",
+                        "value": 67219,
+                        "children": [
+                            {
+                                "code": "811",
+                                "name": "Verwaltung, Vollzug und Kontrolle",
+                                "value": 67219
+                            },
+                            {
+                                "code": "812",
+                                "name": "Strukturverbesserungen",
+                                "value": 11134
+                            },
+                            {
+                                "code": "813",
+                                "name": "Produktionsverbesserungen Vieh",
+                                "value": 3775
+                            },
+                            {
+                                "code": "814",
+                                "name": "Produktionsverbesserungen Pflanzen",
+                                "value": 0
+                            },
+                            {
+                                "code": "815",
+                                "name": "Wirtschaftliche Massnahmen",
+                                "value": 0
+                            },
+                            {
+                                "code": "816",
+                                "name": "Direktzahlungen",
+                                "value": 568800
+                            }
+                        ]
+                    },
+                    {
+                        "code": "82",
+                        "name": "Forstwirtschaft",
+                        "value": 51210,
+                        "children": [
+                            {
+                                "code": "820",
+                                "name": "Forstwirtschaft",
+                                "value": 51210
+                            }
+                        ]
+                    },
+                    {
+                        "code": "83",
+                        "name": "Jagd und Fischerei",
+                        "value": 312,
+                        "children": [
+                            {
+                                "code": "830",
+                                "name": "Jagd und Fischerei",
+                                "value": 312
+                            }
+                        ]
+                    },
+                    {
+                        "code": "84",
+                        "name": "Tourismus",
+                        "value": 4135,
+                        "children": [
+                            {
+                                "code": "840",
+                                "name": "Tourismus",
+                                "value": 4135
+                            }
+                        ]
+                    },
+                    {
+                        "code": "85",
+                        "name": "Industrie, Gewerbe, Handel",
+                        "value": 43391,
+                        "children": [
+                            {
+                                "code": "850",
+                                "name": "Industrie, Gewerbe, Handel",
+                                "value": 43391
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "code": "9",
+                "name": "Steuern",
+                "value": 14,
+                "children": [
+                    {
+                        "code": "91",
+                        "name": "Steuern",
+                        "value": 14,
+                        "children": [
+                            {
+                                "code": "910",
+                                "name": "Steuern",
+                                "value": 14
+                            }
+                        ]
+                    },
+                    {
+                        "code": "93",
+                        "name": "Finanz- und Lastenausgleich",
+                        "value": 291146,
+                        "children": [
+                            {
+                                "code": "930",
+                                "name": "Finanz- und Lastenausgleich",
+                                "value": 291146
+                            }
+                        ]
+                    },
+                    {
+                        "code": "95",
+                        "name": "Ertragsanteile, übrige",
+                        "value": 12978,
+                        "children": [
+                            {
+                                "code": "950",
+                                "name": "Ertragsanteile, übrige",
+                                "value": 12978
+                            }
+                        ]
+                    },
+                    {
+                        "code": "96",
+                        "name": "Zinsen",
+                        "value": 107997,
+                        "children": [
+                            {
+                                "code": "961",
+                                "name": "Zinsen",
+                                "value": 107997
+                            },
+                            {
+                                "code": "963",
+                                "name": "Liegenschaften des Finanzvermögens",
+                                "value": 463
+                            },
+                            {
+                                "code": "969",
+                                "name": "Finanzvermögen n.a.g.",
+                                "value": 5933
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "year": 2012
+    }
+]

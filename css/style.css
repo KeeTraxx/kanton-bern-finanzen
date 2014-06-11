@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div#content {
+    position:relative;
+}
+
+div#vis {
+    margin-right: 500px;
+}
+
+div#info {
+    position: absolute;
+    width: 480px;
+    right: 0px;
+    top: 0;
+}
+
+@font-face {
+    font-family: Junction;
+    src: url("../fonts/Junction.otf") format("opentype");
+}
+
+h1 {
+    font-family: Junction, Helvetica, Verdana, Arial, sans-serif;
+    color: dodgerblue;
+}
