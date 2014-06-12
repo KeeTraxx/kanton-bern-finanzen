@@ -22,6 +22,11 @@ div#info {
     top: 0;
 }
 
+div#info div.d3-slider {
+    width: 360px;
+    overflow: visible;
+}
+
 @font-face {
     font-family: Junction;
     src: url("../fonts/Junction.otf") format("opentype");
