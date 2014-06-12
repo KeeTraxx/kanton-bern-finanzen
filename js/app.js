@@ -10,7 +10,7 @@ angular.module('ktbe', [
 
 angular.module('ktbe.controllers', [])
     .controller('VisualizationController', ['$scope', '$http', function ($scope, $http) {
-        $http.get('data/data2.json').success(function (data) {
+        $http.get('data/data.json').success(function (data) {
             $scope.data = data;
         });
     }]);
