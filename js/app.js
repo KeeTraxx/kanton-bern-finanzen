@@ -230,7 +230,7 @@ angular.module('ktbe.directives', [])
                         .append('tr');
 
                     newTr.append('td').text(function(d) {return d.name});
-                    newTr.append('td').text(function(d) {return d.values[scope.selectedYear].toLocaleString()});
+                    newTr.append('td').text(function(d) {return d.values[scope.selectedYear].toLocaleString("en-US").replace(',',"'")});
 
                     tr.exit()
                         .remove();
