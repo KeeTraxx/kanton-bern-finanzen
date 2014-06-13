@@ -22,12 +22,11 @@ div#info {
     top: 0;
 }
 
+div#info table {
+    font-size: small;
+}
+
 div#slider {
-    /*
-    width: 360px;
-    overflow: visible;
-    margin-bottom: 40px;
-    margin-left: 50px;*/
     width: 500px;
     position: fixed;
     bottom: 50px;
@@ -48,3 +47,4 @@ h1 {
     top: 0;
     left: 0;
 }
+
