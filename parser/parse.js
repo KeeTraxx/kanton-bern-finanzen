@@ -50,7 +50,7 @@ kexcel.open(path.join('input','input.xlsx'), function(err, workbook){
                     node.children = node.children || [];
                     node.children.push(childnode);
                 }
-                childnode.values[year] = parseInt(sheet.getCellValue(row, 8) ) || 0;
+                childnode.values[year] = parseFloat(sheet.getCellValue(row, 8) ) || 0;
                 node = childnode;
                 return c;
             },'');
@@ -62,11 +62,11 @@ kexcel.open(path.join('input','input.xlsx'), function(err, workbook){
         console.log(e);
     }
 
-    fs.writeFile(path.join('..','data', 'data.json'), JSON.stringify(data, null, 4), function(){
+    /*fs.writeFile(path.join('..','data', 'data.json'), JSON.stringify(data, null, 4), function(){
         console.log('done!');
-    });
+    });*/
 
-    fs.writeFile(path.join('..','data', 'data2.json'), JSON.stringify(nodeData, null, 4), function(){
+    fs.writeFile(path.join('..','data', 'data.json'), JSON.stringify(nodeData, null, 4), function(){
         console.log('done!');
     });
 });
