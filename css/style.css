@@ -26,6 +26,10 @@ div#info table {
     font-size: small;
 }
 
+div#info table tr td {
+    vertical-align: middle;
+}
+
 div#slider {
     width: 500px;
     position: fixed;
@@ -48,3 +52,13 @@ h1 {
     left: 0;
 }
 
+#year {
+    font-size: 242px;
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+td.infocol {
+    font-size: large;
+    text-align: center;
+}

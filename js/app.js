@@ -10,10 +10,11 @@ angular.module('ktbe', [
 
 angular.module('ktbe.controllers', [])
     .controller('VisualizationController', ['$scope', '$http', function ($scope, $http) {
+        $scope.color = d3.scale.category10().domain(d3.range(0, 10));
         $http.get('data/data.json').success(function (data) {
             $scope.data = data;
-            $scope.$watch('selectedCode', function(code){
-                if ( code ) {
+            $scope.$watch('selectedCode', function (code) {
+                if (code) {
                     $scope.selectedNode = findRecursive(data, code);
                 } else {
                     $scope.selectedNode = $scope.data;
@@ -78,6 +79,15 @@ angular.module('ktbe.directives', [])
                     return d.name;
                 });
                 svg.call(tip);
+                svg.on('click', function () {
+                    console.log(d3.event.target, arguments, this);
+                    if (d3.event.target == this) {
+                        var parent = scope.selectedCode.substr(0, scope.selectedCode.length - 1);
+                        console.log(parent);
+                        scope.selectedCode = scope.selectedCode.length > 0 ? parent : scope.selectedCode;
+                        scope.$apply();
+                    }
+                });
                 function tick(e) {
                     d3.selectAll('g.node')
                         .each(collide(0.3, nodes))
@@ -115,7 +125,7 @@ angular.module('ktbe.directives', [])
 
                 function update() {
                     // do nothing if there is no year and node
-                    if (! ( scope.selectedYear && scope.selectedNode )) return;
+                    if (!( scope.selectedYear && scope.selectedNode )) return;
                     console.log('update', scope.selectedYear);
 
                     var height = parseInt(svg.style('height'));
@@ -145,8 +155,6 @@ angular.module('ktbe.directives', [])
                         return d.code
                     });
 
-                    var color = d3.scale.category10().domain(d3.range(0,10));
-
                     nodeG.exit()
                         .transition()
                         .attr('transform', 'scale(0)')
@@ -155,9 +163,9 @@ angular.module('ktbe.directives', [])
                     var g = nodeG.enter()
                         .append('g')
                         .attr('class', 'node')
-                        .on('click', function(d){
+                        .on('click', function (d) {
                             if (d3.event.defaultPrevented) return;
-                            if ( d.children ) {
+                            if (d.children) {
                                 scope.selectedCode = d.code;
                                 scope.$apply();
                             }
@@ -171,7 +179,7 @@ angular.module('ktbe.directives', [])
                         .append('circle')
                         .attr('class', 'backdrop')
                         .attr('fill', function (d) {
-                            return color(parseInt(d.code[0]));
+                            return scope.color(parseInt(d.code[0]));
                         })
                         .style('opacity', 0.4)
                         .on('mouseover', tip.show)
@@ -182,8 +190,8 @@ angular.module('ktbe.directives', [])
 
                     g.append('circle')
                         .attr('fill', 'none')
-                        .style('stroke', function(d){
-                            return color(parseInt(d.code[0]));
+                        .style('stroke', function (d) {
+                            return scope.color(parseInt(d.code[0]));
                         })
                         .style('stroke-width', 2)
                         .style('opacity', 0.6);
@@ -214,23 +222,38 @@ angular.module('ktbe.directives', [])
             }
         }
     }])
-    .directive('financeTable', [function(){
+    .directive('financeTable', [function () {
         return {
             restrict: 'A',
-            link: function(scope, el) {
+            link: function (scope, el) {
                 scope.$watch('selectedNode', update);
                 scope.$watch('selectedYear', update);
                 var table = d3.select(el[0]);
 
                 function update() {
-                    if ( !(  scope.selectedYear && scope.selectedNode ) ) return;
-                    var tr = table.select('tbody').selectAll('tr').data(scope.selectedNode.children, function(d){return d.code});
+                    if (!(  scope.selectedYear && scope.selectedNode )) return;
+                    var tr = table.select('tbody').selectAll('tr').data(scope.selectedNode.children, function (d) {
+                        return d.code
+                    });
 
                     var newTr = tr.enter()
                         .append('tr');
 
-                    newTr.append('td').text(function(d) {return d.name});
-                    newTr.append('td').text(function(d) {return d.values[scope.selectedYear].toLocaleString("en-US").replace(',',"'")});
+                    newTr.append('td')
+                        .attr('class', 'infocol')
+                        .html('<i class="fa fa-info-circle"></i>')
+                        .style('color', function (d) {
+                            return scope.color(parseInt(d.code[0]));
+                        });
+                    newTr.append('td').text(function (d) {
+                        return d.name
+                    });
+                    newTr.append('td');
+
+                    tr.select('td:nth-child(3)')
+                        .text(function (d) {
+                            return d.values[scope.selectedYear] ? d.values[scope.selectedYear].toLocaleString("en-US").replace(/,/g, "'") : '-';
+                        });
 
                     tr.exit()
                         .remove();
