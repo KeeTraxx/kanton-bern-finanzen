@@ -74,6 +74,30 @@ angular.module('ktbe.directives', [])
                 var nodes = [];
                 scope.$watch('selectedYear', update);
                 scope.$watch('selectedNode', update);
+
+                scope.$watch('hover', function (node) {
+                    svg.selectAll('circle.border')
+                        .transition()
+                        .style('stroke-width', 2);
+
+                    var g = svg.selectAll('g.node')
+                        .filter(function (d) {
+                            return d == node;
+                        });
+
+                    g.select('circle.border')
+                        .transition()
+                        .style('stroke-width', 7);
+
+                    g.select('g.bear')
+                        .transition()
+                        .attr('transform', 'rotate(30)')
+                        .transition()
+                        .duration(2000)
+                        .ease('elastic-in')
+                        .attr('transform', 'rotate(0)');
+                });
+
                 $($window).on('resize', update);
                 var tip = d3.tip().attr('class', 'd3-tip').html(function (d) {
                     return d.name;
@@ -171,7 +195,7 @@ angular.module('ktbe.directives', [])
                             }
                         });
 
-                    g.append('use')
+                    g.append('g').attr('class', 'bear').append('use')
                         .attr('xlink:href', '#bear')
                         .attr('opacity', 0.2);
 
@@ -182,27 +206,36 @@ angular.module('ktbe.directives', [])
                             return scope.color(parseInt(d.code[0]));
                         })
                         .style('opacity', 0.4)
-                        .on('mouseover', tip.show)
-                        .on('mouseout', tip.hide);
+                        .on('mouseover', function (d) {
+                            tip.show(d);
+                            scope.hover = d;
+                            scope.$apply();
+                        })
+                        .on('mouseout', function (d) {
+                            tip.hide(d);
+                            scope.hover = null;
+                            scope.$apply();
+                        });
 
                     g.on('mousedown', tip.hide);
 
 
                     g.append('circle')
                         .attr('fill', 'none')
+                        .attr('class', 'border')
                         .style('stroke', function (d) {
                             return scope.color(parseInt(d.code[0]));
                         })
                         .style('stroke-width', 2)
                         .style('opacity', 0.6);
 
-                    nodeG.call(force.drag);
 
                     nodeG.selectAll('circle')
-                        .transition()
                         .attr('r', function (d) {
                             return d.radius
                         });
+
+                    nodeG.call(force.drag);
 
                     nodeG.select('use')
                         .attr('transform', function (d) {
@@ -228,7 +261,15 @@ angular.module('ktbe.directives', [])
             link: function (scope, el) {
                 scope.$watch('selectedNode', update);
                 scope.$watch('selectedYear', update);
+
                 var table = d3.select(el[0]);
+
+                scope.$watch('hover', function (node) {
+                    table.selectAll('tbody tr').classed('info', false);
+                    var tr = table.selectAll('tbody tr').filter(function (d) {
+                        return node == d;
+                    }).classed('info', true);
+                });
 
                 function update() {
                     if (!(  scope.selectedYear && scope.selectedNode )) return;
@@ -237,7 +278,22 @@ angular.module('ktbe.directives', [])
                     });
 
                     var newTr = tr.enter()
-                        .append('tr');
+                        .append('tr')
+                        .on('mouseover', function(d){
+                            scope.hover = d;
+                            scope.$apply();
+                        })
+                        .on('mouseout', function(d){
+                            scope.hover = null;
+                            scope.$apply();
+                        })
+                        .on('click', function(d){
+                            if (d3.event.defaultPrevented) return;
+                            if (d.children) {
+                                scope.selectedCode = d.code;
+                                scope.$apply();
+                            }
+                        });
 
                     newTr.append('td')
                         .attr('class', 'infocol')
