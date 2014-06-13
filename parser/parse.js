@@ -61,7 +61,7 @@ kexcel.open(path.join('input','input.xlsx'), function(err, workbook){
     } catch (e) {
         console.log(e);
     }
-    //console.log(util.inspect(data, {showHidden: false, depth: null}));
+
     fs.writeFile(path.join('..','data', 'data.json'), JSON.stringify(data, null, 4), function(){
         console.log('done!');
     });

@@ -220,9 +220,21 @@ angular.module('ktbe.directives', [])
             link: function(scope, el) {
                 scope.$watch('selectedNode', update);
                 scope.$watch('selectedYear', update);
+                var table = d3.select(el[0]);
 
                 function update() {
                     console.log('update', scope.selectedNode, scope.selectedYear);
+                    var tr = table.select('tbody').selectAll('tr').data(scope.selectedNode.children, function(d){return d.code});
+
+                    var newTr = tr.enter()
+                        .append('tr');
+
+                    newTr.append('td').text(function(d) {return d.name});
+                    newTr.append('td').text(function(d) {return d.values[scope.selectedYear]});
+
+                    tr.exit()
+                        .remove();
+
                 }
             }
         }
