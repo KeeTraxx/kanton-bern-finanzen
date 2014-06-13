@@ -12,7 +12,29 @@ angular.module('ktbe.controllers', [])
     .controller('VisualizationController', ['$scope', '$http', function ($scope, $http) {
         $http.get('data/data.json').success(function (data) {
             $scope.data = data;
+            $scope.$watch('selectedCode', function(code){
+                if ( code ) {
+                    $scope.selectedNode = findRecursive(data, code);
+                } else {
+                    $scope.selectedNode = $scope.data;
+                }
+            });
         });
+
+        function findRecursive(nodes, code) {
+            var node = nodes;
+
+            _.reduce(code, function (memo, d) {
+                var c = memo + d;
+                console.log('looking for', c);
+                node = _.find(node.children, function (d) {
+                    return d.code == c;
+                });
+                return c;
+            }, '');
+
+            return node;
+        }
     }]);
 
 angular.module('ktbe.directives', [])
@@ -91,33 +113,15 @@ angular.module('ktbe.directives', [])
                     };
                 }
 
-                function findRecursive(nodes, code) {
-                    var node = null;
-
-                    _.reduce(code, function (memo, d) {
-                        var c = memo + d;
-                        node = _.find(nodes, function (d) {
-                            return d.code == c
-                        });
-                        return c;
-                    }, '');
-
-                    return node;
-                }
-
                 function update() {
                     // do nothing if there is no year and node
-                    if (!scope.selectedYear) return;
+                    if (! ( scope.selectedYear && scope.selectedNode )) return;
                     console.log('update', scope.selectedYear);
 
                     var height = parseInt(svg.style('height'));
                     var width = parseInt(svg.style('width'));
 
-                    var node = scope.data;
-
-                    if (scope.selectedCode) {
-                        node = findRecursive(data.children, scope.selectedCode);
-                    }
+                    var node = scope.selectedNode;
 
                     var max = d3.max(node.children, function (d) {
                         return d.values[scope.selectedYear];
@@ -129,7 +133,7 @@ angular.module('ktbe.directives', [])
 
 
                     nodes = _.each(node.children, function (d) {
-                        d.radius = scale(d.values[scope.selectedYear]);
+                        d.radius = d.values[scope.selectedYear] ? scale(d.values[scope.selectedYear]) : 0;
                     });
 
                     force
@@ -141,7 +145,7 @@ angular.module('ktbe.directives', [])
                         return d.code
                     });
 
-                    var color = d3.scale.category10();
+                    var color = d3.scale.category10().domain(d3.range(0,10));
 
                     nodeG.exit()
                         .transition()
@@ -150,7 +154,14 @@ angular.module('ktbe.directives', [])
 
                     var g = nodeG.enter()
                         .append('g')
-                        .attr('class', 'node');
+                        .attr('class', 'node')
+                        .on('click', function(d){
+                            if (d3.event.defaultPrevented) return;
+                            if ( d.children ) {
+                                scope.selectedCode = d.code;
+                                scope.$apply();
+                            }
+                        });
 
                     g.append('use')
                         .attr('xlink:href', '#bear')
@@ -160,18 +171,19 @@ angular.module('ktbe.directives', [])
                         .append('circle')
                         .attr('class', 'backdrop')
                         .attr('fill', function (d) {
-                            return color(d.code[0]);
+                            return color(parseInt(d.code[0]));
                         })
                         .style('opacity', 0.4)
                         .on('mouseover', tip.show)
                         .on('mouseout', tip.hide);
 
+                    g.on('mousedown', tip.hide);
 
 
                     g.append('circle')
                         .attr('fill', 'none')
                         .style('stroke', function(d){
-                            return color(d.code[0]);
+                            return color(parseInt(d.code[0]));
                         })
                         .style('stroke-width', 2)
                         .style('opacity', 0.6);
@@ -196,8 +208,21 @@ angular.module('ktbe.directives', [])
                         .ease('back-out')
                         .attr('transform', function (d) {
                             return 'rotate(0),scale(' + d.radius / 60 + ')'
-                        })
+                        });
 
+                }
+            }
+        }
+    }])
+    .directive('financeTable', [function(){
+        return {
+            restrict: 'A',
+            link: function(scope, el) {
+                scope.$watch('selectedNode', update);
+                scope.$watch('selectedYear', update);
+
+                function update() {
+                    console.log('update', scope.selectedNode, scope.selectedYear);
                 }
             }
         }

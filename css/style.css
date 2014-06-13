@@ -7,7 +7,7 @@ div#content {
 }
 
 div#vis {
-    margin-right: 500px;
+    margin-right: 540px;
 }
 
 div#vis svg {
@@ -17,14 +17,21 @@ div#vis svg {
 
 div#info {
     position: absolute;
-    width: 480px;
-    right: 0px;
+    width: 520px;
+    right: 10px;
     top: 0;
 }
 
-div#info div.d3-slider {
+div#slider {
+    /*
     width: 360px;
     overflow: visible;
+    margin-bottom: 40px;
+    margin-left: 50px;*/
+    width: 500px;
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
 }
 
 @font-face {
@@ -35,4 +42,9 @@ div#info div.d3-slider {
 h1 {
     font-family: Junction, Helvetica, Verdana, Arial, sans-serif;
     color: dodgerblue;
+}
+
+.d3-tip {
+    top: 0;
+    left: 0;
 }
