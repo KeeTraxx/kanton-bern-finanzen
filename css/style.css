@@ -20,6 +20,7 @@ div#info {
     width: 520px;
     right: 10px;
     top: 0;
+    height: 100%;
 }
 
 div#info table {
@@ -61,4 +62,10 @@ h1 {
 td.infocol {
     font-size: large;
     text-align: center;
+    cursor: pointer;
+}
+
+ol.breadcrumb li {
+    cursor: pointer;
+    color: dodgerblue;
 }

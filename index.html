@@ -1,6 +1,6 @@
 <html ng-app="ktbe">
 <head>
-    <title>Finanzen des Kanton Bern</title>
+    <title>Ausgaben des Kanton Bern</title>
 
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"/>
@@ -28,6 +28,12 @@
 <div id="content" ng-view>
 
 </div>
+<script type="text/ng-template" id="breadcrumbs">
+    <li ng-click="selectedCode = ''">Alle Produktgrupen</li>
+    <li ng-click="selectedCode = selectedCode.substr(0,1)" ng-show="selectedCode.length > 0">{{findRecursive( data, selectedCode.substr(0,1) ).name }}</li>
+    <li ng-click="selectedCode = selectedCode.substr(0,2)" ng-show="selectedCode.length > 1">{{findRecursive( data, selectedCode.substr(0,2) ).name }}</li>
+    <li ng-click="selectedCode = selectedCode.substr(0,3)" ng-show="selectedCode.length > 2">{{findRecursive( data, selectedCode.substr(0,3) ).name }}</li>
+</script>
 <script type="text/ng-template" id="index">
     <div id="slider" slider></div>
     <div id="vis">
@@ -74,10 +80,8 @@
         </svg>
     </div>
     <div id="info">
-        <h1>Finanzen des Kanton Bern</h1>
-
-        <input type="text" ng-model="selectedCode" />
-
+        <h1>Ausgaben des Kanton Bern</h1>
+        <ol class="breadcrumb" breadcrumbs></ol>
         <table finance-table class="table table-condensed table-striped table-hover">
             <thead>
             <tr>
@@ -88,7 +92,20 @@
             </thead>
             <tbody>
             </tbody>
+            <tfoot>
+            <tr>
+                <th>&nbsp;</th>
+                <th>Total</th>
+                <th>{{selectedNode.children | sum:selectedYear}}</th>
+            </tr>
+            </tfoot>
         </table>
+        <div style="position: absolute;bottom:0">
+            <ul class="list-inline">
+                <li><a href="http://www.be.ch/portal/de/tools/kontakt.html">Kontakt</a></li>
+                <li><a href="http://www.be.ch/portal/de/tools/rechtliches.html">Rechtliches</a></li>
+            </ul>
+        </div>
     </div>
 </script>
 

@@ -1,11 +1,12 @@
 angular.module('ktbe', [
     'ngRoute',
     'ktbe.controllers',
-    'ktbe.directives'
+    'ktbe.directives',
+    'ktbe.filters'
 ])
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/:year/:code?', {templateUrl: 'index', controller: 'VisualizationController'});
-        $routeProvider.otherwise({redirectTo: '/2013'})
+        $routeProvider.otherwise({redirectTo: '/2013'});
     }]);
 
 angular.module('ktbe.controllers', [])
@@ -15,14 +16,14 @@ angular.module('ktbe.controllers', [])
             $scope.data = data;
             $scope.$watch('selectedCode', function (code) {
                 if (code) {
-                    $scope.selectedNode = findRecursive(data, code);
+                    $scope.selectedNode = $scope.findRecursive(data, code);
                 } else {
                     $scope.selectedNode = $scope.data;
                 }
             });
         });
 
-        function findRecursive(nodes, code) {
+        $scope.findRecursive = function(nodes, code) {
             var node = nodes;
 
             _.reduce(code, function (memo, d) {
@@ -255,7 +256,7 @@ angular.module('ktbe.directives', [])
             }
         }
     }])
-    .directive('financeTable', [function () {
+    .directive('financeTable', ['$filter', function ($filter) {
         return {
             restrict: 'A',
             link: function (scope, el) {
@@ -279,20 +280,13 @@ angular.module('ktbe.directives', [])
 
                     var newTr = tr.enter()
                         .append('tr')
-                        .on('mouseover', function(d){
+                        .on('mouseover', function (d) {
                             scope.hover = d;
                             scope.$apply();
                         })
-                        .on('mouseout', function(d){
+                        .on('mouseout', function (d) {
                             scope.hover = null;
                             scope.$apply();
-                        })
-                        .on('click', function(d){
-                            if (d3.event.defaultPrevented) return;
-                            if (d.children) {
-                                scope.selectedCode = d.code;
-                                scope.$apply();
-                            }
                         });
 
                     newTr.append('td')
@@ -301,14 +295,25 @@ angular.module('ktbe.directives', [])
                         .style('color', function (d) {
                             return scope.color(parseInt(d.code[0]));
                         });
-                    newTr.append('td').text(function (d) {
-                        return d.name
-                    });
+                    newTr.append('td')
+                        .text(function (d) {
+                            return d.name
+                        })
+                        .style('cursor', function(d){
+                            return d.children ? 'pointer' : ''
+                        })
+                        .on('click', function (d) {
+                            if (d3.event.defaultPrevented) return;
+                            if (d.children) {
+                                scope.selectedCode = d.code;
+                                scope.$apply();
+                            }
+                        });
                     newTr.append('td');
 
                     tr.select('td:nth-child(3)')
                         .text(function (d) {
-                            return d.values[scope.selectedYear] ? d.values[scope.selectedYear].toLocaleString("en-US").replace(/,/g, "'") : '-';
+                            return d.values[scope.selectedYear] ? $filter('swissFormat')(d.values[scope.selectedYear]) : '-';
                         });
 
                     tr.exit()
@@ -316,5 +321,24 @@ angular.module('ktbe.directives', [])
 
                 }
             }
+        }
+    }])
+    .directive('breadcrumbs',[function(){
+        return {
+            templateUrl: 'breadcrumbs'
+        }
+    }]);
+
+angular.module('ktbe.filters', [])
+    .filter('sum', ['$filter', function ($filter) {
+        return function (input, year) {
+            return $filter('swissFormat')(_.reduce(input, function (memo, d) {
+                return memo + (d.values[year] || 0);
+            }, 0));
+        };
+    }])
+    .filter('swissFormat', [function () {
+        return function (input) {
+            return input.toLocaleString("en-US").replace(/,/g, "'");
         }
     }]);
