@@ -2,7 +2,6 @@
     "children": [
         {
             "code": "0",
-            "name": "Legislative",
             "values": {
                 "2009": 587592.20204,
                 "2010": 627811.4980300001,
@@ -10,10 +9,10 @@
                 "2012": 900331.9496000002,
                 "2013": 629503.60925
             },
+            "name": "Allgemeine Verwaltung",
             "children": [
                 {
                     "code": "01",
-                    "name": "Legislative",
                     "values": {
                         "2009": 8794.49211,
                         "2010": 8564.436599999997,
@@ -21,34 +20,34 @@
                         "2012": 8693.586949999999,
                         "2013": 8752.833990000001
                     },
+                    "name": "Legislative und Exekutive",
                     "children": [
                         {
                             "code": "011",
-                            "name": "Legislative",
                             "values": {
                                 "2009": 5552.0549900000005,
                                 "2010": 5300.925450000001,
                                 "2011": 5487.8322,
                                 "2012": 5578.53725,
                                 "2013": 5502.981400000001
-                            }
+                            },
+                            "name": "Legislative"
                         },
                         {
                             "code": "012",
-                            "name": "Exekutive",
                             "values": {
                                 "2009": 3242.43712,
                                 "2010": 3263.51115,
                                 "2011": 3249.4991400000004,
                                 "2012": 3115.0497,
                                 "2013": 3249.85259
-                            }
+                            },
+                            "name": "Exekutive"
                         }
                     ]
                 },
                 {
                     "code": "02",
-                    "name": "Finanz- und Steuerverwaltung",
                     "values": {
                         "2009": 578797.70993,
                         "2010": 619247.0614300001,
@@ -56,39 +55,40 @@
                         "2012": 891638.3626500001,
                         "2013": 620750.77526
                     },
+                    "name": "Allgemeine Dienste",
                     "children": [
                         {
                             "code": "021",
-                            "name": "Finanz- und Steuerverwaltung",
                             "values": {
                                 "2009": 222154.00255,
                                 "2010": 211383.18693999999,
                                 "2011": 221159.62044,
                                 "2012": 218983.79006,
                                 "2013": 150369.23708000002
-                            }
+                            },
+                            "name": "Finanz- und Steuerverwaltung"
                         },
                         {
                             "code": "022",
-                            "name": "Allgemeine Dienste, übrige",
                             "values": {
                                 "2009": 190517.09534,
                                 "2010": 202344.27745000002,
                                 "2011": 202919.92662,
                                 "2012": 194388.40470999997,
                                 "2013": 199765.00227
-                            }
+                            },
+                            "name": "Allgemeine Dienste, übrige"
                         },
                         {
                             "code": "029",
-                            "name": "Verwaltungsliegenschaften n.a.g.",
                             "values": {
                                 "2009": 166126.61203999998,
                                 "2010": 205519.59704,
                                 "2011": 211709.24098,
                                 "2012": 478266.16788,
                                 "2013": 270616.53591
-                            }
+                            },
+                            "name": "Verwaltungsliegenschaften n.a.g."
                         }
                     ]
                 }
@@ -96,7 +96,6 @@
         },
         {
             "code": "1",
-            "name": "Polizei",
             "values": {
                 "2009": 888194.43916,
                 "2010": 850685.7765599999,
@@ -104,10 +103,10 @@
                 "2012": 958621.17317,
                 "2013": 974804.44473
             },
+            "name": "Öffentliche Ordnung und Sicherheit, Verteidigung",
             "children": [
                 {
                     "code": "11",
-                    "name": "Polizei",
                     "values": {
                         "2009": 412026.43637,
                         "2010": 430630.47654999996,
@@ -115,41 +114,41 @@
                         "2012": 418403.68036999996,
                         "2013": 399111.65627
                     },
+                    "name": "Öffentliche Sicherheit",
                     "children": [
                         {
                             "code": "111",
-                            "name": "Polizei",
                             "values": {
                                 "2009": 366461.85546,
                                 "2010": 385736.12879999995,
                                 "2011": 390905.85841999995,
                                 "2012": 374921.32576,
                                 "2013": 356751.37726
-                            }
+                            },
+                            "name": "Polizei"
                         },
                         {
                             "code": "113",
-                            "name": "Strassenverkehrs- und Schifffahrtsamt",
                             "values": {
                                 "2009": 45564.580910000004,
                                 "2010": 44894.34775,
                                 "2011": 45656.79227,
                                 "2012": 43482.35461,
                                 "2013": 42360.279010000006
-                            }
+                            },
+                            "name": "Strassenverkehrs- und Schifffahrtsamt"
                         },
                         {
                             "code": "112",
-                            "name": "Verkehrssicherheit",
                             "values": {
                                 "2013": 0
-                            }
+                            },
+                            "name": "Verkehrssicherheit"
                         }
                     ]
                 },
                 {
                     "code": "12",
-                    "name": "Rechtssprechung",
                     "values": {
                         "2009": 182193.53546,
                         "2010": 189402.47391,
@@ -157,23 +156,23 @@
                         "2012": 210164.32929000002,
                         "2013": 210120.87706
                     },
+                    "name": "Rechtssprechung",
                     "children": [
                         {
                             "code": "120",
-                            "name": "Rechtssprechung",
                             "values": {
                                 "2009": 182193.53546,
                                 "2010": 189402.47391,
                                 "2011": 210472.32352,
                                 "2012": 210164.32929000002,
                                 "2013": 210120.87706
-                            }
+                            },
+                            "name": "Rechtssprechung"
                         }
                     ]
                 },
                 {
                     "code": "13",
-                    "name": "Strafvollzug",
                     "values": {
                         "2009": 107016.93966,
                         "2010": 111794.03908000002,
@@ -181,23 +180,23 @@
                         "2012": 122692.17188,
                         "2013": 128613.69697
                     },
+                    "name": "Strafvollzug",
                     "children": [
                         {
                             "code": "130",
-                            "name": "Strafvollzug",
                             "values": {
                                 "2009": 107016.93966000002,
                                 "2010": 111794.03908,
                                 "2011": 116436.69164000002,
                                 "2012": 122692.17188,
                                 "2013": 128613.69697
-                            }
+                            },
+                            "name": "Strafvollzug"
                         }
                     ]
                 },
                 {
                     "code": "14",
-                    "name": "Allgemeines Rechtswesen",
                     "values": {
                         "2009": 168243.82106000002,
                         "2010": 99613.82653,
@@ -205,23 +204,23 @@
                         "2012": 188451.48096,
                         "2013": 218161.13392
                     },
+                    "name": "Allgemeines Rechtswesen",
                     "children": [
                         {
                             "code": "140",
-                            "name": "Allgemeines Rechtswesen",
                             "values": {
                                 "2009": 168243.82106000002,
                                 "2010": 99613.82653,
                                 "2011": 184163.45923,
                                 "2012": 188451.48096,
                                 "2013": 218161.13392
-                            }
+                            },
+                            "name": "Allgemeines Rechtswesen"
                         }
                     ]
                 },
                 {
                     "code": "16",
-                    "name": "Militärische Verteidigung",
                     "values": {
                         "2009": 18713.70661,
                         "2010": 19244.960489999998,
@@ -229,28 +228,29 @@
                         "2012": 18909.510670000003,
                         "2013": 18797.080509999996
                     },
+                    "name": "Verteidigung",
                     "children": [
                         {
                             "code": "161",
-                            "name": "Militärische Verteidigung",
                             "values": {
                                 "2009": 4642.7510999999995,
                                 "2010": 3268.0563500000003,
                                 "2011": 3278.28205,
                                 "2012": 3253.5147,
                                 "2013": 3058.23515
-                            }
+                            },
+                            "name": "Militärische Verteidigung"
                         },
                         {
                             "code": "162",
-                            "name": "Zivile Verteidigung",
                             "values": {
                                 "2009": 14070.95551,
                                 "2010": 15976.904139999999,
                                 "2011": 15512.67465,
                                 "2012": 15655.995969999998,
                                 "2013": 15738.845360000001
-                            }
+                            },
+                            "name": "Zivile Verteidigung"
                         }
                     ]
                 }
@@ -258,7 +258,6 @@
         },
         {
             "code": "2",
-            "name": "Eingangsstufe",
             "values": {
                 "2009": 2764243.0228899987,
                 "2010": 2781898.1661600005,
@@ -266,10 +265,10 @@
                 "2012": 2877936.944630001,
                 "2013": 2693261.88472
             },
+            "name": "Bildung",
             "children": [
                 {
                     "code": "21",
-                    "name": "Eingangsstufe",
                     "values": {
                         "2009": 1127865.3723499998,
                         "2010": 1119667.34036,
@@ -277,70 +276,70 @@
                         "2012": 1163485.4436000003,
                         "2013": 1157510.23506
                     },
+                    "name": "Obligatorische Schule",
                     "children": [
                         {
                             "code": "211",
-                            "name": "Eingangsstufe",
                             "values": {
                                 "2009": 113258.78933,
                                 "2010": 112482.2126,
                                 "2011": 119219.06744000001,
                                 "2012": 121105.27043,
                                 "2013": 123198.23305
-                            }
+                            },
+                            "name": "Eingangsstufe"
                         },
                         {
                             "code": "212",
-                            "name": "Primarstufe",
                             "values": {
                                 "2009": 572917.6002699999,
                                 "2010": 572721.8652199999,
                                 "2011": 589457.79831,
                                 "2012": 589081.5009199999,
                                 "2013": 578327.41493
-                            }
+                            },
+                            "name": "Primarstufe"
                         },
                         {
                             "code": "213",
-                            "name": "Oberstufe,  Sekundarstufe I",
                             "values": {
                                 "2009": 399857.13665,
                                 "2010": 384735.78692000004,
                                 "2011": 383504.26083,
                                 "2012": 378931.70904000005,
                                 "2013": 371642.51144
-                            }
+                            },
+                            "name": "Oberstufe,  Sekundarstufe I"
                         },
                         {
                             "code": "219",
-                            "name": "Obligatorische Schule n.a.g.",
                             "values": {
                                 "2009": 41831.8461,
                                 "2010": 49727.475620000005,
                                 "2011": 71607.55609,
                                 "2012": 74366.96320999999,
                                 "2013": 84342.07564
-                            }
+                            },
+                            "name": "Obligatorische Schule n.a.g."
                         },
                         {
                             "code": "214",
-                            "name": "Musikschulen",
                             "values": {
                                 "2013": 0
-                            }
+                            },
+                            "name": "Musikschulen"
                         },
                         {
                             "code": "218",
-                            "name": "Tagesbetreuung",
                             "values": {
                                 "2013": 0
-                            }
+                            },
+                            "name": "Tagesbetreuung"
                         }
                     ]
                 },
                 {
                     "code": "22",
-                    "name": "Sonderschulen",
                     "values": {
                         "2009": 13282.19651,
                         "2010": 14203.37823,
@@ -348,23 +347,23 @@
                         "2012": 15491.04442,
                         "2013": 15452.32403
                     },
+                    "name": "Sonderschulen",
                     "children": [
                         {
                             "code": "220",
-                            "name": "Sonderschulen",
                             "values": {
                                 "2009": 13282.19651,
                                 "2010": 14203.37823,
                                 "2011": 14715.50804,
                                 "2012": 15491.044419999998,
                                 "2013": 15452.32403
-                            }
+                            },
+                            "name": "Sonderschulen"
                         }
                     ]
                 },
                 {
                     "code": "23",
-                    "name": "Berufliche Grundbildung",
                     "values": {
                         "2009": 512363.55439999996,
                         "2010": 512013.18596,
@@ -372,23 +371,23 @@
                         "2012": 519853.51803,
                         "2013": 508251.19201999996
                     },
+                    "name": "Berufliche Grundbildung",
                     "children": [
                         {
                             "code": "230",
-                            "name": "Berufliche Grundbildung",
                             "values": {
                                 "2009": 512363.55439999996,
                                 "2010": 512013.18596,
                                 "2011": 565078.86607,
                                 "2012": 519853.51803,
                                 "2013": 508251.19201999996
-                            }
+                            },
+                            "name": "Berufliche Grundbildung"
                         }
                     ]
                 },
                 {
                     "code": "25",
-                    "name": "Gymnasiale Maturitätsschulen",
                     "values": {
                         "2009": 183735.16349,
                         "2010": 180817.58165,
@@ -396,55 +395,55 @@
                         "2012": 175964.00332000002,
                         "2013": 178067.93057
                     },
+                    "name": "Allgemeinbildende Schulen",
                     "children": [
                         {
                             "code": "251",
-                            "name": "Gymnasiale Maturitätsschulen",
                             "values": {
                                 "2009": 183735.16349,
                                 "2010": 180817.58164999998,
                                 "2011": 182225.07488,
                                 "2012": 175964.00332000002,
                                 "2013": 178067.93057
-                            }
+                            },
+                            "name": "Gymnasiale Maturitätsschulen"
                         },
                         {
                             "code": "252",
-                            "name": "Fachmittelschulen und andere allgemeinbildende Schulen",
                             "values": {
                                 "2009": 0,
                                 "2011": 0,
                                 "2012": 0,
                                 "2013": 0
-                            }
+                            },
+                            "name": "Fachmittelschulen und andere allgemeinbildende Schulen"
                         }
                     ]
                 },
                 {
                     "code": "26",
-                    "name": "Höhere Berufsbildung",
                     "values": {
                         "2009": 0,
                         "2011": 0,
                         "2012": 0,
                         "2013": 4264.93155
                     },
+                    "name": "Höhere Berufsbildung",
                     "children": [
                         {
                             "code": "260",
-                            "name": "Höhere Berufsbildung",
                             "values": {
                                 "2009": 0,
                                 "2011": 0,
                                 "2012": 0,
                                 "2013": 4264.93155
-                            }
+                            },
+                            "name": "Höhere Berufsbildung"
                         }
                     ]
                 },
                 {
                     "code": "27",
-                    "name": "Universitäre Hochschulen",
                     "values": {
                         "2009": 828513.5327999999,
                         "2010": 850064.99429,
@@ -452,45 +451,45 @@
                         "2012": 901466.1477999999,
                         "2013": 754298.3164100001
                     },
+                    "name": "Hochschulen",
                     "children": [
                         {
                             "code": "271",
-                            "name": "Universitäre Hochschulen",
                             "values": {
                                 "2009": 454695.6598,
                                 "2010": 464609.05492,
                                 "2011": 470412.1665,
                                 "2012": 478800.6253,
                                 "2013": 344990.41034
-                            }
+                            },
+                            "name": "Universitäre Hochschulen"
                         },
                         {
                             "code": "272",
-                            "name": "Pädagogische Hochschulen",
                             "values": {
                                 "2009": 88401.64358,
                                 "2010": 94019.28836,
                                 "2011": 96614.96441,
                                 "2012": 96332.26615000001,
                                 "2013": 98634.66521
-                            }
+                            },
+                            "name": "Pädagogische Hochschulen"
                         },
                         {
                             "code": "273",
-                            "name": "Fachhochschulen",
                             "values": {
                                 "2009": 285416.22942,
                                 "2010": 291436.65101,
                                 "2011": 313450.22319,
                                 "2012": 326333.25635,
                                 "2013": 310673.24086
-                            }
+                            },
+                            "name": "Fachhochschulen"
                         }
                     ]
                 },
                 {
                     "code": "29",
-                    "name": "Verwaltung",
                     "values": {
                         "2009": 98483.20334000001,
                         "2010": 105131.68567,
@@ -498,44 +497,45 @@
                         "2012": 101676.78745999998,
                         "2013": 75416.95508000001
                     },
+                    "name": "Übriges Bildungswesen",
                     "children": [
                         {
                             "code": "291",
-                            "name": "Verwaltung",
                             "values": {
                                 "2009": 69414.90868000001,
                                 "2010": 61389.43735,
                                 "2011": 49896.145939999995,
                                 "2012": 72661.66425,
                                 "2013": 32611.474280000002
-                            }
+                            },
+                            "name": "Verwaltung"
                         },
                         {
                             "code": "299",
-                            "name": "Bildung n.a.g.",
                             "values": {
                                 "2009": 29068.29466,
                                 "2010": 43742.24832,
                                 "2011": 30383.680590000004,
                                 "2012": 29015.12321,
                                 "2013": 42805.480800000005
-                            }
+                            },
+                            "name": "Bildung n.a.g."
                         }
                     ]
                 },
                 {
                     "code": "28",
-                    "name": "Grundlagenforschung",
                     "values": {
                         "2013": 0
                     },
+                    "name": "Forschung",
                     "children": [
                         {
                             "code": "281",
-                            "name": "Grundlagenforschung",
                             "values": {
                                 "2013": 0
-                            }
+                            },
+                            "name": "Grundlagenforschung"
                         }
                     ]
                 }
@@ -543,7 +543,6 @@
         },
         {
             "code": "3",
-            "name": "Denkmalpflege und Heimatschutz",
             "values": {
                 "2009": 158804.56556,
                 "2010": 150785.55864000003,
@@ -551,10 +550,10 @@
                 "2012": 144495.38224,
                 "2013": 138008.26307
             },
+            "name": "Kultur, Sport und Freizeit, Kirche",
             "children": [
                 {
                     "code": "31",
-                    "name": "Denkmalpflege und Heimatschutz",
                     "values": {
                         "2009": 21918.579930000004,
                         "2010": 21949.02541,
@@ -562,30 +561,30 @@
                         "2012": 21453.9093,
                         "2013": 19824.709
                     },
+                    "name": "Kulturerbe",
                     "children": [
                         {
                             "code": "312",
-                            "name": "Denkmalpflege und Heimatschutz",
                             "values": {
                                 "2009": 21918.579930000004,
                                 "2010": 21949.02541,
                                 "2011": 24684.19122,
                                 "2012": 21453.9093,
                                 "2013": 19824.709
-                            }
+                            },
+                            "name": "Denkmalpflege und Heimatschutz"
                         },
                         {
                             "code": "311",
-                            "name": "Museen und bildende Kunst",
                             "values": {
                                 "2013": 0
-                            }
+                            },
+                            "name": "Museen und bildende Kunst"
                         }
                     ]
                 },
                 {
                     "code": "32",
-                    "name": "Bibliotheken",
                     "values": {
                         "2009": 62844.26903,
                         "2010": 56520.621680000004,
@@ -593,57 +592,57 @@
                         "2012": 46920.90747,
                         "2013": 43748.81922
                     },
+                    "name": "Kultur, übrige",
                     "children": [
                         {
                             "code": "321",
-                            "name": "Bibliotheken",
                             "values": {
                                 "2011": 0,
                                 "2013": 0
-                            }
+                            },
+                            "name": "Bibliotheken"
                         },
                         {
                             "code": "322",
-                            "name": "Konzert und Theater",
                             "values": {
                                 "2011": 0,
                                 "2013": 0
-                            }
+                            },
+                            "name": "Konzert und Theater"
                         },
                         {
                             "code": "329",
-                            "name": "Kultur n.a.g.",
                             "values": {
                                 "2009": 62844.26903000001,
                                 "2010": 56520.62168,
                                 "2011": 45837.165,
                                 "2012": 46920.90747,
                                 "2013": 43748.81922
-                            }
+                            },
+                            "name": "Kultur n.a.g."
                         }
                     ]
                 },
                 {
                     "code": "33",
-                    "name": "Film und Kino",
                     "values": {
                         "2011": 0,
                         "2013": 0
                     },
+                    "name": "Medien",
                     "children": [
                         {
                             "code": "331",
-                            "name": "Film und Kino",
                             "values": {
                                 "2011": 0,
                                 "2013": 0
-                            }
+                            },
+                            "name": "Film und Kino"
                         }
                     ]
                 },
                 {
                     "code": "34",
-                    "name": "Sport",
                     "values": {
                         "2009": 969.6721,
                         "2010": 847.4387999999999,
@@ -651,23 +650,23 @@
                         "2012": 1123.6144,
                         "2013": 1249.84445
                     },
+                    "name": "Sport und Freizeit",
                     "children": [
                         {
                             "code": "341",
-                            "name": "Sport",
                             "values": {
                                 "2009": 969.6721,
                                 "2010": 847.4387999999999,
                                 "2011": 889.4939,
                                 "2012": 1123.6144,
                                 "2013": 1249.84445
-                            }
+                            },
+                            "name": "Sport"
                         }
                     ]
                 },
                 {
                     "code": "35",
-                    "name": "Kirchen und religiöse Angelegenheiten",
                     "values": {
                         "2009": 73072.0445,
                         "2010": 71468.47275000002,
@@ -675,17 +674,18 @@
                         "2012": 74996.95107000001,
                         "2013": 73184.8904
                     },
+                    "name": "Kirchen und religiöse Angelegenheiten",
                     "children": [
                         {
                             "code": "350",
-                            "name": "Kirchen und religiöse Angelegenheiten",
                             "values": {
                                 "2009": 73072.0445,
                                 "2010": 71468.47275000002,
                                 "2011": 73572.87780000002,
                                 "2012": 74996.95107000001,
                                 "2013": 73184.8904
-                            }
+                            },
+                            "name": "Kirchen und religiöse Angelegenheiten"
                         }
                     ]
                 }
@@ -693,7 +693,6 @@
         },
         {
             "code": "4",
-            "name": "Spitäler",
             "values": {
                 "2009": 1403989.2514300002,
                 "2010": 1405875.15498,
@@ -701,10 +700,10 @@
                 "2012": 1949629.73071,
                 "2013": 1756552.1310999999
             },
+            "name": "Gesundheit",
             "children": [
                 {
                     "code": "41",
-                    "name": "Spitäler",
                     "values": {
                         "2009": 1242784.9794899998,
                         "2010": 1260897.42202,
@@ -712,74 +711,74 @@
                         "2012": 1796259.89396,
                         "2013": 1707135.85492
                     },
+                    "name": "Spitäler, Kranken- und Pflegeheime",
                     "children": [
                         {
                             "code": "411",
-                            "name": "Spitäler",
                             "values": {
                                 "2009": 900533.23066,
                                 "2010": 908847.9175399999,
                                 "2011": 920427.1247799998,
                                 "2012": 1165877.576,
                                 "2013": 1069237.9768299998
-                            }
+                            },
+                            "name": "Spitäler"
                         },
                         {
                             "code": "412",
-                            "name": "Kranken- und Pflegeheime",
                             "values": {
                                 "2009": 69344.97905,
                                 "2010": 76913.00140000001,
                                 "2011": 150438.57845,
                                 "2012": 306267.39995,
                                 "2013": 327392.72719999996
-                            }
+                            },
+                            "name": "Kranken- und Pflegeheime"
                         },
                         {
                             "code": "413",
-                            "name": "Psychiatrische Kliniken",
                             "values": {
                                 "2009": 272906.76978,
                                 "2010": 275136.50308000005,
                                 "2011": 287718.89940999995,
                                 "2012": 324114.91800999996,
                                 "2013": 310505.15089
-                            }
+                            },
+                            "name": "Psychiatrische Kliniken"
                         }
                     ]
                 },
                 {
                     "code": "42",
-                    "name": "Rettungsdienste",
                     "values": {
                         "2009": 17757.124,
                         "2011": 3165.133,
                         "2012": 8491.073,
                         "2013": 4899.49
                     },
+                    "name": "Ambulante Krankenpflege",
                     "children": [
                         {
                             "code": "422",
-                            "name": "Rettungsdienste",
                             "values": {
                                 "2009": 17757.124,
                                 "2011": 3165.133,
                                 "2012": 8491.073,
                                 "2013": 4899.49
-                            }
+                            },
+                            "name": "Rettungsdienste"
                         },
                         {
                             "code": "421",
-                            "name": "Ambulante Krankenpflege",
                             "values": {
                                 "2013": 0
-                            }
+                            },
+                            "name": "Ambulante Krankenpflege"
                         }
                     ]
                 },
                 {
                     "code": "43",
-                    "name": "Alkohol- und Drogenmissbrauch",
                     "values": {
                         "2009": 36602.82449,
                         "2010": 40117.56547,
@@ -787,34 +786,34 @@
                         "2012": 33746.16292,
                         "2013": 33004.59799
                     },
+                    "name": "Gesundheitsprävention",
                     "children": [
                         {
                             "code": "431",
-                            "name": "Alkohol- und Drogenmissbrauch",
                             "values": {
                                 "2009": 25892.6611,
                                 "2010": 29300.60292,
                                 "2011": 27469.809350000003,
                                 "2012": 23728.8427,
                                 "2013": 23330.05685
-                            }
+                            },
+                            "name": "Alkohol- und Drogenmissbrauch"
                         },
                         {
                             "code": "434",
-                            "name": "Lebensmittelkontrolle",
                             "values": {
                                 "2009": 10710.163389999998,
                                 "2010": 10816.96255,
                                 "2011": 10149.637949999998,
                                 "2012": 10017.320220000001,
                                 "2013": 9674.541140000001
-                            }
+                            },
+                            "name": "Lebensmittelkontrolle"
                         }
                     ]
                 },
                 {
                     "code": "48",
-                    "name": "F&E in Gesundheit",
                     "values": {
                         "2009": 95654.22565000001,
                         "2010": 94860,
@@ -822,23 +821,23 @@
                         "2012": 98239.411,
                         "2013": 0
                     },
+                    "name": "F&E in Gesundheit",
                     "children": [
                         {
                             "code": "480",
-                            "name": "F&E in Gesundheit",
                             "values": {
                                 "2009": 95654.22565000001,
                                 "2010": 94860,
                                 "2011": 97370.8,
                                 "2012": 98239.411,
                                 "2013": 0
-                            }
+                            },
+                            "name": "F&E in Gesundheit"
                         }
                     ]
                 },
                 {
                     "code": "49",
-                    "name": "Gesundheitswesen n.a.g.",
                     "values": {
                         "2009": 11190.097800000001,
                         "2010": 10000.16749,
@@ -846,17 +845,18 @@
                         "2012": 12893.18983,
                         "2013": 11512.18819
                     },
+                    "name": "Gesundheitswesen n.a.g.",
                     "children": [
                         {
                             "code": "490",
-                            "name": "Gesundheitswesen n.a.g.",
                             "values": {
                                 "2009": 11190.097800000001,
                                 "2010": 10000.167489999998,
                                 "2011": 11772.984390000001,
                                 "2012": 12893.18983,
                                 "2013": 11512.18819
-                            }
+                            },
+                            "name": "Gesundheitswesen n.a.g."
                         }
                     ]
                 }
@@ -864,7 +864,6 @@
         },
         {
             "code": "5",
-            "name": "Krankenversicherung",
             "values": {
                 "2009": 1891730.4743299999,
                 "2010": 2089628.30272,
@@ -872,10 +871,10 @@
                 "2012": 2083187.9178,
                 "2013": 2112952.2331899996
             },
+            "name": "Soziale Sicherheit",
             "children": [
                 {
                     "code": "51",
-                    "name": "Krankenversicherung",
                     "values": {
                         "2009": 463623.6656,
                         "2010": 540117.15802,
@@ -883,34 +882,34 @@
                         "2012": 588166.8504,
                         "2013": 550326.94548
                     },
+                    "name": "Krankheit und Unfall",
                     "children": [
                         {
                             "code": "511",
-                            "name": "Krankenversicherung",
                             "values": {
                                 "2009": 4667.79605,
                                 "2010": 3164.1331500000006,
                                 "2011": 3403.4961,
                                 "2012": 23293.72913,
                                 "2013": 9242.08
-                            }
+                            },
+                            "name": "Krankenversicherung"
                         },
                         {
                             "code": "512",
-                            "name": "Prämienverbilligungen",
                             "values": {
                                 "2009": 458955.86955,
                                 "2010": 536953.02487,
                                 "2011": 550902.8741799999,
                                 "2012": 564873.12127,
                                 "2013": 541084.86548
-                            }
+                            },
+                            "name": "Prämienverbilligungen"
                         }
                     ]
                 },
                 {
                     "code": "52",
-                    "name": "Ergänzungsleistungen IV",
                     "values": {
                         "2009": 657764.1564399999,
                         "2010": 665548.9485,
@@ -918,49 +917,49 @@
                         "2012": 62514.1488,
                         "2013": 608625.25526
                     },
+                    "name": "Invalidität",
                     "children": [
                         {
                             "code": "522",
-                            "name": "Ergänzungsleistungen IV",
                             "values": {
                                 "2009": 229147.4528,
                                 "2010": 230673.17696,
                                 "2011": 249737.95857,
                                 "2012": 254794,
                                 "2013": 235290
-                            }
+                            },
+                            "name": "Ergänzungsleistungen IV"
                         },
                         {
                             "code": "523",
-                            "name": "Invalidenheime",
                             "values": {
                                 "2009": 428616.70363999996,
                                 "2010": 434875.77154000005,
                                 "2011": 455611.87663,
                                 "2012": 370220.14882999996,
                                 "2013": 373335.25526
-                            }
+                            },
+                            "name": "Invalidenheime"
                         },
                         {
                             "code": "524",
-                            "name": "Leistungen an Invalide",
                             "values": {
                                 "2011": 2190.1322,
                                 "2013": 0
-                            }
+                            },
+                            "name": "Leistungen an Invalide"
                         },
                         {
                             "code": "521",
-                            "name": "Invalidenversicherung IV",
                             "values": {
                                 "2009": 0
-                            }
+                            },
+                            "name": "Invalidenversicherung IV"
                         }
                     ]
                 },
                 {
                     "code": "53",
-                    "name": "Alters- und Hinterlassenversicherung AHV",
                     "values": {
                         "2009": 368768.11918,
                         "2010": 360534.47404,
@@ -968,52 +967,52 @@
                         "2012": 383957.0408,
                         "2013": 408244.40786000004
                     },
+                    "name": "Alter + Hinterlassene",
                     "children": [
                         {
                             "code": "531",
-                            "name": "Alters- und Hinterlassenversicherung AHV",
                             "values": {
                                 "2009": 23913.155,
                                 "2010": 11111.841,
                                 "2011": 12653.3202,
                                 "2012": 0.1,
                                 "2013": 7095.14522
-                            }
+                            },
+                            "name": "Alters- und Hinterlassenversicherung AHV"
                         },
                         {
                             "code": "532",
-                            "name": "Ergänzungsleistungen AHV",
                             "values": {
                                 "2009": 343721.18,
                                 "2010": 346009.76544,
                                 "2011": 374606.937,
                                 "2012": 382191,
                                 "2013": 399480
-                            }
+                            },
+                            "name": "Ergänzungsleistungen AHV"
                         },
                         {
                             "code": "533",
-                            "name": "Leistungen an Pensionierte",
                             "values": {
                                 "2009": 1133.7841799999999,
                                 "2010": 3412.8676,
                                 "2011": 1419.40446,
                                 "2012": 1766.04076,
                                 "2013": 1669.2626400000001
-                            }
+                            },
+                            "name": "Leistungen an Pensionierte"
                         },
                         {
                             "code": "535",
-                            "name": "Leistungen an das Alter",
                             "values": {
                                 "2013": 0
-                            }
+                            },
+                            "name": "Leistungen an das Alter"
                         }
                     ]
                 },
                 {
                     "code": "54",
-                    "name": "Familienzulagen",
                     "values": {
                         "2009": 40963.91468000001,
                         "2010": 50202.35604,
@@ -1021,40 +1020,40 @@
                         "2012": 48069.21269000001,
                         "2013": 50316.56818
                     },
+                    "name": "Familie und Jugend",
                     "children": [
                         {
                             "code": "541",
-                            "name": "Familienzulagen",
                             "values": {
                                 "2009": 0,
                                 "2010": 7300.293,
                                 "2011": 8490.9583,
                                 "2013": 7176
-                            }
+                            },
+                            "name": "Familienzulagen"
                         },
                         {
                             "code": "544",
-                            "name": "Jugendschutz",
                             "values": {
                                 "2009": 40963.91468,
                                 "2010": 42902.06304,
                                 "2011": 44103.47588,
                                 "2012": 48069.21269000001,
                                 "2013": 43140.56818
-                            }
+                            },
+                            "name": "Jugendschutz"
                         },
                         {
                             "code": "545",
-                            "name": "Leistungen an Familien",
                             "values": {
                                 "2013": 0
-                            }
+                            },
+                            "name": "Leistungen an Familien"
                         }
                     ]
                 },
                 {
                     "code": "55",
-                    "name": "Arbeitslosenversicherung",
                     "values": {
                         "2009": 1553.978,
                         "2010": 14961.556,
@@ -1062,32 +1061,32 @@
                         "2012": 14169.949,
                         "2013": 14277.927
                     },
+                    "name": "Arbeitslosigkeit",
                     "children": [
                         {
                             "code": "551",
-                            "name": "Arbeitslosenversicherung",
                             "values": {
                                 "2010": 14961.556,
                                 "2011": 14291.757300000001,
                                 "2012": 14169.949,
                                 "2013": 14277.927
-                            }
+                            },
+                            "name": "Arbeitslosenversicherung"
                         },
                         {
                             "code": "559",
-                            "name": "Arbeitslosigkeit n.a.g.",
                             "values": {
                                 "2009": 1553.978,
                                 "2011": 0,
                                 "2012": 0,
                                 "2013": 0
-                            }
+                            },
+                            "name": "Arbeitslosigkeit n.a.g."
                         }
                     ]
                 },
                 {
                     "code": "57",
-                    "name": "Wirtschaftliche Hilfe",
                     "values": {
                         "2009": 359056.64043,
                         "2010": 458263.81012,
@@ -1095,55 +1094,56 @@
                         "2012": 423810.61612,
                         "2013": 481161.12941000005
                     },
+                    "name": "Sozialhilfe und Asylwesen",
                     "children": [
                         {
                             "code": "572",
-                            "name": "Wirtschaftliche Hilfe",
                             "values": {
                                 "2009": 37898.63919,
                                 "2010": 324613.29001,
                                 "2011": 355191.96494,
                                 "2012": 369196.11695,
                                 "2013": 353999.09854
-                            }
+                            },
+                            "name": "Wirtschaftliche Hilfe"
                         },
                         {
                             "code": "573",
-                            "name": "Asylwesen",
                             "values": {
                                 "2009": 1769.47075,
                                 "2010": 72642.38211,
                                 "2011": 2165.31185,
                                 "2012": 10855.18147,
                                 "2013": 110342.52603000001
-                            }
+                            },
+                            "name": "Asylwesen"
                         },
                         {
                             "code": "579",
-                            "name": "Fürsorge n.a.g.",
                             "values": {
                                 "2009": 319388.53049000003,
                                 "2010": 61008.138,
                                 "2011": 34028.67665,
                                 "2012": 43759.31769999999,
                                 "2013": 16819.50484
-                            }
+                            },
+                            "name": "Fürsorge n.a.g."
                         }
                     ]
                 },
                 {
                     "code": "59",
-                    "name": "Hilfsaktionen im Ausland",
                     "values": {
                         "2013": 0
                     },
+                    "name": "Soziale Wohlfahrt n.a.g.",
                     "children": [
                         {
                             "code": "593",
-                            "name": "Hilfsaktionen im Ausland",
                             "values": {
                                 "2013": 0
-                            }
+                            },
+                            "name": "Hilfsaktionen im Ausland"
                         }
                     ]
                 }
@@ -1151,7 +1151,6 @@
         },
         {
             "code": "6",
-            "name": "Nationalstrassen",
             "values": {
                 "2009": 909090.87224,
                 "2010": 919309.02445,
@@ -1159,10 +1158,10 @@
                 "2012": 907210.98431,
                 "2013": 907575.14657
             },
+            "name": "Verkehr und Nachrichtenübermittlung",
             "children": [
                 {
                     "code": "61",
-                    "name": "Nationalstrassen",
                     "values": {
                         "2009": 590927.4004100001,
                         "2010": 560896.56366,
@@ -1170,52 +1169,52 @@
                         "2012": 567205.56175,
                         "2013": 554625.7409399999
                     },
+                    "name": "Strassenverkehr",
                     "children": [
                         {
                             "code": "611",
-                            "name": "Nationalstrassen",
                             "values": {
                                 "2009": 226885.97028,
                                 "2010": 214096.47847,
                                 "2011": 250939.61383000002,
                                 "2012": 284459.86815000005,
                                 "2013": 295722.01305
-                            }
+                            },
+                            "name": "Nationalstrassen"
                         },
                         {
                             "code": "613",
-                            "name": "Kantonsstrassen, übrige",
                             "values": {
                                 "2009": 324458.44693,
                                 "2010": 311940.31983999995,
                                 "2011": 338353.62165,
                                 "2012": 241051.23169999997,
                                 "2013": 225155.24129
-                            }
+                            },
+                            "name": "Kantonsstrassen, übrige"
                         },
                         {
                             "code": "619",
-                            "name": "Strassen n.a.g.",
                             "values": {
                                 "2009": 39582.9832,
                                 "2010": 34859.76535,
                                 "2011": 12798.0937,
                                 "2012": 41694.46190000001,
                                 "2013": 33748.486600000004
-                            }
+                            },
+                            "name": "Strassen n.a.g."
                         },
                         {
                             "code": "612",
-                            "name": "Hauptstrassen nach Bundesrecht",
                             "values": {
                                 "2013": 0
-                            }
+                            },
+                            "name": "Hauptstrassen nach Bundesrecht"
                         }
                     ]
                 },
                 {
                     "code": "62",
-                    "name": "Regionalverkehr",
                     "values": {
                         "2009": 318163.47183,
                         "2010": 358412.46079000004,
@@ -1223,39 +1222,40 @@
                         "2012": 340005.42256000004,
                         "2013": 352949.40563
                     },
+                    "name": "Öffentlicher Verkehr",
                     "children": [
                         {
                             "code": "622",
-                            "name": "Regionalverkehr",
                             "values": {
                                 "2009": 258137.0324,
                                 "2010": 295397.1373,
                                 "2011": 292440.25695,
                                 "2012": 270719.51565,
                                 "2013": 287979.44038
-                            }
+                            },
+                            "name": "Regionalverkehr"
                         },
                         {
                             "code": "623",
-                            "name": "Agglomerationsverkehr",
                             "values": {
                                 "2009": 55568.5811,
                                 "2010": 60141.00895,
                                 "2011": 62598.793549999995,
                                 "2012": 66457.18185000001,
                                 "2013": 62619.565149999995
-                            }
+                            },
+                            "name": "Agglomerationsverkehr"
                         },
                         {
                             "code": "629",
-                            "name": "Öffentlicher Verkehr n.a.g",
                             "values": {
                                 "2009": 4457.85833,
                                 "2010": 2874.31454,
                                 "2011": 2807.8151799999996,
                                 "2012": 2828.72506,
                                 "2013": 2350.4001000000003
-                            }
+                            },
+                            "name": "Öffentlicher Verkehr n.a.g"
                         }
                     ]
                 }
@@ -1263,7 +1263,6 @@
         },
         {
             "code": "7",
-            "name": "Wasserversorgung",
             "values": {
                 "2009": 123130.37322000001,
                 "2010": 96031.06114,
@@ -1271,10 +1270,10 @@
                 "2012": 106401.77375,
                 "2013": 109498.80604999998
             },
+            "name": "Umweltschutz und Raumordnung",
             "children": [
                 {
                     "code": "71",
-                    "name": "Wasserversorgung",
                     "values": {
                         "2009": 9650.4857,
                         "2010": 7157.45995,
@@ -1282,23 +1281,23 @@
                         "2012": 4493.966350000001,
                         "2013": 7906.8237
                     },
+                    "name": "Wasserversorgung",
                     "children": [
                         {
                             "code": "710",
-                            "name": "Wasserversorgung",
                             "values": {
                                 "2009": 9650.4857,
                                 "2010": 7157.45995,
                                 "2011": 7528.16885,
                                 "2012": 4493.966350000001,
                                 "2013": 7906.8237
-                            }
+                            },
+                            "name": "Wasserversorgung"
                         }
                     ]
                 },
                 {
                     "code": "72",
-                    "name": "Abwasserbeseitigung",
                     "values": {
                         "2009": 54678.882690000006,
                         "2010": 41149.120760000005,
@@ -1306,23 +1305,23 @@
                         "2012": 40254.57196,
                         "2013": 37423.82615
                     },
+                    "name": "Abwasserbeseitigung",
                     "children": [
                         {
                             "code": "720",
-                            "name": "Abwasserbeseitigung",
                             "values": {
                                 "2009": 54678.882690000006,
                                 "2010": 41149.12076,
                                 "2011": 39587.607579999996,
                                 "2012": 40254.57196,
                                 "2013": 37423.82615
-                            }
+                            },
+                            "name": "Abwasserbeseitigung"
                         }
                     ]
                 },
                 {
                     "code": "73",
-                    "name": "Abfallwirtschaft",
                     "values": {
                         "2009": 3216.4146800000003,
                         "2010": 3012.98768,
@@ -1330,23 +1329,23 @@
                         "2012": 4567.16964,
                         "2013": 5378.57924
                     },
+                    "name": "Abfallwirtschaft",
                     "children": [
                         {
                             "code": "730",
-                            "name": "Abfallwirtschaft",
                             "values": {
                                 "2009": 3216.4146800000003,
                                 "2010": 3012.98768,
                                 "2011": 3018.88493,
                                 "2012": 4567.16964,
                                 "2013": 5378.57924
-                            }
+                            },
+                            "name": "Abfallwirtschaft"
                         }
                     ]
                 },
                 {
                     "code": "74",
-                    "name": "Gewässerverbauungen",
                     "values": {
                         "2009": 2101.71785,
                         "2010": 3372.72885,
@@ -1354,23 +1353,23 @@
                         "2012": 2176.594,
                         "2013": 9394.53875
                     },
+                    "name": "Verbauungen",
                     "children": [
                         {
                             "code": "741",
-                            "name": "Gewässerverbauungen",
                             "values": {
                                 "2009": 2101.71785,
                                 "2010": 3372.72885,
                                 "2011": 2348.3144500000003,
                                 "2012": 2176.594,
                                 "2013": 9394.53875
-                            }
+                            },
+                            "name": "Gewässerverbauungen"
                         }
                     ]
                 },
                 {
                     "code": "75",
-                    "name": "Arten- und Landschaftsschutz",
                     "values": {
                         "2009": 2913.8086399999997,
                         "2010": 3688.65886,
@@ -1378,23 +1377,23 @@
                         "2012": 2611.83022,
                         "2013": 4861.5454
                     },
+                    "name": "Arten- und Landschaftsschutz",
                     "children": [
                         {
                             "code": "750",
-                            "name": "Arten- und Landschaftsschutz",
                             "values": {
                                 "2009": 2913.80864,
                                 "2010": 3688.65886,
                                 "2011": 3681.53507,
                                 "2012": 2611.83022,
                                 "2013": 4861.545399999999
-                            }
+                            },
+                            "name": "Arten- und Landschaftsschutz"
                         }
                     ]
                 },
                 {
                     "code": "76",
-                    "name": "Luftreinhaltung und Klimaschutz",
                     "values": {
                         "2009": 6754.5097000000005,
                         "2010": 2,
@@ -1402,30 +1401,30 @@
                         "2012": 21.5,
                         "2013": 33739.763549999996
                     },
+                    "name": "Bekämpfung von Umweltverschmutzung",
                     "children": [
                         {
                             "code": "761",
-                            "name": "Luftreinhaltung und Klimaschutz",
                             "values": {
                                 "2009": 6754.5097000000005,
                                 "2010": 2,
                                 "2011": 2,
                                 "2012": 21.5,
                                 "2013": 33737.763549999996
-                            }
+                            },
+                            "name": "Luftreinhaltung und Klimaschutz"
                         },
                         {
                             "code": "769",
-                            "name": "Bekämpfung von Umweltverschmutzung n.a.g.",
                             "values": {
                                 "2013": 2
-                            }
+                            },
+                            "name": "Bekämpfung von Umweltverschmutzung n.a.g."
                         }
                     ]
                 },
                 {
                     "code": "77",
-                    "name": "Umweltschutz n.a.g.",
                     "values": {
                         "2009": 21895.38406,
                         "2010": 20164.893239999998,
@@ -1433,23 +1432,23 @@
                         "2012": 46327.504199999996,
                         "2013": 4233.754599999999
                     },
+                    "name": "Übriger Umweltschutz",
                     "children": [
                         {
                             "code": "779",
-                            "name": "Umweltschutz n.a.g.",
                             "values": {
                                 "2009": 21895.384060000004,
                                 "2010": 20164.89324,
                                 "2011": 23053.789210000003,
                                 "2012": 46327.504199999996,
                                 "2013": 4233.754599999999
-                            }
+                            },
+                            "name": "Umweltschutz n.a.g."
                         }
                     ]
                 },
                 {
                     "code": "79",
-                    "name": "Raumordnung",
                     "values": {
                         "2009": 21919.169899999997,
                         "2010": 17483.2118,
@@ -1457,17 +1456,18 @@
                         "2012": 5948.63738,
                         "2013": 6559.974659999999
                     },
+                    "name": "Raumordnung",
                     "children": [
                         {
                             "code": "790",
-                            "name": "Raumordnung",
                             "values": {
                                 "2009": 21919.1699,
                                 "2010": 17483.2118,
                                 "2011": 21103.859299999996,
                                 "2012": 5948.63738,
                                 "2013": 6559.974659999999
-                            }
+                            },
+                            "name": "Raumordnung"
                         }
                     ]
                 }
@@ -1475,7 +1475,6 @@
         },
         {
             "code": "8",
-            "name": "Verwaltung, Vollzug und Kontrolle",
             "values": {
                 "2009": 747717.3955799999,
                 "2010": 763969.50035,
@@ -1483,10 +1482,10 @@
                 "2012": 749980.69077,
                 "2013": 760209.2370099999
             },
+            "name": "Volkswirtschaft",
             "children": [
                 {
                     "code": "81",
-                    "name": "Verwaltung, Vollzug und Kontrolle",
                     "values": {
                         "2009": 636213.02222,
                         "2010": 667998.0214699999,
@@ -1494,76 +1493,76 @@
                         "2012": 650930.82181,
                         "2013": 654767.45587
                     },
+                    "name": "Landwirtschaft",
                     "children": [
                         {
                             "code": "811",
-                            "name": "Verwaltung, Vollzug und Kontrolle",
                             "values": {
                                 "2009": 89555.36917,
                                 "2010": 97475.95783000001,
                                 "2011": 71507.6872,
                                 "2012": 67219.83423000001,
                                 "2013": 70966.92877
-                            }
+                            },
+                            "name": "Verwaltung, Vollzug und Kontrolle"
                         },
                         {
                             "code": "812",
-                            "name": "Strukturverbesserungen",
                             "values": {
                                 "2009": 92.47435,
                                 "2010": 13431.357199999999,
                                 "2011": 13536.6158,
                                 "2012": 11134.36725,
                                 "2013": 11296.52695
-                            }
+                            },
+                            "name": "Strukturverbesserungen"
                         },
                         {
                             "code": "813",
-                            "name": "Produktionsverbesserungen Vieh",
                             "values": {
                                 "2009": 8475.78875,
                                 "2010": 6595.289789999999,
                                 "2011": 4540.96749,
                                 "2012": 3775.87279,
                                 "2013": 2481.4022999999997
-                            }
+                            },
+                            "name": "Produktionsverbesserungen Vieh"
                         },
                         {
                             "code": "814",
-                            "name": "Produktionsverbesserungen Pflanzen",
                             "values": {
                                 "2009": 0,
                                 "2011": 0,
                                 "2012": 0,
                                 "2013": 0
-                            }
+                            },
+                            "name": "Produktionsverbesserungen Pflanzen"
                         },
                         {
                             "code": "815",
-                            "name": "Wirtschaftliche Massnahmen",
                             "values": {
                                 "2009": 0,
                                 "2011": 0,
                                 "2012": 0,
                                 "2013": 0
-                            }
+                            },
+                            "name": "Wirtschaftliche Massnahmen"
                         },
                         {
                             "code": "816",
-                            "name": "Direktzahlungen",
                             "values": {
                                 "2009": 538089.3899500001,
                                 "2010": 550495.41665,
                                 "2011": 569914.63738,
                                 "2012": 568800.74754,
                                 "2013": 570022.59785
-                            }
+                            },
+                            "name": "Direktzahlungen"
                         }
                     ]
                 },
                 {
                     "code": "82",
-                    "name": "Forstwirtschaft",
                     "values": {
                         "2009": 47789.5073,
                         "2010": 52585.037469999996,
@@ -1571,23 +1570,23 @@
                         "2012": 51210.31276,
                         "2013": 49515.148980000005
                     },
+                    "name": "Forstwirtschaft",
                     "children": [
                         {
                             "code": "820",
-                            "name": "Forstwirtschaft",
                             "values": {
                                 "2009": 47789.5073,
                                 "2010": 52585.037469999996,
                                 "2011": 51492.6253,
                                 "2012": 51210.31275999999,
                                 "2013": 49515.148980000005
-                            }
+                            },
+                            "name": "Forstwirtschaft"
                         }
                     ]
                 },
                 {
                     "code": "83",
-                    "name": "Jagd und Fischerei",
                     "values": {
                         "2009": 18414.3603,
                         "2010": 518.03,
@@ -1595,23 +1594,23 @@
                         "2012": 312.61108,
                         "2013": 319.25235
                     },
+                    "name": "Jagd und Fischerei",
                     "children": [
                         {
                             "code": "830",
-                            "name": "Jagd und Fischerei",
                             "values": {
                                 "2009": 18414.3603,
                                 "2010": 518.03,
                                 "2011": 524.7169,
                                 "2012": 312.61108,
                                 "2013": 319.25235
-                            }
+                            },
+                            "name": "Jagd und Fischerei"
                         }
                     ]
                 },
                 {
                     "code": "84",
-                    "name": "Tourismus",
                     "values": {
                         "2009": 3867.3745500000005,
                         "2010": 4420.77955,
@@ -1619,23 +1618,23 @@
                         "2012": 4135.12926,
                         "2013": 6528.63304
                     },
+                    "name": "Tourismus",
                     "children": [
                         {
                             "code": "840",
-                            "name": "Tourismus",
                             "values": {
                                 "2009": 3867.3745500000005,
                                 "2010": 4420.779550000001,
                                 "2011": 3993.27355,
                                 "2012": 4135.12926,
                                 "2013": 6528.63304
-                            }
+                            },
+                            "name": "Tourismus"
                         }
                     ]
                 },
                 {
                     "code": "85",
-                    "name": "Industrie, Gewerbe, Handel",
                     "values": {
                         "2009": 41433.13121,
                         "2010": 38447.63186,
@@ -1643,33 +1642,34 @@
                         "2012": 43391.81586,
                         "2013": 48033.95376999999
                     },
+                    "name": "Industrie, Gewerbe, Handel",
                     "children": [
                         {
                             "code": "850",
-                            "name": "Industrie, Gewerbe, Handel",
                             "values": {
                                 "2009": 41433.13120999999,
                                 "2010": 38447.63186,
                                 "2011": 39707.47649,
                                 "2012": 43391.81586,
                                 "2013": 48033.95376999999
-                            }
+                            },
+                            "name": "Industrie, Gewerbe, Handel"
                         }
                     ]
                 },
                 {
                     "code": "87",
-                    "name": "Energie n.a.g",
                     "values": {
                         "2013": 1044.793
                     },
+                    "name": "Brennstoffe und Energie",
                     "children": [
                         {
                             "code": "879",
-                            "name": "Energie n.a.g",
                             "values": {
                                 "2013": 1044.793
-                            }
+                            },
+                            "name": "Energie n.a.g"
                         }
                     ]
                 }
@@ -1677,7 +1677,6 @@
         },
         {
             "code": "9",
-            "name": "Finanz- und Lastenausgleich",
             "values": {
                 "2009": 333971.06560999993,
                 "2010": 350861.12256,
@@ -1685,10 +1684,10 @@
                 "2012": 418534.66869,
                 "2013": 487387.75274
             },
+            "name": "Finanzen und Steuern",
             "children": [
                 {
                     "code": "93",
-                    "name": "Finanz- und Lastenausgleich",
                     "values": {
                         "2009": 191494.972,
                         "2010": 191626.453,
@@ -1696,23 +1695,23 @@
                         "2012": 291146.762,
                         "2013": 290644.178
                     },
+                    "name": "Finanz- und Lastenausgleich",
                     "children": [
                         {
                             "code": "930",
-                            "name": "Finanz- und Lastenausgleich",
                             "values": {
                                 "2009": 191494.972,
                                 "2010": 191626.453,
                                 "2011": 188341.86,
                                 "2012": 291146.762,
                                 "2013": 290644.178
-                            }
+                            },
+                            "name": "Finanz- und Lastenausgleich"
                         }
                     ]
                 },
                 {
                     "code": "95",
-                    "name": "Ertragsanteile, übrige",
                     "values": {
                         "2009": 9685.53325,
                         "2010": 10419.27965,
@@ -1720,23 +1719,23 @@
                         "2012": 12978.49153,
                         "2013": 11473.1275
                     },
+                    "name": "Ertragsanteile, übrige",
                     "children": [
                         {
                             "code": "950",
-                            "name": "Ertragsanteile, übrige",
                             "values": {
                                 "2009": 9685.53325,
                                 "2010": 10419.27965,
                                 "2011": 12814.981109999999,
                                 "2012": 12978.49153,
                                 "2013": 11473.1275
-                            }
+                            },
+                            "name": "Ertragsanteile, übrige"
                         }
                     ]
                 },
                 {
                     "code": "96",
-                    "name": "Zinsen",
                     "values": {
                         "2009": 132790.56036,
                         "2010": 148815.38991,
@@ -1744,57 +1743,58 @@
                         "2012": 114395.24199,
                         "2013": 117275.05053000001
                     },
+                    "name": "Vermögens- und Schuldenverwaltung",
                     "children": [
                         {
                             "code": "961",
-                            "name": "Zinsen",
                             "values": {
                                 "2009": 122297.53476000001,
                                 "2010": 130033.86009,
                                 "2011": 115805.43956999999,
                                 "2012": 107997.87302,
                                 "2013": 107407.2793
-                            }
+                            },
+                            "name": "Zinsen"
                         },
                         {
                             "code": "963",
-                            "name": "Liegenschaften des Finanzvermögens",
                             "values": {
                                 "2009": 32.915949999999995,
                                 "2010": 59.70357,
                                 "2011": 255.21677000000003,
                                 "2012": 463.92717,
                                 "2013": 1681.39823
-                            }
+                            },
+                            "name": "Liegenschaften des Finanzvermögens"
                         },
                         {
                             "code": "969",
-                            "name": "Finanzvermögen n.a.g.",
                             "values": {
                                 "2009": 10460.10965,
                                 "2010": 18721.82625,
                                 "2011": 9346.416,
                                 "2012": 5933.4418,
                                 "2013": 8186.373
-                            }
+                            },
+                            "name": "Finanzvermögen n.a.g."
                         }
                     ]
                 },
                 {
                     "code": "91",
-                    "name": "Steuern",
                     "values": {
                         "2012": 14.17317,
                         "2013": 67995.39670999999
                     },
+                    "name": "Steuern",
                     "children": [
                         {
                             "code": "910",
-                            "name": "Steuern",
                             "values": {
                                 "2012": 14.17317,
                                 "2013": 67995.39670999999
-                            }
+                            },
+                            "name": "Steuern"
                         }
                     ]
                 }

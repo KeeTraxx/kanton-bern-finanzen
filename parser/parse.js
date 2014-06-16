@@ -46,10 +46,11 @@ kexcel.open(path.join('input','input.xlsx'), function(err, workbook){
                 //console.log('Looking for ', c);
                 var childnode = _.find(node.children, function(n) {return n.code == c;});
                 if (!childnode) {
-                    childnode = {code: c, name: sheet.getCellValue(row,6), values: {} };
+                    childnode = {code: c, values: {} };
                     node.children = node.children || [];
                     node.children.push(childnode);
                 }
+                childnode.name = sheet.getCellValue(row,6);
                 childnode.values[year] = parseFloat(sheet.getCellValue(row, 8) ) || 0;
                 node = childnode;
                 return c;

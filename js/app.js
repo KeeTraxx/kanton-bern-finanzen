@@ -15,6 +15,8 @@ angular.module('ktbe.controllers', [])
             var c = d3.scale.category10().domain(d3.range(0, 10));
             var base = d3.hsl(c(input[0]));
             base.h += +( input[1] || 0 ) * 5;
+            base.s += +( input[1] || 0 ) / 20;
+            base.l += +( input[1] || 0 ) / 30;
             return base;
         };
         $http.get('data/data.json').success(function (data) {
