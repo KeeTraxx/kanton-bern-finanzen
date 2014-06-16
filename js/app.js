@@ -281,8 +281,11 @@ angular.module('ktbe.directives', [])
                 function update() {
                     if (!(  scope.selectedYear && scope.selectedNode )) return;
                     var tr = table.select('tbody').selectAll('tr').data(scope.selectedNode.children, function (d) {
-                        return d.code
+                        return d.code;
                     });
+
+                    var total = $filter('sum')(scope.selectedNode.children, scope.selectedYear);
+                    console.log(total);
 
                     var newTr = tr.enter()
                         .append('tr')
@@ -316,10 +319,16 @@ angular.module('ktbe.directives', [])
                             }
                         });
                     newTr.append('td');
+                    newTr.append('td');
 
                     tr.select('td:nth-child(3)')
                         .text(function (d) {
                             return d.values[scope.selectedYear] ? $filter('swissFormat')(d.values[scope.selectedYear]) : '-';
+                        });
+
+                    tr.select('td:nth-child(4)')
+                        .text(function (d) {
+                            return d.values[scope.selectedYear] ? $filter('number')(d.values[scope.selectedYear] / total * 100, 2 ) + '%' : '0%';
                         });
 
                     tr.exit()
@@ -336,11 +345,11 @@ angular.module('ktbe.directives', [])
     }]);
 
 angular.module('ktbe.filters', [])
-    .filter('sum', ['$filter', function ($filter) {
+    .filter('sum', [function () {
         return function (input, year) {
-            return $filter('swissFormat')(_.reduce(input, function (memo, d) {
+            return _.reduce(input, function (memo, d) {
                 return memo + (d.values[year] || 0);
-            }, 0));
+            }, 0);
         };
     }])
     .filter('swissFormat', [function () {

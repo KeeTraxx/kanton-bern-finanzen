@@ -88,6 +88,7 @@
                 <th>&nbsp;</th>
                 <th>Produktgruppe</th>
                 <th>Ausgaben in<br/> 1000 Fr.</th>
+                <th>Relativer<br/> Anteil</th>
             </tr>
             </thead>
             <tbody>
@@ -96,7 +97,8 @@
             <tr>
                 <th>&nbsp;</th>
                 <th>Total</th>
-                <th>{{selectedNode.children | sum:selectedYear}}</th>
+                <th>{{selectedNode.children | sum:selectedYear | swissFormat}}</th>
+                <th>&nbsp;</th>
             </tr>
             </tfoot>
         </table>
