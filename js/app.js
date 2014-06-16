@@ -1,5 +1,6 @@
 angular.module('ktbe', [
     'ngRoute',
+    'ngSanitize',
     'ktbe.controllers',
     'ktbe.directives',
     'ktbe.filters'
@@ -35,7 +36,6 @@ angular.module('ktbe.controllers', [])
 
             _.reduce(code, function (memo, d) {
                 var c = memo + d;
-                console.log('looking for', c);
                 node = _.find(node.children, function (d) {
                     return d.code == c;
                 });
@@ -46,7 +46,7 @@ angular.module('ktbe.controllers', [])
         }
     }]);
 
-angular.module('ktbe.directives', [])
+angular.module('ktbe.directives', ['ui.bootstrap'])
     .directive('slider', ['$routeParams', function ($routeParams) {
         return {
             restrict: 'A',
@@ -262,7 +262,7 @@ angular.module('ktbe.directives', [])
             }
         }
     }])
-    .directive('financeTable', ['$filter', function ($filter) {
+    .directive('financeTable', ['$filter', '$modal', function ($filter,$modal) {
         return {
             restrict: 'A',
             link: function (scope, el) {
@@ -285,7 +285,6 @@ angular.module('ktbe.directives', [])
                     });
 
                     var total = $filter('sum')(scope.selectedNode.children, scope.selectedYear);
-                    console.log(total);
 
                     var newTr = tr.enter()
                         .append('tr')
@@ -303,6 +302,19 @@ angular.module('ktbe.directives', [])
                         .html('<i class="fa fa-info-circle"></i>')
                         .style('color', function (d) {
                             return scope.color(d.code);
+                        })
+                        .on('click',function(d){
+                            scope.d = d;
+                            scope.$apply();
+                            var lorem = new Lorem;
+                            lorem.type = Lorem.TEXT;
+                            lorem.query = '2p';
+                            d.description = lorem.createLorem();
+
+                            $modal.open({
+                                scope: scope,
+                                templateUrl: 'info'
+                            });
                         });
                     newTr.append('td')
                         .text(function (d) {
