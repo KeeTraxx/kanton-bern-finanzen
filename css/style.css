@@ -27,7 +27,7 @@ div#info table {
     font-size: small;
 }
 
-div#info table tr td {
+div#info table tr > * {
     vertical-align: middle;
 }
 

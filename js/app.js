@@ -170,7 +170,7 @@ angular.module('ktbe.directives', [])
 
                     var scale = d3.scale.sqrt()
                         .domain([0, max])
-                        .range([10, height / 6]);
+                        .range([1, height / 6]);
 
 
                     nodes = _.each(node.children, function (d) {
