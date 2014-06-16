@@ -11,7 +11,12 @@ angular.module('ktbe', [
 
 angular.module('ktbe.controllers', [])
     .controller('VisualizationController', ['$scope', '$http', function ($scope, $http) {
-        $scope.color = d3.scale.category10().domain(d3.range(0, 10));
+        $scope.color = function (input) {
+            var c = d3.scale.category10().domain(d3.range(0, 10));
+            var base = d3.hsl(c(input[0]));
+            base.h += +( input[1] || 0 ) * 5;
+            return base;
+        };
         $http.get('data/data.json').success(function (data) {
             $scope.data = data;
             $scope.$watch('selectedCode', function (code) {
@@ -23,7 +28,7 @@ angular.module('ktbe.controllers', [])
             });
         });
 
-        $scope.findRecursive = function(nodes, code) {
+        $scope.findRecursive = function (nodes, code) {
             var node = nodes;
 
             _.reduce(code, function (memo, d) {
@@ -106,9 +111,8 @@ angular.module('ktbe.directives', [])
                 svg.call(tip);
                 svg.on('click', function () {
                     console.log(d3.event.target, arguments, this);
-                    if (d3.event.target == this) {
+                    if ( scope.selectedCode && d3.event.target == this) {
                         var parent = scope.selectedCode.substr(0, scope.selectedCode.length - 1);
-                        console.log(parent);
                         scope.selectedCode = scope.selectedCode.length > 0 ? parent : scope.selectedCode;
                         scope.$apply();
                     }
@@ -204,7 +208,7 @@ angular.module('ktbe.directives', [])
                         .append('circle')
                         .attr('class', 'backdrop')
                         .attr('fill', function (d) {
-                            return scope.color(parseInt(d.code[0]));
+                            return scope.color(d.code);
                         })
                         .style('opacity', 0.4)
                         .on('mouseover', function (d) {
@@ -225,7 +229,7 @@ angular.module('ktbe.directives', [])
                         .attr('fill', 'none')
                         .attr('class', 'border')
                         .style('stroke', function (d) {
-                            return scope.color(parseInt(d.code[0]));
+                            return scope.color(d.code);
                         })
                         .style('stroke-width', 2)
                         .style('opacity', 0.6);
@@ -293,13 +297,13 @@ angular.module('ktbe.directives', [])
                         .attr('class', 'infocol')
                         .html('<i class="fa fa-info-circle"></i>')
                         .style('color', function (d) {
-                            return scope.color(parseInt(d.code[0]));
+                            return scope.color(d.code);
                         });
                     newTr.append('td')
                         .text(function (d) {
                             return d.name
                         })
-                        .style('cursor', function(d){
+                        .style('cursor', function (d) {
                             return d.children ? 'pointer' : ''
                         })
                         .on('click', function (d) {
@@ -323,7 +327,7 @@ angular.module('ktbe.directives', [])
             }
         }
     }])
-    .directive('breadcrumbs',[function(){
+    .directive('breadcrumbs', [function () {
         return {
             templateUrl: 'breadcrumbs'
         }
