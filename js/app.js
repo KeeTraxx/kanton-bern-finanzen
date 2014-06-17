@@ -8,10 +8,24 @@ angular.module('ktbe', [
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/:year/:code?', {templateUrl: 'index', controller: 'VisualizationController'});
         $routeProvider.otherwise({redirectTo: '/2013'});
+    }])
+    .run(['$route', '$rootScope', '$location', function ($route, $rootScope, $location) {
+        var original = $location.path;
+        $location.path = function (path, reload) {
+            if (reload === false) {
+                var lastRoute = $route.current;
+                var un = $rootScope.$on('$locationChangeSuccess', function () {
+                    $route.current = lastRoute;
+                    un();
+                });
+            }
+
+            return original.apply($location, [path]);
+        };
     }]);
 
 angular.module('ktbe.controllers', [])
-    .controller('VisualizationController', ['$scope', '$http', function ($scope, $http) {
+    .controller('VisualizationController', ['$scope', '$http', '$location', '$routeParams', '$timeout', function ($scope, $http, $location, $routeParams, $timeout) {
         $scope.color = function (input) {
             var c = d3.scale.category10().domain(d3.range(0, 10));
             var base = d3.hsl(c(input[0]));
@@ -22,13 +36,15 @@ angular.module('ktbe.controllers', [])
         };
         $http.get('data/data.json').success(function (data) {
             $scope.data = data;
-            $scope.$watch('selectedCode', function (code) {
-                if (code) {
-                    $scope.selectedNode = $scope.findRecursive(data, code);
-                } else {
-                    $scope.selectedNode = $scope.data;
-                }
-            });
+            $scope.selectedCode = $routeParams.code || null;
+        });
+
+        $scope.$watch('selectedCode', function (code) {
+            if (code) {
+                $scope.selectedNode = $scope.findRecursive($scope.data, code);
+            } else {
+                $scope.selectedNode = $scope.data;
+            }
         });
 
         $scope.findRecursive = function (nodes, code) {
@@ -43,7 +59,15 @@ angular.module('ktbe.controllers', [])
             }, '');
 
             return node;
+        };
+
+        $scope.$watch('selectedYear', updateUrl);
+        $scope.$watch('selectedCode', updateUrl);
+
+        function updateUrl() {
+            $location.path($scope.selectedYear + '/' + ($scope.selectedCode || ''), false);
         }
+
     }]);
 
 angular.module('ktbe.directives', ['ui.bootstrap'])
@@ -51,7 +75,6 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
         return {
             restrict: 'A',
             link: function (scope, el) {
-                scope.selectedCode = $routeParams.code;
                 scope.$watch('data', function (data) {
                     if (data) {
                         console.log(data);
@@ -113,7 +136,7 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
                 svg.call(tip);
                 svg.on('click', function () {
                     console.log(d3.event.target, arguments, this);
-                    if ( scope.selectedCode && d3.event.target == this) {
+                    if (scope.selectedCode && d3.event.target == this) {
                         var parent = scope.selectedCode.substr(0, scope.selectedCode.length - 1);
                         scope.selectedCode = scope.selectedCode.length > 0 ? parent : scope.selectedCode;
                         scope.$apply();
@@ -155,6 +178,7 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
                 }
 
                 function update() {
+                    console.log('update', scope.selectedYear, scope.selectedNode);
                     // do nothing if there is no year and node
                     if (!( scope.selectedYear && scope.selectedNode )) return;
                     console.log('update', scope.selectedYear);
@@ -262,7 +286,7 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
             }
         }
     }])
-    .directive('financeTable', ['$filter', '$modal', function ($filter,$modal) {
+    .directive('financeTable', ['$filter', '$modal', function ($filter, $modal) {
         return {
             restrict: 'A',
             link: function (scope, el) {
@@ -303,7 +327,7 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
                         .style('color', function (d) {
                             return scope.color(d.code);
                         })
-                        .on('click',function(d){
+                        .on('click', function (d) {
                             scope.d = d;
                             scope.$apply();
                             var lorem = new Lorem;
@@ -342,7 +366,7 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
                     tr.select('td:nth-child(4)')
                         .attr('class', 'number')
                         .text(function (d) {
-                            return d.values[scope.selectedYear] ? $filter('number')(d.values[scope.selectedYear] / total * 100, 2 ) + '%' : '0%';
+                            return d.values[scope.selectedYear] ? $filter('number')(d.values[scope.selectedYear] / total * 100, 2) + '%' : '0%';
                         });
 
                     tr.exit()
