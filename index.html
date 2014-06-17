@@ -100,8 +100,8 @@
             <tr>
                 <th>&nbsp;</th>
                 <th>Ausgaben</th>
-                <th>Fr. in {{selectedYear}}</th>
-                <th>Relativer<br/> Anteil</th>
+                <th class="number">Fr. in {{selectedYear}}</th>
+                <th class="number">in %</th>
             </tr>
             </thead>
             <tbody>
@@ -110,8 +110,8 @@
             <tr>
                 <th>&nbsp;</th>
                 <th>Total</th>
-                <th class="">{{selectedNode.children | sum:selectedYear | swissFormat}}</th>
-                <th>&nbsp;</th>
+                <th class="number">{{selectedNode.children | sum:selectedYear | swissFormat}}</th>
+                <th class="number">&nbsp;</th>
             </tr>
             </tfoot>
         </table>

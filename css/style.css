@@ -69,3 +69,7 @@ ol.breadcrumb li {
     cursor: pointer;
     color: dodgerblue;
 }
+
+.number {
+    text-align: right;
+}

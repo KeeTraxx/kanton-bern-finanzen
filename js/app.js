@@ -334,11 +334,13 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
                     newTr.append('td');
 
                     tr.select('td:nth-child(3)')
+                        .attr('class', 'number')
                         .text(function (d) {
                             return d.values[scope.selectedYear] ? $filter('swissFormat')(d.values[scope.selectedYear]) : '-';
                         });
 
                     tr.select('td:nth-child(4)')
+                        .attr('class', 'number')
                         .text(function (d) {
                             return d.values[scope.selectedYear] ? $filter('number')(d.values[scope.selectedYear] / total * 100, 2 ) + '%' : '0%';
                         });
