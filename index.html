@@ -42,7 +42,7 @@
     </div>
 </script>
 <script type="text/ng-template" id="breadcrumbs">
-    <li ng-click="selectedCode = ''">Alle Produktgrupen</li>
+    <li ng-click="selectedCode = ''">Alle Ausgaben</li>
     <li ng-click="selectedCode = selectedCode.substr(0,1)" ng-show="selectedCode.length > 0">{{findRecursive( data, selectedCode.substr(0,1) ).name }}</li>
     <li ng-click="selectedCode = selectedCode.substr(0,2)" ng-show="selectedCode.length > 1">{{findRecursive( data, selectedCode.substr(0,2) ).name }}</li>
     <li ng-click="selectedCode = selectedCode.substr(0,3)" ng-show="selectedCode.length > 2">{{findRecursive( data, selectedCode.substr(0,3) ).name }}</li>
@@ -99,8 +99,8 @@
             <thead>
             <tr>
                 <th>&nbsp;</th>
-                <th>Produktgruppe</th>
-                <th>Ausgaben in<br/> 1000 Fr.</th>
+                <th>Ausgaben</th>
+                <th>Fr. in {{selectedYear}}</th>
                 <th>Relativer<br/> Anteil</th>
             </tr>
             </thead>
@@ -110,7 +110,7 @@
             <tr>
                 <th>&nbsp;</th>
                 <th>Total</th>
-                <th>{{selectedNode.children | sum:selectedYear | swissFormat}}</th>
+                <th class="">{{selectedNode.children | sum:selectedYear | swissFormat}}</th>
                 <th>&nbsp;</th>
             </tr>
             </tfoot>

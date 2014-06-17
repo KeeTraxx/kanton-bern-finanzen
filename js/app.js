@@ -366,6 +366,6 @@ angular.module('ktbe.filters', [])
     }])
     .filter('swissFormat', [function () {
         return function (input) {
-            return input.toLocaleString("en-US").replace(/,/g, "'");
+            return (Math.round(input * 1000)).toLocaleString("en-US").replace(/,/g, "'");
         }
     }]);
