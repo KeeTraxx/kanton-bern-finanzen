@@ -37,6 +37,8 @@ angular.module('ktbe.controllers', [])
         $http.get('data/data.json').success(function (data) {
             $scope.data = data;
             $scope.selectedCode = $routeParams.code || null;
+            var n = $scope.findRecursive($scope.selectedCode);
+            ga('send', 'event', 'direct', n ? n.name : 'root');
         });
 
         $scope.$watch('selectedCode', function (code) {
@@ -135,11 +137,11 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
                 });
                 svg.call(tip);
                 svg.on('click', function () {
-                    console.log(d3.event.target, arguments, this);
                     if (scope.selectedCode && d3.event.target == this) {
                         var parent = scope.selectedCode.substr(0, scope.selectedCode.length - 1);
                         scope.selectedCode = scope.selectedCode.length > 0 ? parent : scope.selectedCode;
                         scope.$apply();
+                        ga('send', 'event', 'parent', scope.selectedNode.name || 'root');
                     }
                 });
                 function tick(e) {
@@ -178,10 +180,8 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
                 }
 
                 function update() {
-                    console.log('update', scope.selectedYear, scope.selectedNode);
                     // do nothing if there is no year and node
                     if (!( scope.selectedYear && scope.selectedNode )) return;
-                    console.log('update', scope.selectedYear);
 
                     var height = parseInt(svg.style('height'));
                     var width = parseInt(svg.style('width'));
@@ -223,6 +223,7 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
                             if (d.children) {
                                 scope.selectedCode = d.code;
                                 scope.$apply();
+                                ga('send', 'event', 'bubbleClick', scope.selectedNode.name || 'root');
                             }
                         });
 
@@ -334,7 +335,7 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
                             lorem.type = Lorem.TEXT;
                             lorem.query = '2p';
                             d.description = lorem.createLorem();
-
+                            ga('send', 'event', 'openModal', d.name || 'root');
                             $modal.open({
                                 scope: scope,
                                 templateUrl: 'info'
@@ -352,6 +353,7 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
                             if (d.children) {
                                 scope.selectedCode = d.code;
                                 scope.$apply();
+                                ga('send', 'event', 'tableClick', $scope.selectedNode.code || 'root');
                             }
                         });
                     newTr.append('td');
