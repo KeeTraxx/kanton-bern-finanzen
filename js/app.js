@@ -338,7 +338,7 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
                             ga('send', 'event', 'openModal', d.name || 'root');
                             $modal.open({
                                 scope: scope,
-                                templateUrl: 'info'
+                                templateUrl: 'infotemplate'
                             });
                         });
                     newTr.append('td')
@@ -353,7 +353,7 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
                             if (d.children) {
                                 scope.selectedCode = d.code;
                                 scope.$apply();
-                                ga('send', 'event', 'tableClick', $scope.selectedNode.code || 'root');
+                                ga('send', 'event', 'tableClick', scope.selectedNode.code || 'root');
                             }
                         });
                     newTr.append('td');

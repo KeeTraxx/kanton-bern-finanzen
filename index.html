@@ -30,7 +30,7 @@
 <div id="content" ng-view>
 
 </div>
-<script type="text/ng-template" id="info">
+<script type="text/ng-template" id="infotemplate">
     <div class="modal-header">
         <span style="float: right; cursor: pointer" ng-click="$close()">&#10006;</span>
         <h3 class="modal-title">{{d.name}}</h3>
@@ -42,7 +42,7 @@
     </div>
 </script>
 <script type="text/ng-template" id="breadcrumbs">
-    <li ng-click="console.log('ah');selectedCode = ''">Alle Ausgaben</li>
+    <li ng-click="selectedCode = ''">Alle Ausgaben</li>
     <li ng-click="selectedCode = selectedCode.substr(0,1)" ng-show="selectedCode.length > 0">{{findRecursive( data, selectedCode.substr(0,1) ).name }}</li>
     <li ng-click="selectedCode = selectedCode.substr(0,2)" ng-show="selectedCode.length > 1">{{findRecursive( data, selectedCode.substr(0,2) ).name }}</li>
     <li ng-click="selectedCode = selectedCode.substr(0,3)" ng-show="selectedCode.length > 2">{{findRecursive( data, selectedCode.substr(0,3) ).name }}</li>
