@@ -2,6 +2,10 @@
 <head>
     <title>Ausgaben des Kanton Bern</title>
 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="css/d3.slider.css"/>
@@ -24,6 +28,28 @@
 
     <script type="application/javascript" src="js/d3.slider.js"></script>
 
+    <script type="text/javascript">
+        var $buoop = {
+            vs: {i: 10, f: 15, o: 12.1, s: 5.1},
+            l: 'de',
+            test: true,
+            onshow: function(infos) {
+                //document.getElementById('content').innerHTML = '';
+            }
+        };
+        $buoop.ol = window.onload;
+        window.onload = function () {
+            try {
+                if ($buoop.ol) $buoop.ol();
+            } catch (e) {
+            }
+            var e = document.createElement("script");
+            e.setAttribute("type", "text/javascript");
+            e.setAttribute("src", "//browser-update.org/update.js");
+            document.body.appendChild(e);
+        }
+    </script>
+
 </head>
 <body>
 
@@ -33,6 +59,7 @@
 <script type="text/ng-template" id="infotemplate">
     <div class="modal-header">
         <span style="float: right; cursor: pointer" ng-click="$close()">&#10006;</span>
+
         <h3 class="modal-title">{{d.name}}</h3>
     </div>
     <div class="modal-body" ng-bind-html="d.description">
@@ -43,14 +70,20 @@
 </script>
 <script type="text/ng-template" id="breadcrumbs">
     <li ng-click="selectedCode = ''">Alle Ausgaben</li>
-    <li ng-click="selectedCode = selectedCode.substr(0,1)" ng-show="selectedCode.length > 0">{{findRecursive( data, selectedCode.substr(0,1) ).name }}</li>
-    <li ng-click="selectedCode = selectedCode.substr(0,2)" ng-show="selectedCode.length > 1">{{findRecursive( data, selectedCode.substr(0,2) ).name }}</li>
-    <li ng-click="selectedCode = selectedCode.substr(0,3)" ng-show="selectedCode.length > 2">{{findRecursive( data, selectedCode.substr(0,3) ).name }}</li>
+    <li ng-click="selectedCode = selectedCode.substr(0,1)" ng-show="selectedCode.length > 0">{{findRecursive( data,
+        selectedCode.substr(0,1) ).name }}
+    </li>
+    <li ng-click="selectedCode = selectedCode.substr(0,2)" ng-show="selectedCode.length > 1">{{findRecursive( data,
+        selectedCode.substr(0,2) ).name }}
+    </li>
+    <li ng-click="selectedCode = selectedCode.substr(0,3)" ng-show="selectedCode.length > 2">{{findRecursive( data,
+        selectedCode.substr(0,3) ).name }}
+    </li>
 </script>
 <script type="text/ng-template" id="index">
     <div id="slider" slider></div>
     <div id="vis">
-        <svg visualization xmlns:xlink="http://www.w3.org/1999/xlink">
+        <svg visualization xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%">
             <defs>
                 <path id="bear" fill-rule="evenodd" stroke-miterlimit="10" d="M-10.241-35.604
 		l1.168-0.303l1.252,0.303l0.773,0.782l-0.731,0.773l-2.025,1.118l-0.647-0.689l-0.479-1.076L-10.241-35.604z M-26.834-39.311
@@ -129,10 +162,17 @@
 
 
 <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
     ga('create', 'UA-52111436-1', 'keetraxx.github.io');
     ga('send', 'pageview');
