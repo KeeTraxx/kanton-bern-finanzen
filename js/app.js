@@ -79,13 +79,12 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
             link: function (scope, el) {
                 scope.$watch('data', function (data) {
                     if (data) {
-                        console.log(data);
                         var extent = d3.extent(_.keys(data.children[0].values));
-                        var sliderConf = d3.slider().min(extent[0]).max(extent[1]).axis(true).step(1).value($routeParams.year).on('slide', function (e, value) {
+                        var sliderConf = d3.slider().min(extent[0]).max(extent[1]).axis(true).step(1).value($routeParams.year || extent[1]).on('slide', function (e, value) {
                             scope.selectedYear = value;
                             scope.$apply();
                         });
-                        scope.selectedYear = $routeParams.year;
+                        scope.selectedYear = $routeParams.year != 'undefined' ? $routeParams.year : extent[1];
                         d3.select(el[0]).call(sliderConf);
                     }
                 });
