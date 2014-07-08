@@ -178,6 +178,9 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
                     };
                 }
 
+                // Reference circles
+                svg.append('g').attr('class','reference');
+
                 function update() {
                     // do nothing if there is no year and node
                     if (!( scope.selectedYear && scope.selectedNode )) return;
@@ -219,7 +222,10 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
                         .attr('class', 'node')
                         .on('click', function (d) {
                             if (d3.event.defaultPrevented) return;
-                            if (d.children) {
+                            var children = _.filter(d.children, function(d){
+                                return d.values[scope.selectedYear] > 0;
+                            });
+                            if (children.length > 1) {
                                 scope.selectedCode = d.code;
                                 scope.$apply();
                                 ga('send', 'event', 'bubbleClick', scope.selectedNode.name || 'root');
@@ -304,11 +310,16 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
 
                 function update() {
                     if (!(  scope.selectedYear && scope.selectedNode )) return;
-                    var tr = table.select('tbody').selectAll('tr').data(scope.selectedNode.children, function (d) {
+
+                    var filtered = _.filter(scope.selectedNode.children, function(d){
+                        return d.values[scope.selectedYear] > 0;
+                    });
+
+                    var tr = table.select('tbody').selectAll('tr').data(filtered, function (d) {
                         return d.code;
                     });
 
-                    var total = $filter('sum')(scope.selectedNode.children, scope.selectedYear);
+                    var total = $filter('sum')(filtered, scope.selectedYear);
 
                     var newTr = tr.enter()
                         .append('tr')
@@ -349,7 +360,11 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
                         })
                         .on('click', function (d) {
                             if (d3.event.defaultPrevented) return;
-                            if (d.children) {
+                            var children = _.filter(d.children, function(d){
+                                return d.values[scope.selectedYear] > 0;
+                            });
+
+                            if ( children.length > 1) {
                                 scope.selectedCode = d.code;
                                 scope.$apply();
                                 ga('send', 'event', 'tableClick', scope.selectedNode.code || 'root');
