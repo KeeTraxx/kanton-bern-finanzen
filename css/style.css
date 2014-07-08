@@ -79,3 +79,18 @@ ol.breadcrumb li {
     background-position: 0 15px;
     background-repeat: no-repeat;
 }
+
+g.reference circle {
+    fill: none;
+    stroke-width: 2px;
+    stroke: black;
+    stroke-dasharray: 8px 3px;
+}
+
+g.reference {
+    opacity: 0.3;
+}
+
+g.reference text {
+    text-anchor: middle;
+}

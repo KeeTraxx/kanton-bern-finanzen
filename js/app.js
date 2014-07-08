@@ -179,7 +179,11 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
                 }
 
                 // Reference circles
-                svg.append('g').attr('class','reference');
+                svg.append('g').attr('class', 'reference');
+
+                // Nodes
+                var nodesG = svg.append('g')
+                    .attr('class', 'nodes');
 
                 function update() {
                     // do nothing if there is no year and node
@@ -198,9 +202,55 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
                         .domain([0, max])
                         .range([1, height / 6]);
 
-
                     nodes = _.each(node.children, function (d) {
                         d.radius = d.values[scope.selectedYear] ? scale(d.values[scope.selectedYear]) : 0;
+                    });
+
+                    var max = d3.max(nodes, function (d) {
+                        return d.values[scope.selectedYear];
+                    });
+
+                    var maxLog = ~~(Math.log(max) * Math.LOG10E);
+                    var maxRefCircle = Math.pow(10, maxLog);
+
+                    var refCircleData = [maxRefCircle, maxRefCircle / 2, maxRefCircle / 10];
+
+                    svg.select('g.reference').attr({
+                        transform: function (d) {
+                            return 'translate(120,' + (height - 90) + ')'
+                        }
+                    });
+
+                    var refCircles = svg.select('.reference').selectAll('g').data(refCircleData);
+                    var refEnter = refCircles.enter().append('g');
+                    refEnter.append('circle');
+                    refEnter.append('text');
+                    refCircles.exit().remove();
+
+                    refCircles.select('circle')
+                        .transition()
+                        .attr({
+                            r: function (d) {
+                                return scale(d);
+                            },
+                            cy: function(d) {
+                                return -scale(d);
+                            }
+                        });
+
+                    refCircles.select('text').text(function(d){
+                        var suffixes = ['', '000', ' Mio.', ' Mrd.', ' Bio.', ' Brd.'];
+                        var index = 0;
+                        var result = d*1000;
+                        while(result > 1000) {
+                            index++;
+                            result /= 1000;
+                        }
+                        return result + suffixes[index];
+                    }).attr({
+                        y: function(d) {
+                            return -scale(d) * 2 - 5;
+                        }
                     });
 
                     force
@@ -208,9 +258,11 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
                         .size([width, height])
                         .start();
 
-                    var nodeG = svg.selectAll('g.node').data(nodes, function (d) {
-                        return d.code
-                    });
+                    var nodeG = nodesG
+                        .selectAll('g.node')
+                        .data(nodes, function (d) {
+                            return d.code;
+                        });
 
                     nodeG.exit()
                         .transition()
@@ -222,7 +274,7 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
                         .attr('class', 'node')
                         .on('click', function (d) {
                             if (d3.event.defaultPrevented) return;
-                            var children = _.filter(d.children, function(d){
+                            var children = _.filter(d.children, function (d) {
                                 return d.values[scope.selectedYear] > 0;
                             });
                             if (children.length > 1) {
@@ -311,7 +363,7 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
                 function update() {
                     if (!(  scope.selectedYear && scope.selectedNode )) return;
 
-                    var filtered = _.filter(scope.selectedNode.children, function(d){
+                    var filtered = _.filter(scope.selectedNode.children, function (d) {
                         return d.values[scope.selectedYear] > 0;
                     });
 
@@ -360,11 +412,11 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
                         })
                         .on('click', function (d) {
                             if (d3.event.defaultPrevented) return;
-                            var children = _.filter(d.children, function(d){
+                            var children = _.filter(d.children, function (d) {
                                 return d.values[scope.selectedYear] > 0;
                             });
 
-                            if ( children.length > 1) {
+                            if (children.length > 1) {
                                 scope.selectedCode = d.code;
                                 scope.$apply();
                                 ga('send', 'event', 'tableClick', scope.selectedNode.code || 'root');
