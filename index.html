@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html ng-app="ktbe">
 <head>
     <title>Ausgaben des Kanton Bern</title>
@@ -21,6 +22,7 @@
     -->
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="utf-8">
 
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
 
@@ -147,22 +149,26 @@
         <ol class="breadcrumb" breadcrumbs></ol>
         <table finance-table class="table table-condensed table-striped table-hover">
             <thead>
-            <tr>
-                <th>&nbsp;</th>
-                <th>Ausgaben</th>
-                <th class="number">Fr. in {{selectedYear}}</th>
-                <th class="number">in %</th>
-            </tr>
+                <tr>
+                    <th>&nbsp;</th>
+                    <th>Ausgaben</th>
+                    <th class="number">Fr. in {{selectedYear}}</th>
+                    <th class="number">in %</th>
+                </tr>
             </thead>
             <tbody>
             </tbody>
             <tfoot>
-            <tr>
-                <th>&nbsp;</th>
-                <th>Total</th>
-                <th class="number">{{selectedNode.children | sum:selectedYear | swissFormat}}</th>
-                <th class="number">&nbsp;</th>
-            </tr>
+                <tr>
+                    <th>&nbsp;</th>
+                    <th>Total</th>
+                    <th class="number">{{selectedNode.children | sum:selectedYear | swissFormat}}</th>
+                    <th class="number">&nbsp;</th>
+                </tr>
+                <tr>
+                    <td><i class="fa fa-hand-o-up"></i></td>
+                    <td colspan="20">Für weitere Informationen zu den Ausgabekategorien auf die Informationssymbole <i class="fa fa-info-circle"></i> klicken.</td>
+                </tr>
             </tfoot>
         </table>
         <div style="position: absolute;bottom:0">
