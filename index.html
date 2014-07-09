@@ -53,7 +53,7 @@
             vs: {i: 10, f: 15, o: 12.1, s: 5.1},
             l: 'de',
             //test: true,
-            onshow: function(infos) {
+            onshow: function (infos) {
                 //document.getElementById('content').innerHTML = '';
             }
         };
@@ -79,6 +79,7 @@
 <script type="text/ng-template" id="infotemplate">
     <div class="modal-header">
         <span style="float: right; cursor: pointer" ng-click="$close()">&#10006;</span>
+
         <h3 class="modal-title">{{d.name}}</h3>
     </div>
     <div class="modal-body" ng-bind-html="d.description">
@@ -145,39 +146,83 @@
         </svg>
     </div>
     <div id="info">
-        <h1><div class="crest"></div> Ausgaben des Kanton Bern</h1>
+        <h1>
+            <div class="crest"></div>
+            Ausgaben des Kanton Bern
+        </h1>
         <ol class="breadcrumb" breadcrumbs></ol>
         <table finance-table class="table table-condensed table-striped table-hover">
             <thead>
-                <tr>
-                    <th>&nbsp;</th>
-                    <th>Ausgaben</th>
-                    <th class="number">Fr. in {{selectedYear}}</th>
-                    <th class="number">in %</th>
-                </tr>
+            <tr>
+                <th>&nbsp;</th>
+                <th>Ausgaben</th>
+                <th class="number">Fr. in {{selectedYear}}</th>
+                <th class="number">in %</th>
+            </tr>
             </thead>
             <tbody>
             </tbody>
             <tfoot>
-                <tr>
-                    <th>&nbsp;</th>
-                    <th>Total</th>
-                    <th class="number">{{selectedNode.children | sum:selectedYear | swissFormat}}</th>
-                    <th class="number">&nbsp;</th>
-                </tr>
-                <tr>
-                    <td><i class="fa fa-hand-o-up"></i></td>
-                    <td colspan="20">Für weitere Informationen zu den Ausgabekategorien auf die Informationssymbole <i class="fa fa-info-circle"></i> klicken.</td>
-                </tr>
+            <tr>
+                <th>&nbsp;</th>
+                <th>Total</th>
+                <th class="number">{{selectedNode.children | sum:selectedYear | swissFormat}}</th>
+                <th class="number">&nbsp;</th>
+            </tr>
+            <tr>
+                <td><i class="fa fa-hand-o-up"></i></td>
+                <td colspan="20">Für weitere Informationen zu den Ausgabekategorien auf die Informationssymbole <i
+                        class="fa fa-info-circle"></i> klicken.
+                </td>
+            </tr>
             </tfoot>
         </table>
-        <div style="position: absolute;bottom:0">
+        <div style="position: absolute;bottom:0" ng-controller="Modal">
             <ul class="list-inline">
                 <li><a href="https://www.fin.be.ch/fin/de/index/direktion/organisation/gs/kontakt.html">Kontakt</a></li>
-                <li><a href="http://www.be.ch/portal/de/tools/rechtliches.html">Rechtliches</a></li>
-                <li>Quelle?</li>
+                <li><a href="" ng-click="open('about')">Impressum</a></li>
+                <li><a href="" ng-click="open('downloads')">Downloads</a></li>
             </ul>
         </div>
+    </div>
+</script>
+
+<script type="text/ng-template" id="downloads">
+    <div class="modal-header">
+        <span style="float: right; cursor: pointer" ng-click="$close()">&#10006;</span>
+
+        <h3 class="modal-title">Downloads</h3>
+    </div>
+    <div class="modal-body">
+        <dl>
+            <dt>Geschäftsberichte des Kantons Bern</dt>
+            <dd><a target="_blank" href="http://www.be.ch/geschaeftsbericht">http://www.be.ch/geschaeftsbericht</a></dd>
+            <dt>Überblick über die Finanzzahlen 2013</dt>
+            <dd>
+                <a target="_blank" href="http://www.be.ch/portal/de/index/mediencenter/medienmitteilungen.assetref/content/dam/documents/portal/Medienmitteilungen/de/2014/03/2014-03-11-geschaeftsbericht-be-2013-ueberblick.pdf">[ PDF ]</a>
+            </dd>
+            <dt>Rohdaten der Visualisation</dt>
+            <dd><a target="_blank" href="data/data.json">[ JSON ]</a></dd>
+            <dt>Source Code der Visualisierung</dt>
+            <dd><a target="_blank" href="https://github.com/KeeTraxx/kanton-bern-finanzen">[ GitHub ]</a></dd>
+        </dl>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" ng-click="$close()">Schliessen</button>
+    </div>
+</script>
+
+<script type="text/ng-template" id="about">
+    <div class="modal-header">
+        <span style="float: right; cursor: pointer" ng-click="$close()">&#10006;</span>
+
+        <h3 class="modal-title">Impressum</h3>
+    </div>
+    <div class="modal-body">
+        Impressum
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" ng-click="$close()">Schliessen</button>
     </div>
 </script>
 

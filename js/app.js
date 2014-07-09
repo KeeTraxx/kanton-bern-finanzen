@@ -465,6 +465,13 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
         return {
             templateUrl: 'breadcrumbs'
         }
+    }])
+    .controller('Modal',['$scope', '$modal', function($scope, $modal){
+        $scope.open = function(modal) {
+            $modal.open({
+                templateUrl: modal
+            });
+        };
     }]);
 
 angular.module('ktbe.filters', [])

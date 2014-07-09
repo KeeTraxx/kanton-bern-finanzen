@@ -11,10 +11,7 @@ div#content {
 
 div#vis {
     margin-right: 540px;
-    height: 100%;
-}
-
-div#vis svg {
+    height: 99%;
 }
 
 div#info {
@@ -93,4 +90,8 @@ g.reference {
 
 g.reference text {
     text-anchor: middle;
+}
+
+dd {
+    margin: 0 10px 10px 10px;
 }
