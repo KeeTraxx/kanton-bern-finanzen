@@ -77,7 +77,6 @@
 <script type="text/ng-template" id="infotemplate">
     <div class="modal-header">
         <span style="float: right; cursor: pointer" ng-click="$close()">&#10006;</span>
-
         <h3 class="modal-title">{{d.name}}</h3>
     </div>
     <div class="modal-body" ng-bind-html="d.description">
@@ -144,7 +143,7 @@
         </svg>
     </div>
     <div id="info">
-        <h1>Ausgaben des Kanton Bern</h1>
+        <h1><div class="crest"></div> Ausgaben des Kanton Bern</h1>
         <ol class="breadcrumb" breadcrumbs></ol>
         <table finance-table class="table table-condensed table-striped table-hover">
             <thead>
@@ -168,7 +167,7 @@
         </table>
         <div style="position: absolute;bottom:0">
             <ul class="list-inline">
-                <li><a href="http://www.be.ch/portal/de/tools/kontakt.html">Kontakt</a></li>
+                <li><a href="https://www.fin.be.ch/fin/de/index/direktion/organisation/gs/kontakt.html">Kontakt</a></li>
                 <li><a href="http://www.be.ch/portal/de/tools/rechtliches.html">Rechtliches</a></li>
                 <li>Quelle?</li>
             </ul>
