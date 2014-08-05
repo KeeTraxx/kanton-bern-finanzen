@@ -77,6 +77,12 @@ ol.breadcrumb li {
     background-repeat: no-repeat;
 }
 
+g.node text {
+    text-anchor: middle;
+    pointer-events: none;
+    fill: white;
+}
+
 g.reference circle {
     fill: none;
     stroke-width: 2px;

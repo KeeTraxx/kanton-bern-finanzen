@@ -1,20 +1,20 @@
 /*
-kanton-bern-finanzen https://github.com/KeeTraxx/kanton-bern-finanzen
-    Copyright (C) 2014  Khôi Tran
+ kanton-bern-finanzen https://github.com/KeeTraxx/kanton-bern-finanzen
+ Copyright (C) 2014  Khôi Tran
 
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
 
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
 angular.module('ktbe', [
     'ngRoute',
     'ngSanitize',
@@ -108,7 +108,7 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
             }
         }
     }])
-    .directive('visualization', ['$window', function ($window) {
+    .directive('visualization', ['$window', '$filter', function ($window, $filter) {
         return {
             restrict: 'A',
             link: function (scope, el) {
@@ -250,22 +250,15 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
                             r: function (d) {
                                 return scale(d);
                             },
-                            cy: function(d) {
+                            cy: function (d) {
                                 return -scale(d);
                             }
                         });
 
-                    refCircles.select('text').text(function(d){
-                        var suffixes = ['', '000', ' Mio.', ' Mrd.', ' Bio.', ' Brd.'];
-                        var index = 0;
-                        var result = d*1000;
-                        while(result > 1000) {
-                            index++;
-                            result /= 1000;
-                        }
-                        return result + suffixes[index];
+                    refCircles.select('text').text(function (d) {
+                        return $filter('humanReadable')(d * 1000);
                     }).attr({
-                        y: function(d) {
+                        y: function (d) {
                             return -scale(d) * 2 - 5;
                         }
                     });
@@ -335,6 +328,15 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
                         .style('stroke-width', 2)
                         .style('opacity', 0.6);
 
+                    g.append('text')
+                        .text(function(d){
+                            return $filter('humanReadable')( d.values[scope.selectedYear] * 1000);
+                        });
+
+                    nodeG.select('text')
+                        .attr('transform', function (d) {
+                            return 'scale(' + d.radius / 50 + ')';
+                        });
 
                     nodeG.selectAll('circle')
                         .attr('r', function (d) {
@@ -466,8 +468,8 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
             templateUrl: 'breadcrumbs'
         }
     }])
-    .controller('Modal',['$scope', '$modal', function($scope, $modal){
-        $scope.open = function(modal) {
+    .controller('Modal', ['$scope', '$modal', function ($scope, $modal) {
+        $scope.open = function (modal) {
             $modal.open({
                 templateUrl: modal
             });
@@ -485,5 +487,17 @@ angular.module('ktbe.filters', [])
     .filter('swissFormat', [function () {
         return function (input) {
             return (Math.round(input * 1000)).toLocaleString("en-US").replace(/,/g, "'");
+        }
+    }])
+    .filter('humanReadable', [function () {
+        return function (input) {
+            var index = ~~(Math.log(input) * Math.LOG10E / 3);
+            var hr = ['', '000', ' Mio.', ' Mrd.', ' Bio.', ' Brd.'];
+            if (index > 1) {
+                var result = input / Math.pow(1000, index);
+                return result.toFixed(2) + hr[index];
+            } else {
+                return input.toFixed(2);
+            }
         }
     }]);
