@@ -329,13 +329,13 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
                         .style('opacity', 0.6);
 
                     g.append('text')
-                        .text(function(d){
-                            return $filter('humanReadable')( d.values[scope.selectedYear] * 1000);
+                        .attr('transform', function (d) {
+                            return 'scale(' + d.radius / 50 + ')';
                         });
 
                     nodeG.select('text')
-                        .attr('transform', function (d) {
-                            return 'scale(' + d.radius / 50 + ')';
+                        .text(function(d) {
+                            return $filter('humanReadable')( d.values[scope.selectedYear] * 1000);
                         });
 
                     nodeG.selectAll('circle')
