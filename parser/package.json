@@ -5,8 +5,8 @@
   "author": "Khôi Tran <kt@compile.ch> (http://www.tran-engineering.ch)",
   "license": "MIT",
   "dependencies": {
-    "kexcel": "~0.9.1",
-    "underscore": "~1.6.0"
+    "underscore": "~1.6.0",
+    "kexcel": "~1.2.3"
   },
   "main": "parse.js",
   "private": true

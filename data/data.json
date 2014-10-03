@@ -10,6 +10,7 @@
                 "2013": 629503.60925
             },
             "name": "Allgemeine Verwaltung",
+            "description": "Umfasst den Regierungsrat (Exekutive) und den Grossen Rat (Legislative) inkl. Kommissionen, übrige allgemeine Dienste, welche keiner bestimmten Funktion zugewiesen werden können (wie Direktionssekretariate, Staatskanzlei etc.), Finanz- und Steuerverwaltung sowie Verwaltungsliegenschaften, die keiner bestimmten Funktion zugewiesen werden können.",
             "children": [
                 {
                     "code": "01",
@@ -88,7 +89,7 @@
                                 "2012": 478266.16788,
                                 "2013": 270616.53591
                             },
-                            "name": "Verwaltungsliegenschaften n.a.g."
+                            "name": "Verwaltungsliegenschaften, n. a. g."
                         }
                     ]
                 }
@@ -104,6 +105,7 @@
                 "2013": 974804.44473
             },
             "name": "Öffentliche Ordnung und Sicherheit, Verteidigung",
+            "description": "Umfasst die Polizei, das Strassenverkehrs- und Schifffahrtsamt, die Verkehrssicherheit ohne die Bereiche Luft- und Raumfahrt, die Rechtssprechung, jedoch ohne den Strafvollzug. Weiter sind die Feuerwehr sowie die Verteidigung (militärisch und zivil), ohne militärische Hilfsaktionen, diesem Bereich zugeordnet.",
             "children": [
                 {
                     "code": "11",
@@ -266,6 +268,7 @@
                 "2013": 2693261.88472
             },
             "name": "Bildung",
+            "description": "Umfasst die obligatorische Schule, die Sonderschulen ohne zusätzliche ergänzende Leistungen, die berufliche Grundbildung, die höhere Berufsbildung, die Hochschulen und die Forschung, sowie das übrige Bildungswesen, welches keiner der aufgeführten Funktion zugewiesen werden kann.",
             "children": [
                 {
                     "code": "21",
@@ -320,7 +323,7 @@
                                 "2012": 74366.96320999999,
                                 "2013": 84342.07564
                             },
-                            "name": "Obligatorische Schule n.a.g."
+                            "name": "Obligatorische Schule, n. a. g."
                         },
                         {
                             "code": "214",
@@ -519,7 +522,7 @@
                                 "2012": 29015.12321,
                                 "2013": 42805.480800000005
                             },
-                            "name": "Bildung n.a.g."
+                            "name": "Bildung, n. a. g."
                         }
                     ]
                 },
@@ -551,6 +554,7 @@
                 "2013": 138008.26307
             },
             "name": "Kultur, Sport und Freizeit, Kirche",
+            "description": "Umfasst u.a. die Denkmalpflege und den Heimatschutz, Konzert und Theater, Film und Kino, Sport und Freizeit sowie Kirche und religiöse Angelegenheiten.",
             "children": [
                 {
                     "code": "31",
@@ -619,7 +623,7 @@
                                 "2012": 46920.90747,
                                 "2013": 43748.81922
                             },
-                            "name": "Kultur n.a.g."
+                            "name": "Kultur, n. a. g."
                         }
                     ]
                 },
@@ -701,6 +705,7 @@
                 "2013": 1756552.1310999999
             },
             "name": "Gesundheit",
+            "description": "Umfasst die Funktionen Spitäler, Kranken- und Pflegeheime, die ambulante Krankenpflege sowie die Gesundheitsprävention ohne die soziale Unterstützung von Alkohol- und Drogenabhängigen und die Forschung und Entwicklung in Gesundheit.",
             "children": [
                 {
                     "code": "41",
@@ -845,7 +850,7 @@
                         "2012": 12893.18983,
                         "2013": 11512.18819
                     },
-                    "name": "Gesundheitswesen n.a.g.",
+                    "name": "Gesundheitswesen, n. a. g.",
                     "children": [
                         {
                             "code": "490",
@@ -856,7 +861,7 @@
                                 "2012": 12893.18983,
                                 "2013": 11512.18819
                             },
-                            "name": "Gesundheitswesen n.a.g."
+                            "name": "Gesundheitswesen, n. a. g."
                         }
                     ]
                 }
@@ -872,6 +877,7 @@
                 "2013": 2112952.2331899996
             },
             "name": "Soziale Sicherheit",
+            "description": "Die sozialen Risiken bilden in diesem Aufgabenbereich die Basis. Darin enthalten sind die Prämienverbilligungen, Ergänzungsleistungen, die wirtschaftliche Hilfe sowie das Asylwesen.",
             "children": [
                 {
                     "code": "51",
@@ -1081,7 +1087,7 @@
                                 "2012": 0,
                                 "2013": 0
                             },
-                            "name": "Arbeitslosigkeit n.a.g."
+                            "name": "Arbeitslosigkeit, n. a. g."
                         }
                     ]
                 },
@@ -1127,7 +1133,7 @@
                                 "2012": 43759.31769999999,
                                 "2013": 16819.50484
                             },
-                            "name": "Fürsorge n.a.g."
+                            "name": "Fürsorge,  n. a. g."
                         }
                     ]
                 },
@@ -1159,6 +1165,7 @@
                 "2013": 907575.14657
             },
             "name": "Verkehr und Nachrichtenübermittlung",
+            "description": "Umfasst die Bereiche Strassenverkehr (Strassen), ohne die Verkehrssicherheit und ohne das Strassenverkehrsamt, sowie den öffentlichen Verkehr.",
             "children": [
                 {
                     "code": "61",
@@ -1202,7 +1209,7 @@
                                 "2012": 41694.46190000001,
                                 "2013": 33748.486600000004
                             },
-                            "name": "Strassen n.a.g."
+                            "name": "Strassen, n. a. g."
                         },
                         {
                             "code": "612",
@@ -1255,7 +1262,7 @@
                                 "2012": 2828.72506,
                                 "2013": 2350.4001000000003
                             },
-                            "name": "Öffentlicher Verkehr n.a.g"
+                            "name": "Öffentlicher Verkehr, n.a.g"
                         }
                     ]
                 }
@@ -1271,6 +1278,7 @@
                 "2013": 109498.80604999998
             },
             "name": "Umweltschutz und Raumordnung",
+            "description": "Umfasst die Wasserversorgung, die Abwasserbeseitigung, die Abfallwirtschaft, Gewässerverbauungen und die Raumordnung.",
             "children": [
                 {
                     "code": "71",
@@ -1443,7 +1451,7 @@
                                 "2012": 46327.504199999996,
                                 "2013": 4233.754599999999
                             },
-                            "name": "Umweltschutz n.a.g."
+                            "name": "Umweltschutz, n. a. g."
                         }
                     ]
                 },
@@ -1483,6 +1491,7 @@
                 "2013": 760209.2370099999
             },
             "name": "Volkswirtschaft",
+            "description": "Umfasst die Bereiche Landwirtschaft, Forstwirtschaft, Tourismus, Industrie, Gewerbe, Handel ohne die Regionalen Arbeitsvermittlungszentren und Leistungen an Arbeitslose sowie Brennstoffe und Energie.",
             "children": [
                 {
                     "code": "81",
@@ -1685,6 +1694,7 @@
                 "2013": 487387.75274
             },
             "name": "Finanzen und Steuern",
+            "description": "Umfasst die Steuern, den Finanz- und Lastenausgleich sowie die Vermögens- und Schuldenverwaltung (z.B. Zinsen).",
             "children": [
                 {
                     "code": "93",
@@ -1776,7 +1786,7 @@
                                 "2012": 5933.4418,
                                 "2013": 8186.373
                             },
-                            "name": "Finanzvermögen n.a.g."
+                            "name": "Finanzvermögen, n. a. g."
                         }
                     ]
                 },

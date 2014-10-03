@@ -23,6 +23,20 @@ var kexcel = require('kexcel');
 
 var _ = require('underscore');
 
+var descriptions = {
+    "0": "Umfasst den Regierungsrat (Exekutive) und den Grossen Rat (Legislative) inkl. Kommissionen, übrige allgemeine Dienste, welche keiner bestimmten Funktion zugewiesen werden können (wie Direktionssekretariate, Staatskanzlei etc.), Finanz- und Steuerverwaltung sowie Verwaltungsliegenschaften, die keiner bestimmten Funktion zugewiesen werden können.",
+    "1": "Umfasst die Polizei, das Strassenverkehrs- und Schifffahrtsamt, die Verkehrssicherheit ohne die Bereiche Luft- und Raumfahrt, die Rechtssprechung, jedoch ohne den Strafvollzug. Weiter sind die Feuerwehr sowie die Verteidigung (militärisch und zivil), ohne militärische Hilfsaktionen, diesem Bereich zugeordnet.",
+    "2": "Umfasst die obligatorische Schule, die Sonderschulen ohne zusätzliche ergänzende Leistungen, die berufliche Grundbildung, die höhere Berufsbildung, die Hochschulen und die Forschung, sowie das übrige Bildungswesen, welches keiner der aufgeführten Funktion zugewiesen werden kann.",
+    "3": "Umfasst u.a. die Denkmalpflege und den Heimatschutz, Konzert und Theater, Film und Kino, Sport und Freizeit sowie Kirche und religiöse Angelegenheiten.",
+    "4": "Umfasst die Funktionen Spitäler, Kranken- und Pflegeheime, die ambulante Krankenpflege sowie die Gesundheitsprävention ohne die soziale Unterstützung von Alkohol- und Drogenabhängigen und die Forschung und Entwicklung in Gesundheit.",
+    "5": "Die sozialen Risiken bilden in diesem Aufgabenbereich die Basis. Darin enthalten sind die Prämienverbilligungen, Ergänzungsleistungen, die wirtschaftliche Hilfe sowie das Asylwesen.",
+    "6": "Umfasst die Bereiche Strassenverkehr (Strassen), ohne die Verkehrssicherheit und ohne das Strassenverkehrsamt, sowie den öffentlichen Verkehr.",
+    "7": "Umfasst die Wasserversorgung, die Abwasserbeseitigung, die Abfallwirtschaft, Gewässerverbauungen und die Raumordnung.",
+    "8": "Umfasst die Bereiche Landwirtschaft, Forstwirtschaft, Tourismus, Industrie, Gewerbe, Handel ohne die Regionalen Arbeitsvermittlungszentren und Leistungen an Arbeitslose sowie Brennstoffe und Energie.",
+    "9": "Umfasst die Steuern, den Finanz- und Lastenausgleich sowie die Vermögens- und Schuldenverwaltung (z.B. Zinsen)."
+};
+
+
 kexcel.open(path.join('input','input.xlsx'), function(err, workbook){
     var data = [];
     var nodeData = {};
@@ -30,8 +44,6 @@ kexcel.open(path.join('input','input.xlsx'), function(err, workbook){
     _.each(workbook.sheets, function(sheet){
         var yeardata = {children:[]};
         yeardata.year = parseInt( sheet.name );
-
-
 
         var year = yeardata.year;
         console.log(sheet.name);
@@ -49,6 +61,7 @@ kexcel.open(path.join('input','input.xlsx'), function(err, workbook){
                     node.children = node.children || [];
                     node.children.push(childnode);
                 }
+
                 node = childnode;
                 return c;
             },'');
@@ -69,6 +82,12 @@ kexcel.open(path.join('input','input.xlsx'), function(err, workbook){
                     node.children.push(childnode);
                 }
                 childnode.name = sheet.getCellValue(row,6);
+
+
+                if (descriptions[c]) {
+                    childnode.description = descriptions[c];
+                }
+
                 childnode.values[year] = parseFloat(sheet.getCellValue(row, 8) ) || 0;
                 node = childnode;
                 return c;
