@@ -403,25 +403,25 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
                             scope.$apply();
                         });
 
-                    newTr.append('td')
+                    var td = newTr.append('td')
                         .attr('class', 'infocol')
-                        .html('<i class="fa fa-info-circle"></i>')
+                        .html(function(d){
+                            return d.description ? '<i class="fa fa-info-circle"></i>' : '';
+                        })
                         .style('color', function (d) {
                             return scope.color(d.code);
                         })
                         .on('click', function (d) {
+                            if (!d.description) return;
                             scope.d = d;
                             scope.$apply();
-                            var lorem = new Lorem;
-                            lorem.type = Lorem.TEXT;
-                            lorem.query = '2p';
-                            d.description = lorem.createLorem();
                             ga('send', 'event', 'openModal', d.name || 'root');
                             $modal.open({
                                 scope: scope,
                                 templateUrl: 'infotemplate'
                             });
                         });
+
                     newTr.append('td')
                         .text(function (d) {
                             return d.name
