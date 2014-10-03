@@ -406,7 +406,7 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
                     var td = newTr.append('td')
                         .attr('class', 'infocol')
                         .html(function(d){
-                            return d.description ? '<i class="fa fa-info-circle"></i>' : '';
+                            return d.description ? '<i class="fa fa-info-circle"></i>' : '<i class="fa fa-circle"></i>';
                         })
                         .style('color', function (d) {
                             return scope.color(d.code);
