@@ -180,6 +180,7 @@
         </table>
         <div style="position: absolute;bottom:0" ng-controller="Modal">
             <ul class="list-inline">
+                <li><a href="" ng-click="open('annotation')">Erläuterungen</a></li>
                 <li><a href="https://www.fin.be.ch/fin/de/index/direktion/organisation/gs/kontakt.html">Kontakt</a></li>
                 <li><a href="" ng-click="open('about')">Impressum</a></li>
                 <li><a href="" ng-click="open('downloads')">Downloads</a></li>
@@ -220,7 +221,30 @@
         <h3 class="modal-title">Impressum</h3>
     </div>
     <div class="modal-body">
-        Impressum
+        <dl>
+            <dt>Herausgeber</dt>
+            <dd><a href="http://www.fin.be.ch/">Finanzdirektion des Kantons Bern</a></dd>
+            <dt>Realisierung</dt>
+            <dd><a href="http://www.digitale-nachhaltigkeit.unibe.ch">Forschungsstelle Digitale Nachhaltigkeit am Institut für Wirtschaftsinformatik der Universität Bern</a></dd>
+            <dt>Veröffentlichung</dt>
+            <dd>November 2014</dd>
+        </dl>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" ng-click="$close()">Schliessen</button>
+    </div>
+</script>
+
+<script type="text/ng-template" id="annotation">
+    <div class="modal-header">
+        <span style="float: right; cursor: pointer" ng-click="$close()">&#10006;</span>
+
+        <h3 class="modal-title">Erläuterungen</h3>
+    </div>
+    <div class="modal-body">
+        <p>Die vorliegende Open Finance Applikation visualisiert die Aufwendungen der Laufenden Rechnung sowie die Ausgaben der Investitionsrechnung des Kantons Bern. Es stehen die Finanzzahlen von den Jahren 2009 bis 2013 aufgegliedert in 10 verschiedene Tätigkeitsfelder des Kantons. Pro Ausgabenbereich können die Angaben bis zu zwei Stufen in die Tiefe betrachtet werden. Dabei werden sowohl die absoluten Beträge als auch der proportionale Anteil ausgewiesen.</p>
+        <p>Ziel für diese Visualisierung ist das Schaffen eines besseren Verständnisses für die öffentlichen Ausgaben des Kantons Bern. Es soll damit auf spielerische Weise aufgezeigt werden, in welche Bereiche der Kanton die öffentlichen Gelder investiert und in welchen Grössenverhältnissen die Ausgaben zueinander stehen. Mit der Möglichkeit, die Zahlen über die verschiedenen Jahren anzuzeigen, können auch zeitliche Entwicklungen nachvollzogen werden.</p>
+        <p>Weitere Hintergründe zu solchen Finanzvisualisierungen sind im Artikel <a href="http://www.sgvw.ch/d/fokus/Seiten/130712_OpenFinanceApps_Stuermer.aspx">"Open Finance Apps: Chancen und Voraussetzungen bei der Visualisierung von Finanzdaten"</a> beschrieben.</p>
     </div>
     <div class="modal-footer">
         <button class="btn btn-primary" ng-click="$close()">Schliessen</button>
