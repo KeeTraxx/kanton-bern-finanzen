@@ -96,8 +96,10 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
             link: function (scope, el) {
                 scope.$watch('data', function (data) {
                     if (data) {
-                        var extent = d3.extent(_.keys(data.children[0].values));
-                        var sliderConf = d3.slider().min(extent[0]).max(extent[1]).axis(true).step(1).value($routeParams.year || extent[1]).on('slide', function (e, value) {
+                        var values = _.keys(data.children[0].values);
+                        var extent = d3.extent(values);
+                        var axis = d3.svg.axis().ticks(Math.min(values.length - 1, 6)).tickFormat(d3.format('d'));
+                        var sliderConf = d3.slider().min(extent[0]).max(extent[1]).axis(axis).step(1).value($routeParams.year || extent[1]).on('slide', function (e, value) {
                             scope.selectedYear = value;
                             scope.$apply();
                         });
@@ -329,13 +331,13 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
                         .style('opacity', 0.6);
 
                     g.append('text')
-                        .text(function(d){
-                            return $filter('humanReadable')( d.values[scope.selectedYear] * 1000);
+                        .attr('transform', function (d) {
+                            return 'scale(' + d.radius / 50 + ')';
                         });
 
                     nodeG.select('text')
-                        .attr('transform', function (d) {
-                            return 'scale(' + d.radius / 50 + ')';
+                        .text(function(d) {
+                            return $filter('humanReadable')( d.values[scope.selectedYear] * 1000);
                         });
 
                     nodeG.selectAll('circle')
