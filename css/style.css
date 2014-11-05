@@ -2,6 +2,8 @@ html, body { height:100%; }
 
 body {
     font-family: 'Roboto', Helvetica, Verdana, Arial, sans-serif;
+    min-width: 960px;
+    min-height: 800px;
 }
 
 div#content {
@@ -56,7 +58,16 @@ h1 {
 td.infocol {
     font-size: x-large;
     text-align: center;
+}
+
+td.infocol .fa-info-circle {
     cursor: pointer;
+}
+
+td.hasChildren {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #2980b9;
 }
 
 ol.breadcrumb li {
@@ -77,10 +88,18 @@ ol.breadcrumb li {
     background-repeat: no-repeat;
 }
 
+g.node.hasChildren {
+    cursor: pointer;
+}
+
 g.node text {
     text-anchor: middle;
     pointer-events: none;
     fill: white;
+}
+
+g.reference {
+    display: none;
 }
 
 g.reference circle {

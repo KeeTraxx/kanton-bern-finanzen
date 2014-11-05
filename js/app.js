@@ -282,6 +282,9 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
                     var g = nodeG.enter()
                         .append('g')
                         .attr('class', 'node')
+                        .classed('hasChildren', function(d){
+                            return d.children && d.children.length > 0;
+                        })
                         .on('click', function (d) {
                             if (d3.event.defaultPrevented) return;
                             var children = _.filter(d.children, function (d) {
@@ -330,7 +333,7 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
 
                     g.append('text')
                         .text(function(d){
-                            return $filter('humanReadable')( d.values[scope.selectedYear] * 1000);
+                            return $filter('humanReadable')( d.values[scope.selectedYear] * 1000, maxLog);
                         });
 
                     nodeG.select('text')
@@ -426,8 +429,8 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
                         .text(function (d) {
                             return d.name
                         })
-                        .style('cursor', function (d) {
-                            return d.children ? 'pointer' : ''
+                        .classed('hasChildren', function(d) {
+                            return d.children && d.children.length > 0;
                         })
                         .on('click', function (d) {
                             if (d3.event.defaultPrevented) return;
@@ -486,12 +489,12 @@ angular.module('ktbe.filters', [])
     }])
     .filter('swissFormat', [function () {
         return function (input) {
-            return (Math.round(input * 1000)).toLocaleString("en-US").replace(/,/g, "'");
+            return (Math.round(input * 1000)).toLocaleString("en-US").replace(/,/g, "'").replace('.00', '');
         }
     }])
     .filter('humanReadable', [function () {
-        return function (input) {
-            var index = ~~(Math.log(input) * Math.LOG10E / 3);
+        return function (input, index) {
+            index = index ? ~~((index) / 3)+1 : ~~(Math.log(input) * Math.LOG10E / 3);
             var hr = ['', '000', ' Mio.', ' Mrd.', ' Bio.', ' Brd.'];
             if (index > 1) {
                 var result = input / Math.pow(1000, index);

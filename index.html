@@ -170,7 +170,7 @@
                 <th class="number">{{selectedNode.children | sum:selectedYear | swissFormat}}</th>
                 <th class="number">&nbsp;</th>
             </tr>
-            <tr>
+            <tr ng-show="!selectedNode.code">
                 <td><i class="fa fa-hand-o-up"></i></td>
                 <td colspan="20">Für weitere Informationen zu den Ausgabekategorien auf die Informationssymbole <i
                         class="fa fa-info-circle"></i> klicken.
@@ -217,7 +217,6 @@
 <script type="text/ng-template" id="about">
     <div class="modal-header">
         <span style="float: right; cursor: pointer" ng-click="$close()">&#10006;</span>
-
         <h3 class="modal-title">Impressum</h3>
     </div>
     <div class="modal-body">
