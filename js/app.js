@@ -282,7 +282,7 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
                     var g = nodeG.enter()
                         .append('g')
                         .attr('class', 'node')
-                        .classed('hasChildren', function(d){
+                        .classed('hasChildren', function (d) {
                             return d.children && d.children.length > 0;
                         })
                         .on('click', function (d) {
@@ -332,8 +332,8 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
                         .style('opacity', 0.6);
 
                     g.append('text')
-                        .text(function(d){
-                            return $filter('humanReadable')( d.values[scope.selectedYear] * 1000, maxLog);
+                        .text(function (d) {
+                            return $filter('humanReadable')(d.values[scope.selectedYear] * 1000, maxLog);
                         });
 
                     nodeG.select('text')
@@ -389,11 +389,15 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
                         return d.values[scope.selectedYear] > 0;
                     });
 
-                    var tr = table.select('tbody').selectAll('tr').data(filtered, function (d) {
+                    var sorted = _.sortBy(filtered, function(d) {
+                        return d.values[scope.selectedYear];
+                    }).reverse();
+
+                    var tr = table.select('tbody').selectAll('tr').data(sorted, function (d) {
                         return d.code;
                     });
 
-                    var total = $filter('sum')(filtered, scope.selectedYear);
+                    var total = $filter('sum')(sorted, scope.selectedYear);
 
                     var newTr = tr.enter()
                         .append('tr')
@@ -408,7 +412,7 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
 
                     var td = newTr.append('td')
                         .attr('class', 'infocol')
-                        .html(function(d){
+                        .html(function (d) {
                             return d.description ? '<i class="fa fa-info-circle"></i>' : '<i class="fa fa-circle"></i>';
                         })
                         .style('color', function (d) {
@@ -429,7 +433,7 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
                         .text(function (d) {
                             return d.name
                         })
-                        .classed('hasChildren', function(d) {
+                        .classed('hasChildren', function (d) {
                             return d.children && d.children.length > 0;
                         })
                         .on('click', function (d) {
@@ -494,7 +498,7 @@ angular.module('ktbe.filters', [])
     }])
     .filter('humanReadable', [function () {
         return function (input, index) {
-            index = index ? ~~((index) / 3)+1 : ~~(Math.log(input) * Math.LOG10E / 3);
+            index = index ? ~~((index) / 3) + 1 : ~~(Math.log(input) * Math.LOG10E / 3);
             var hr = ['', '000', ' Mio.', ' Mrd.', ' Bio.', ' Brd.'];
             if (index > 1) {
                 var result = input / Math.pow(1000, index);
