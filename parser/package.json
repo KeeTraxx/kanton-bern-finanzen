@@ -5,8 +5,10 @@
   "author": "Khôi Tran <kt@compile.ch> (http://www.tran-engineering.ch)",
   "license": "MIT",
   "dependencies": {
-    "underscore": "~1.6.0",
-    "kexcel": "~1.2.3"
+    "bluebird": "^2.9.25",
+    "kexcel": "^1.2.3",
+    "lodash": "^3.8.0",
+    "underscore": "^1.6.0"
   },
   "main": "parse.js",
   "private": true
