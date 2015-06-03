@@ -20,7 +20,8 @@ angular.module('ktbe', [
     'ngSanitize',
     'ktbe.controllers',
     'ktbe.directives',
-    'ktbe.filters'
+    'ktbe.filters',
+    'ktbe.services'
 ])
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/:year/:code?', {templateUrl: 'index', controller: 'VisualizationController'});
@@ -42,7 +43,7 @@ angular.module('ktbe', [
     }]);
 
 angular.module('ktbe.controllers', [])
-    .controller('VisualizationController', ['$scope', '$http', '$location', '$routeParams', '$timeout', function ($scope, $http, $location, $routeParams, $timeout) {
+    .controller('VisualizationController', ['$scope', '$http', '$location', '$routeParams', '$timeout', 'FinanceService', 'DescriptionService', '$q', function ($scope, $http, $location, $routeParams, $timeout, FinanceService, DescriptionService, $q) {
         $scope.color = function (input) {
             var c = d3.scale.category10().domain(d3.range(0, 10));
             var base = d3.hsl(c(input[0]));
@@ -51,42 +52,47 @@ angular.module('ktbe.controllers', [])
             base.l += +( input[1] || 0 ) / 30;
             return base;
         };
-        $http.get('data/data.json').success(function (data) {
-            $scope.data = data;
-            $scope.selectedCode = $routeParams.code || null;
-            var n = $scope.findRecursive($scope.selectedCode);
-            ga('send', 'event', 'direct', n ? n.name : 'root');
-        });
 
-        $scope.$watch('selectedCode', function (code) {
-            if (code) {
-                $scope.selectedNode = $scope.findRecursive($scope.data, code);
-            } else {
-                $scope.selectedNode = $scope.data;
+        $q.all([FinanceService, DescriptionService]).then(function (financeData, descriptions) {
+
+            console.log('desu',financeData, descriptions);
+
+            $http.get('data/data.json').success(function (data) {
+                $scope.data = data;
+                $scope.selectedCode = $routeParams.code || null;
+                var n = $scope.findRecursive($scope.selectedCode);
+                ga('send', 'event', 'direct', n ? n.name : 'root');
+            });
+
+            $scope.$watch('selectedCode', function (code) {
+                if (code) {
+                    $scope.selectedNode = $scope.findRecursive($scope.data, code);
+                } else {
+                    $scope.selectedNode = $scope.data;
+                }
+            });
+
+            $scope.findRecursive = function (nodes, code) {
+                var node = nodes;
+
+                _.reduce(code, function (memo, d) {
+                    var c = memo + d;
+                    node = _.find(node.children, function (d) {
+                        return d.code == c;
+                    });
+                    return c;
+                }, '');
+
+                return node;
+            };
+
+            $scope.$watch('selectedYear', updateUrl);
+            $scope.$watch('selectedCode', updateUrl);
+
+            function updateUrl() {
+                $location.path($scope.selectedYear + '/' + ($scope.selectedCode || ''), false);
             }
         });
-
-        $scope.findRecursive = function (nodes, code) {
-            var node = nodes;
-
-            _.reduce(code, function (memo, d) {
-                var c = memo + d;
-                node = _.find(node.children, function (d) {
-                    return d.code == c;
-                });
-                return c;
-            }, '');
-
-            return node;
-        };
-
-        $scope.$watch('selectedYear', updateUrl);
-        $scope.$watch('selectedCode', updateUrl);
-
-        function updateUrl() {
-            $location.path($scope.selectedYear + '/' + ($scope.selectedCode || ''), false);
-        }
-
     }]);
 
 angular.module('ktbe.directives', ['ui.bootstrap'])
@@ -389,7 +395,7 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
                         return d.values[scope.selectedYear] > 0;
                     });
 
-                    var sorted = _.sortBy(filtered, function(d) {
+                    var sorted = _.sortBy(filtered, function (d) {
                         return d.values[scope.selectedYear];
                     }).reverse();
 
@@ -507,4 +513,44 @@ angular.module('ktbe.filters', [])
                 return input.toFixed(2);
             }
         }
+    }]);
+
+angular.module('ktbe.services', [])
+    .service('FinanceService', ['$q', function ($q) {
+        return $q(function (resolve, reject) {
+            d3.csv('data/data.csv', function (row) {
+                for (var key in row) {
+                    if (row.hasOwnProperty(key) && row[key].match(/^[0-9\.-]+$/)) {
+                        row[key] = +row[key];
+                    }
+                }
+                return row;
+            }, function (err, data) {
+                if (err) {
+                    reject(err);
+                }
+
+                resolve(data);
+            });
+        });
+
+    }])
+    .service('DescriptionService', ['$q', function ($q) {
+        return $q(function (resolve, reject) {
+            d3.csv('data/descriptions.csv', function (row) {
+                for (var key in row) {
+                    if (row.hasOwnProperty(key) && row[key].match(/^[0-9\.-]+$/)) {
+                        row[key] = +row[key];
+                    }
+                }
+                return row;
+            }, function (err, data) {
+                if (err) {
+                    reject(err);
+                }
+
+                resolve(data);
+            });
+        });
+
     }]);
