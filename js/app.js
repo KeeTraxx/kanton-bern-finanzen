@@ -24,7 +24,7 @@ angular.module('ktbe', [
     'ktbe.services'
 ])
     .config(['$routeProvider', function ($routeProvider) {
-        $routeProvider.when('/:year/:code?/:type?', {templateUrl: 'index', controller: 'VisualizationController'});
+        $routeProvider.when('/:year/:code?', {templateUrl: 'index', controller: 'VisualizationController'});
         $routeProvider.otherwise({redirectTo: '/2013'});
     }])
     .run(['$route', '$rootScope', '$location', function ($route, $rootScope, $location) {
@@ -55,13 +55,14 @@ angular.module('ktbe.controllers', [])
 
         $q.all([FinanceService, DescriptionService]).then(function (results) {
             $scope.data = results[0];
-            $scope.descriptions = results[1];
+            $scope.descriptions = d3.map(results[1], function (d) {
+                return d.code
+            });
             $scope.$watchCollection('filter', updateUrl);
             //$scope.$watch('selectedCode', updateUrl);
 
             function updateUrl(filter) {
-                console.log('upd', filter);
-                $location.path(filter.year + '/' + (filter.code || '') + (filter.type ? '/' + filter.type : ''), false);
+                $location.path(filter.year + '/' + (filter.code || ''), false);
             }
         });
     }]);
@@ -73,8 +74,7 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
             link: function (scope, el) {
                 scope.filter = {
                     year: $routeParams.year || '2013',
-                    code: $routeParams.code || '',
-                    type: $routeParams.type
+                    code: $routeParams.code || ''
                 };
                 FinanceService.then(function (financeData) {
                     var extent = d3.extent(financeData, function (d) {
@@ -108,27 +108,64 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
                     .gravity(0.05)
                     .on('tick', tick);
 
-
-
                 var nodes = [];
+                var clusters = {
+                    revenue: {
+                        x: 100,
+                        y: 200,
+                        radius: 0
+                    },
+                    expense: {
+                        x: 300,
+                        y: 200,
+                        radius: 0
+                    }
+                };
+
                 scope.$watchCollection('filter', function (filter) {
                     FinanceService.then(function (data) {
+
+                        function hasChildren(node) {
+                            if (node.code == '') return true;
+                            var regexp = new RegExp('^' + node.code + '[0-9]+$');
+                            return data.some(function (d) {
+                                return d.code.match(regexp);
+                            });
+                        }
+
                         scope.filteredData = data.filter(function (d) {
-                            return d.year == filter.year && d.code === filter.code;
+                            return d.year == filter.year && d.code.match(new RegExp('^' + filter.code + '[0-9]$'));
                         });
+
+                        scope.filteredData.forEach(function (d) {
+                            d.hasChildren = hasChildren(d);
+                        });
+
+                        scope.parent = {
+                            revenue: _.find(data, function (d) {
+                                return d.code == filter.code && d.year == filter.year && d.type == 'revenue';
+                            }),
+                            expense: _.find(data, function (d) {
+                                return d.code == filter.code && d.year == filter.year && d.type == 'expense';
+                            })
+                        };
+
                         update();
                     });
                 });
                 //scope.$watch('selectedNode', update);
 
                 scope.$watch('hover', function (node) {
+
                     svg.selectAll('circle.border')
                         .transition()
                         .style('stroke-width', 2);
 
+                    if (!node) return;
+
                     var g = svg.selectAll('g.node')
                         .filter(function (d) {
-                            return d == node;
+                            return d.code == node.code;
                         });
 
                     g.select('circle.border')
@@ -150,25 +187,24 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
                 });
                 svg.call(tip);
                 svg.on('click', function () {
-                    // TODO return
-                    /*
-                    if (scope.filter.code && d3.event.target == this) {
-                        var parent = scope.selectedCode.substr(0, scope.selectedCode.length - 1);
-                        scope.selectedCode = scope.selectedCode.length > 0 ? parent : scope.selectedCode;
+                    if (scope.filter.code.length > 0 && d3.event.target == this) {
+                        scope.filter.code = scope.filter.code.substr(0, scope.filter.code.length - 2);
                         scope.$apply();
-                        ga('send', 'event', 'parent', scope.selectedNode.name || 'root');
-                    }*/
+                        ga('send', 'event', 'parent', scope.filter.code || 'root');
+                    }
                 });
                 function tick(e) {
                     d3.selectAll('g.node')
-                        .each(collide(0.3, nodes))
+                        .each(cluster(10 * e.alpha * e.alpha))
+                        .each(collide(0.3))
                         .attr("transform", function (d) {
                             return 'translate(' + d.x + ',' + d.y + ')';
                         });
                 }
 
-                var padding = 6, // separation between same-color nodes
-                    clusterPadding = 18; // separation between different-color nodes
+                var padding = 6; // separation between same-color nodes
+                var clusterPadding = 18; // separation between different-color nodes
+                var maxRadius = 100;
 
                 function collide(alpha) {
                     var quadtree = d3.geom.quadtree(scope.filteredData);
@@ -197,6 +233,26 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
                     };
                 }
 
+                // Move d to be adjacent to the cluster node.
+                function cluster(alpha) {
+                    return function (d) {
+                        var cluster = clusters[d.type];
+                        if (cluster === d) return;
+                        var x = d.x - cluster.x,
+                            y = d.y - cluster.y,
+                            l = Math.sqrt(x * x + y * y),
+                            r = 0;
+                        //r = d.radius + cluster.radius;
+                        if (l != r) {
+                            l = (l - r) / l * alpha;
+                            d.x -= x *= 0.01;
+                            d.y -= y *= 0.01;
+                            /*cluster.x += x;
+                             cluster.y += y;*/
+                        }
+                    };
+                }
+
                 // Reference circles
                 svg.append('g').attr('class', 'reference');
 
@@ -206,10 +262,46 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
 
                 function update() {
                     // do nothing if there is no year and node
-                    //if (!( scope.filter.year && scope.filter.code )) return;
 
                     var height = parseInt(svg.style('height'));
                     var width = parseInt(svg.style('width'));
+
+                    d3.select('#year')
+                        .attr('transform', function(){
+                            var bb = this.getBBox();
+                            var widthTransform = width / bb.width / 2.6;
+                            return 'scale('+widthTransform+')';
+                        });
+
+                    maxRadius = height / 6;
+
+
+                    clusters.revenue.x = width / 4;
+                    clusters.revenue.y = height / 2;
+
+                    clusters.expense.x = width / 4 * 3;
+                    clusters.expense.y = height / 2;
+
+                    var clusterText = svg.select('#labels').selectAll('g.cluster')
+                        .data([clusters.revenue, clusters.expense]);
+
+                    svg.selectAll('g.cluster').attr({
+                        transform: function (d) {
+                            return 'translate(' + d.x + ', ' + d.y + ')';
+                        }
+                    }).selectAll('text').attr({
+                        transform: function(){
+                            var bb = this.getBBox();
+                            var widthTransform = width / bb.width / 3;
+                            return 'scale('+widthTransform+')';
+                        }
+                    });
+
+                    scope.filteredData.forEach(function (d) {
+                        d.x = clusters[d.type].x;
+                        d.y = clusters[d.type].y;
+                    });
+
 
                     var data = scope.filteredData;
 
@@ -219,13 +311,11 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
 
                     var scale = d3.scale.sqrt()
                         .domain([0, max])
-                        .range([1, height / 6]);
+                        .range([1, height / 8]);
 
                     data.forEach(function (d) {
                         d.radius = scale(d.value);
                     });
-
-                    console.log(data);
 
 
                     var maxLog = ~~(Math.log(max) * Math.LOG10E);
@@ -271,40 +361,33 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
                     var nodeG = nodesG
                         .selectAll('g.node')
                         .data(data, function (d) {
-                            return d.code + d.type;
+                            return d.year + d.code + d.type;
                         });
 
                     nodeG.exit()
-                        .transition()
-                        .attr('transform', 'scale(0)')
+                        //.transition()
+                        //.attr('transform', 'scale(0)')
                         .remove();
-
 
                     var g = nodeG.enter()
                         .append('g')
                         .attr('class', 'node')
                         .classed('hasChildren', function (d) {
-                            return d.children && d.children.length > 0;
+                            return d.hasChildren;
                         })
                         .on('click', function (d) {
                             if (d3.event.defaultPrevented) return;
-                            // TODO here
-                            var newdata = scope.data.filter(function(d){
-                                //return scope.
-                            });
-                            /*
-                            var children = _.filter(d.children, function (d) {
-                                return d.values[scope.selectedYear] > 0;
-                            });
-                            if (children.length > 1) {
-                                scope.selectedCode = d.code;
+                            if (d.hasChildren) {
+                                scope.filter.code = d.code;
                                 scope.$apply();
-                                ga('send', 'event', 'bubbleClick', scope.selectedNode.name || 'root');
-                            }*/
+                            }
+                            ga('send', 'event', 'bubbleClick', d.name || 'root');
+
                         });
 
 
-                    g.append('g').attr('class', 'bear').append('use')
+                    g.append('g')
+                        .attr('class', 'bear').append('use')
                         .attr('xlink:href', '#bear')
                         .attr('opacity', 0.2);
 
@@ -325,7 +408,6 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
                         .on('mouseover', function (d) {
                             tip.show(d);
                             scope.hover = d;
-                            console.log(d);
                             scope.$apply();
                         })
                         .on('mouseout', function (d) {
@@ -341,15 +423,18 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
                         .attr('fill', 'none')
                         .attr('class', 'border')
                         .style('stroke', function (d) {
-                            var code;
+                            /*
+                             var code;
 
-                            if (d.code === '') {
-                                code = d.type == 'revenue' ? '0' : '3';
-                            } else {
-                                code = d.code;
-                            }
+                             if (d.code === '') {
+                             code = d.type == 'revenue' ? '0' : '3';
+                             } else {
+                             code = d.code;
+                             }
 
-                            return scope.color(code);
+                             return scope.color(code);
+                             */
+                            return d.type == 'revenue' ? '#3f3' : '#f33';
                         })
                         .style('stroke-width', 2)
                         .style('opacity', 0.6);
@@ -365,7 +450,7 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
 
                     nodeG.selectAll('circle')
                         .attr('r', function (d) {
-                            return d.radius
+                            return d.radius;
                         });
 
                     nodeG.call(force.drag);
@@ -387,107 +472,147 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
                 }
             }
         }
-    }])
+    }
+    ])
     .directive('financeTable', ['$filter', '$modal', function ($filter, $modal) {
         return {
             restrict: 'A',
             link: function (scope, el) {
-                scope.$watchCollection('filter', update);
+                scope.$watchCollection('filteredData', update);
                 //scope.$watch('selectedYear', update);
 
                 var table = d3.select(el[0]);
 
                 scope.$watch('hover', function (node) {
                     table.selectAll('tbody tr').classed('info', false);
+                    if (!node) return;
                     var tr = table.selectAll('tbody tr').filter(function (d) {
-                        return node == d;
+                        return node.code == d.code || node.code == d.key;
                     }).classed('info', true);
                 });
 
                 function update() {
-                    /*if (!(  scope.selectedYear && scope.selectedNode )) return;
+                    if (!scope.filteredData) return;
 
-                     var filtered = _.filter(scope.selectedNode.children, function (d) {
-                     return d.values[scope.selectedYear] > 0;
-                     });
+                    var descriptions = {};
+                    scope.data.forEach(function (d) {
+                        if (d.code && d.description && !descriptions[d.code]) {
+                            descriptions[d.code] = d.description;
+                        }
+                    });
 
-                     var sorted = _.sortBy(filtered, function (d) {
-                     return d.values[scope.selectedYear];
-                     }).reverse();
+                    scope.breadcrumbs = [];
 
-                     var tr = table.select('tbody').selectAll('tr').data(sorted, function (d) {
-                     return d.code;
-                     });
+                    for (var i = 1; i <= scope.filter.code.length; i++) {
+                        var search = scope.filter.code.substr(0, i);
+                        scope.breadcrumbs.push(_.find(scope.data, function (d) {
+                            return d.code == search;
+                        }));
+                    }
 
-                     var total = $filter('sum')(sorted, scope.selectedYear);
+                    var data = d3.nest()
+                        .key(function (d) {
+                            return d.code
+                        })
+                        .key(function (d) {
+                            return d.type
+                        }).sortKeys()
+                        .entries(scope.filteredData);
 
-                     var newTr = tr.enter()
-                     .append('tr')
-                     .on('mouseover', function (d) {
-                     scope.hover = d;
-                     scope.$apply();
-                     })
-                     .on('mouseout', function (d) {
-                     scope.hover = null;
-                     scope.$apply();
-                     });
+                    scope.foundDescriptions = scope.filteredData.some(function (d) {
+                        return d.description != undefined;
+                    });
 
-                     var td = newTr.append('td')
-                     .attr('class', 'infocol')
-                     .html(function (d) {
-                     return d.description ? '<i class="fa fa-info-circle"></i>' : '<i class="fa fa-circle"></i>';
-                     })
-                     .style('color', function (d) {
-                     return scope.color(d.code);
-                     })
-                     .on('click', function (d) {
-                     if (!d.description) return;
-                     scope.d = d;
-                     scope.$apply();
-                     ga('send', 'event', 'openModal', d.name || 'root');
-                     $modal.open({
-                     scope: scope,
-                     templateUrl: 'infotemplate'
-                     });
-                     });
+                    var tr = table.select('tbody').selectAll('tr').data(data, function (d) {
+                        return d.key;
+                    });
 
-                     newTr.append('td')
-                     .text(function (d) {
-                     return d.name
-                     })
-                     .classed('hasChildren', function (d) {
-                     return d.children && d.children.length > 0;
-                     })
-                     .on('click', function (d) {
-                     if (d3.event.defaultPrevented) return;
-                     var children = _.filter(d.children, function (d) {
-                     return d.values[scope.selectedYear] > 0;
-                     });
+                    tr.exit()
+                        .remove();
 
-                     if (children.length > 1) {
-                     scope.selectedCode = d.code;
-                     scope.$apply();
-                     ga('send', 'event', 'tableClick', scope.selectedNode.code || 'root');
-                     }
-                     });
-                     newTr.append('td');
-                     newTr.append('td');
+                    var newTr = tr.enter()
+                        .append('tr')
+                        .on('mouseover', function (d) {
+                            scope.hover = {code: d.key};
+                            scope.$apply();
+                        })
+                        .on('mouseout', function (d) {
+                            scope.hover = null;
+                            scope.$apply();
+                        });
 
-                     tr.select('td:nth-child(3)')
-                     .attr('class', 'number')
-                     .text(function (d) {
-                     return d.values[scope.selectedYear] ? $filter('swissFormat')(d.values[scope.selectedYear]) : '-';
-                     });
+                    var td = newTr.append('td')
+                        .attr('class', 'infocol')
+                        .html(function (d) {
+                            return descriptions[d.key] ? '<i class="fa fa-info-circle"></i>' : '<i class="fa fa-circle"></i>';
+                        })
+                        .style('color', function (d) {
+                            return scope.color(d.key);
+                        })
+                        .on('click', function (d) {
+                            if (!descriptions[d.key]) return;
+                            scope.d = d.values[0].values[0];
+                            scope.$apply();
+                            ga('send', 'event', 'openModal', d.name || 'root');
+                            $modal.open({
+                                scope: scope,
+                                templateUrl: 'infotemplate'
+                            });
+                        });
 
-                     tr.select('td:nth-child(4)')
-                     .attr('class', 'number')
-                     .text(function (d) {
-                     return d.values[scope.selectedYear] ? $filter('number')(d.values[scope.selectedYear] / total * 100, 2) + '%' : '0%';
-                     });
+                    newTr.append('td').datum(function (d) {
+                        return d.values[0].values[0]
+                    })
+                        .text(function (d) {
+                            return d.name;
+                        })
+                        .classed('hasChildren', function (d) {
+                            return d.hasChildren;
+                        })
+                        .on('click', function (d) {
+                            if (d3.event.defaultPrevented) return;
+                            if (d.hasChildren) {
+                                scope.filter.code = d.code;
+                                scope.$apply();
+                            }
+                        });
+                    newTr.append('td').attr('class', 'number revenue');
 
-                     tr.exit()
-                     .remove();
-                     */
+                    newTr.append('td').attr('class', 'number expense');
+
+                    tr.select('td.revenue').datum(function (d) {
+                        var d = _.find(d.values, function (d) {
+                            return d.key == 'revenue';
+                        });
+                        if (d) {
+                            return d.values[0]
+                        } else {
+                            return {
+                                value: '-'
+                            }
+                        }
+                    }).text(function (d) {
+                        return d.value ? $filter('swissFormat')(d.value) : '-';
+                    });
+
+                    tr.select('td.expense').datum(function (d) {
+                        var d = _.find(d.values, function (d) {
+                            return d.key == 'expense';
+                        });
+                        if (d) {
+                            return d.values[0]
+                        } else {
+                            return {
+                                value: '-'
+                            }
+                        }
+                    }).text(function (d) {
+                        return d.value ? $filter('swissFormat')(d.value) : '-';
+                    });
+
+                    tr.exit()
+                        .remove();
+
                 }
             }
         }
@@ -515,7 +640,8 @@ angular.module('ktbe.filters', [])
     }])
     .filter('swissFormat', [function () {
         return function (input) {
-            return (Math.round(input * 1000)).toLocaleString("en-US").replace(/,/g, "'").replace('.00', '');
+            var result = (Math.round(input * 1000)).toLocaleString("en-US").replace(/,/g, "'").replace('.00', '');
+            return isNaN(input) ? '-' : result;
         }
     }])
     .filter('humanReadable', [function () {
@@ -533,23 +659,51 @@ angular.module('ktbe.filters', [])
 
 angular.module('ktbe.services', [])
     .service('FinanceService', ['$q', function ($q) {
+
+        function hasChildren(node) {
+            if (node.code == '') return true;
+            var regexp = new RegExp('^' + node.code + '[0-9]+$');
+            return data.some(function (d) {
+                return d.code.match(regexp);
+            });
+        }
+
         var data;
         if (!data) {
             data = $q(function (resolve, reject) {
-                d3.csv('data/data.csv', function (row) {
+                d3.csv('data/descriptions.csv', function (row) {
                     for (var key in row) {
-                        if (row.hasOwnProperty(key) && row[key].match(/^[0-9\.-]+$/)) {
+                        if (row.hasOwnProperty(key) && key != 'code' && row[key].match(/^[0-9\.-]+$/)) {
                             row[key] = +row[key];
                         }
                     }
                     return row;
-                }, function (err, data) {
-                    if (err) {
-                        reject(err);
-                    }
+                }, function (descriptions) {
 
-                    resolve(data);
+                    descriptions = d3.map(descriptions, function (d) {
+                        return d.code;
+                    }).entries();
+
+                    d3.csv('data/data.csv', function (row) {
+                        for (var key in row) {
+                            if (row.hasOwnProperty(key) && key != 'code' && row[key].match(/^[0-9\.-]+$/)) {
+                                row[key] = +row[key];
+                            }
+                        }
+
+                        if (descriptions[row.code]) {
+                            row.description = descriptions[row.code].value.Text;
+                        }
+
+                        return row;
+                    }, function (err, data) {
+                        if (err) {
+                            reject(err);
+                        }
+                        resolve(data);
+                    });
                 });
+
             });
         }
 
@@ -563,7 +717,7 @@ angular.module('ktbe.services', [])
             data = $q(function (resolve, reject) {
                 d3.csv('data/descriptions.csv', function (row) {
                     for (var key in row) {
-                        if (row.hasOwnProperty(key) && row[key].match(/^[0-9\.-]+$/)) {
+                        if (row.hasOwnProperty(key) && key != 'code' && row[key].match(/^[0-9\.-]+$/)) {
                             row[key] = +row[key];
                         }
                     }

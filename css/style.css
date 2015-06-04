@@ -1,13 +1,18 @@
-html, body { height:100%; }
+html, body {
+    height: 100%;
+}
 
 body {
     font-family: 'Roboto', Helvetica, Verdana, Arial, sans-serif;
     min-width: 960px;
-    min-height: 800px;
+}
+
+.number {
+    font-family: 'PT Sans Narrow', Helvetica, Verdana, Arial, sans-serif;
 }
 
 div#content {
-    position:relative;
+    position: relative;
     height: 100%;
 }
 
@@ -53,6 +58,17 @@ h1 {
     font-size: 242px;
     opacity: 0.1;
     pointer-events: none;
+}
+
+#labels {
+    font-size: 64px;
+    opacity: 0.1;
+    pointer-events: none;
+    text-anchor: middle;
+}
+
+#labels {
+    transform: translate(0px,150px);
 }
 
 td.infocol {
@@ -119,4 +135,10 @@ g.reference text {
 
 dd {
     margin: 0 10px 10px 10px;
+}
+
+#meta {
+    position: absolute;
+    bottom: 0;
+    background-color: white;
 }

@@ -5,7 +5,7 @@ var _ = require('lodash');
 var fs = require('fs');
 var output = fs.createWriteStream('output.csv');
 
-kexcel.open(path.join(__dirname, '..', 'input', 'von_EFV_ ktn_be.xlsx'), function (err, workbook) {
+kexcel.open(path.join(__dirname, 'input', 'ktn_be.xlsx'), function (err, workbook) {
 
     output.write('type,year,code,name,value\n');
 
@@ -28,7 +28,7 @@ kexcel.open(path.join(__dirname, '..', 'input', 'von_EFV_ ktn_be.xlsx'), functio
                 'revenue',
                 year,
                 code,
-                rowData[2],
+                '"' + rowData[2] + '"',
                 rowData[i]
             ].join(',') + '\n')
         });
@@ -52,7 +52,7 @@ kexcel.open(path.join(__dirname, '..', 'input', 'von_EFV_ ktn_be.xlsx'), functio
                     'expense',
                     year,
                     code,
-                    rowData[2],
+                    '"'+rowData[2]+'"',
                     rowData[i]
                 ].join(',') + '\n')
         });
