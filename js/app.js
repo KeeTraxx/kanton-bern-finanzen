@@ -183,7 +183,13 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
 
                 $($window).on('resize', update);
                 var tip = d3.tip().attr('class', 'd3-tip').html(function (d) {
-                    return d.name;
+                    var parent = scope.parent[d.type];
+
+                    var percentage =  (d.value / parent.value * 100).toFixed(2);
+
+                    console.log(parent, percentage);
+                    return '<h4 style="text-align: center">' + d.name + '</h4>' +
+                            '<p style="text-align: center">' + $filter('swissFormat')(d.value) + ' Fr. ('+percentage+'%)</p>';
                 });
                 svg.call(tip);
                 svg.on('click', function () {
@@ -267,10 +273,10 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
                     var width = parseInt(svg.style('width'));
 
                     d3.select('#year')
-                        .attr('transform', function(){
+                        .attr('transform', function () {
                             var bb = this.getBBox();
                             var widthTransform = width / bb.width / 2.6;
-                            return 'scale('+widthTransform+')';
+                            return 'scale(' + widthTransform + ')';
                         });
 
                     maxRadius = height / 6;
@@ -290,10 +296,10 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
                             return 'translate(' + d.x + ', ' + d.y + ')';
                         }
                     }).selectAll('text').attr({
-                        transform: function(){
+                        transform: function () {
                             var bb = this.getBBox();
                             var widthTransform = width / bb.width / 3;
-                            return 'scale('+widthTransform+')';
+                            return 'scale(' + widthTransform + ')';
                         }
                     });
 
