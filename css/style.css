@@ -112,6 +112,7 @@ g.node text {
     text-anchor: middle;
     pointer-events: none;
     fill: white;
+    font-family: 'Raleway', sans-serif;
 }
 
 g.reference {
