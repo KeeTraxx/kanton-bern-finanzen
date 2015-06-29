@@ -187,7 +187,6 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
 
                     var percentage =  (d.value / parent.value * 100).toFixed(2);
 
-                    console.log(parent, percentage);
                     return '<h4 style="text-align: center">' + d.name + '</h4>' +
                             '<p style="text-align: center">' + $filter('swissFormat')(d.value) + ' Fr. ('+percentage+'%)</p>';
                 });
@@ -410,7 +409,7 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
 
                             return scope.color(code);
                         })
-                        .style('opacity', 0.4)
+                        .style('opacity', 0.6)
                         .on('mouseover', function (d) {
                             tip.show(d);
                             scope.hover = d;
@@ -429,18 +428,16 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
                         .attr('fill', 'none')
                         .attr('class', 'border')
                         .style('stroke', function (d) {
-                            /*
-                             var code;
+                            var code;
 
-                             if (d.code === '') {
-                             code = d.type == 'revenue' ? '0' : '3';
-                             } else {
-                             code = d.code;
-                             }
+                            if (d.code === '') {
+                                code = d.type == 'revenue' ? '0' : '3';
+                            } else {
+                                code = d.code;
+                            }
 
-                             return scope.color(code);
-                             */
-                            return d.type == 'revenue' ? '#3f3' : '#f33';
+                            return scope.color(code);
+                            //return d.type == 'revenue' ? '#3f3' : '#f33';
                         })
                         .style('stroke-width', 2)
                         .style('opacity', 0.6);
