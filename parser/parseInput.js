@@ -3,7 +3,7 @@ var kexcel = require('kexcel');
 var path = require('path');
 var _ = require('lodash');
 var fs = require('fs');
-var output = fs.createWriteStream('output.csv');
+var output = fs.createWriteStream('data.csv');
 
 kexcel.open(path.join(__dirname, 'input', 'ktn_be.xlsx'), function (err, workbook) {
 

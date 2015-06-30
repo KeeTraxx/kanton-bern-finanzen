@@ -22,25 +22,23 @@ angular.module('ktbe', [
     'ktbe.directives',
     'ktbe.filters',
     'ktbe.services'
-])
-    .config(['$routeProvider', function ($routeProvider) {
-        $routeProvider.when('/:year/:code?', {templateUrl: 'index', controller: 'VisualizationController'});
-        $routeProvider.otherwise({redirectTo: '/2013'});
-    }])
-    .run(['$route', '$rootScope', '$location', function ($route, $rootScope, $location) {
-        var original = $location.path;
-        $location.path = function (path, reload) {
-            if (reload === false) {
-                var lastRoute = $route.current;
-                var un = $rootScope.$on('$locationChangeSuccess', function () {
-                    $route.current = lastRoute;
-                    un();
-                });
-            }
+]).config(['$routeProvider', function ($routeProvider) {
+    $routeProvider.when('/:year/:code?', {templateUrl: 'index', controller: 'VisualizationController'});
+    $routeProvider.otherwise({redirectTo: '/2014'});
+}]).run(['$route', '$rootScope', '$location', function ($route, $rootScope, $location) {
+    var original = $location.path;
+    $location.path = function (path, reload) {
+        if (reload === false) {
+            var lastRoute = $route.current;
+            var un = $rootScope.$on('$locationChangeSuccess', function () {
+                $route.current = lastRoute;
+                un();
+            });
+        }
 
-            return original.apply($location, [path]);
-        };
-    }]);
+        return original.apply($location, [path]);
+    };
+}]);
 
 angular.module('ktbe.controllers', [])
     .controller('VisualizationController', ['$scope', '$http', '$location', '$routeParams', '$timeout', 'FinanceService', 'DescriptionService', '$q', function ($scope, $http, $location, $routeParams, $timeout, FinanceService, DescriptionService, $q) {
@@ -185,15 +183,15 @@ angular.module('ktbe.directives', ['ui.bootstrap'])
                 var tip = d3.tip().attr('class', 'd3-tip').html(function (d) {
                     var parent = scope.parent[d.type];
 
-                    var percentage =  (d.value / parent.value * 100).toFixed(2);
+                    var percentage = (d.value / parent.value * 100).toFixed(2);
 
                     return '<h4 style="text-align: center">' + d.name + '</h4>' +
-                            '<p style="text-align: center">' + $filter('swissFormat')(d.value) + ' Fr. ('+percentage+'%)</p>';
+                        '<p style="text-align: center">' + $filter('swissFormat')(d.value) + ' Fr. (' + percentage + '%)</p>';
                 });
                 svg.call(tip);
                 svg.on('click', function () {
                     if (scope.filter.code.length > 0 && d3.event.target == this) {
-                        scope.filter.code = scope.filter.code.substr(0, scope.filter.code.length - 2);
+                        scope.filter.code = scope.filter.code.substr(0, scope.filter.code.length - 1);
                         scope.$apply();
                         ga('send', 'event', 'parent', scope.filter.code || 'root');
                     }
