@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="ktbe">
 <head>
-    <title>Finanzen des Kanton Bern</title>
+    <title>Die Finanzen des Kantons Bern</title>
 
     <!--
         kanton-bern-finanzen https://github.com/KeeTraxx/kanton-bern-finanzen
@@ -92,7 +92,7 @@
     </div>
 </script>
 <script type="text/ng-template" id="breadcrumbs">
-    <li ng-click="filter.code = ''">Alle Einnahmen und Ausgaben</li>
+    <li ng-click="filter.code = ''"  title="Ansicht zurücksetzen">Alle Einnahmen und Ausgaben</li>
     <li ng-repeat="node in breadcrumbs" ng-click="filter.code == node.code">{{node.name}}</li>
 </script>
 <script type="text/ng-template" id="index">
@@ -151,10 +151,11 @@
         </svg>
     </div>
     <div id="info">
-        <h1>
+        <h1 ng-click="filter.code = ''" title="Ansicht zurücksetzen">
             <div class="crest"></div>
-            Finanzen des Kanton Bern
+            Finanzdirektion des Kantons Bern
         </h1>
+		<h2 ng-click="filter.code = ''" title="Ansicht zurücksetzen">Die Finanzen des Kantons Bern</h2>
         <ol class="breadcrumb" breadcrumbs></ol>
         <p>Die Angaben enthalten die Aufwendungen und Erträge der Laufenden Rechnung sowie die Ausgaben und Einnahmen
             der Investitionsrechnung.</p>
@@ -186,6 +187,7 @@
             </tfoot>
         </table>
         <div id="meta" ng-controller="Modal">
+			<p class="footer-left"><a href=""  ng-click="open('about')">© Finanzdirektion des Kantons Bern</a></p>		
             <ul class="list-inline">
                 <li><a href="" ng-click="open('annotation')">Erläuterungen</a></li>
                 <li><a href="https://www.fin.be.ch/fin/de/index/direktion/organisation/gs/kontakt.html">Kontakt</a></li>
